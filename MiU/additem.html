@@ -10,16 +10,19 @@
 		<meta name="keywords" content="html5, VFW, visual frameworks, Full Sail University, Derek Bertubin," />
 		<meta name="robots"  content="index, follow " />
 		<meta name="viewport"  content="user-scalable=no, width=device-width" />
-		<title>VFW Project HTML Document</title>
-		<link href="styles.css" rel="stylesheet" />
+		<title>MiU Project HTML Document Add Task</title>
+		<link href="CSS-1.css" rel="stylesheet" />
 				<!-- List Drop Down -->
 	</head>
 	<body>
-            <h1>Add Item</h1>
+		<header>
+			<a href="index.html" id="header" style="text-decoration:none"><h1>Task Master</h1></a>
+		</header>
 			<nav>
 				<a href="#" id="clear">Clear Stored Tasks</a> 
 				<a href="#" id="displayLink" >Display Tasks</a>
 				<a href="additem.html" id="addNew" style="display:none;">Add New Task</a>
+				<a href="index.html" id="escape">Home</a>
 			</nav>			
 		<form action="#" method="post" id="addTask">		
 			<!--<fieldset id="taskFieldSet">-->
@@ -35,6 +38,7 @@
 			</fieldset>
 			<input type="submit" value="Save Task" id= "submit"/>
     		</form>			
-		<script type="text/javascript" src="main.js"></script>		
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="json.js"></script>	
 	</body>
 </html>
