@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Task Master - Right</title>
+	<title>Task Master - Wrong App</title>
 
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -33,65 +33,57 @@
 		</a>
 		<div data-role="content">
 			<div align="center">
-				<a href="additem.html" >
-					<img src="images/calltoaction.png" id="img"/> <!-- add image here -->
+				<a href="additem.html" data-ajax="false">
+					<img src="images/calltoaction.png" id="calltoaction"/> <!-- add image here -->
 				</a>
 		</div>
 		</br>
-			<div>
-				<ul class="ui-listview" data-role="listview" data-theme="a" data-filter="true" data-divider-theme="c">
-					<li>
-						<a href="#listAll" data-icon="arrow-r">
-							<h3>List All Tasks</h3>
-						</a>
-					</li>
-					<li data-role="list-divider" >
-							Task Type Categories
-					</li>
-					<li data-role="list-divider">
-						<a href="#current" data-icon="arrow-r">
-							<h3>Current Projects</h3>
-						</a>
-					</li>
-					<li>
-						<a href="#future" data-icon="arrow-r">
-							<h3>Future Projects</h3>
-						</a>
-					</li>
-					<li>
-						<a href="#collabrative" data-icon="arrow-r">
-							<h3>Collabrative Projects</h3>
-						</a>
-					</li>
-					<li>
-						<a href="#short" data-icon="arrow-r">
-							<h3>Short Term Goals</h3>
-						</a>
-					</li>
-					<li>
-						<a href="#long" data-icon="arrow-r">
-							<h3>Long Term Goals</h3>
-						</a>
-					</li>
-				</ul>
+				<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<a href="#listAll">
+					<img src="images/listall.png" id="img">
+				</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#current">
+					<img src="images/current.png" id="img">
+				</a>
+			</div>
+			<div class="ui-block-a">
+				<a href="#future">
+					<img src="images/future.png" id="img">
+				</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#collabrative">
+					<img src="images/collabrative.png" id="img">
+				</a>
+			</div>
+			<div class="ui-block-a">
+				<a href="#long">
+					<img src="images/long.png" id="img">
+				</a>
+			</div>
+			<div class="ui-block-b">
+				<a href="#short">
+					<img src="images/short.png" id="img">
+				</a>
 			</div>
 		</div>
-			<div href="additem.html" data-role="footer" data-theme="b" data-position="fixed">
-			<h4> Add a Task!</h4>
-		</div>
+			
 
 	</div>
 
 <!--List All Page-->	
-	<div data-role="page" data-theme="b" id="listAll" data-add-back-btn="true">
+	<div data-role="page" data-theme="b" id="listall" >
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			 <h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a" >
+		<div data-role="content" data-theme="b">
 			<div align="center">
-				<a href="additem.html" >
+				<a href="additem.html" data-ajax="false">
 				<img src="images/calltoaction.png" id="img"/>
 				</a>
 			</div>
@@ -100,7 +92,7 @@
 				<ul class="ui-listview" data-role="listview" data-filter="true">
 
 					<li>
-						<a href="#example">
+						<a href="#current">
 							<img src="images/current.png"><!-- MAKE CURRENT PNG-->
 							<h2>Test App</h2>
 							<p>Due: 01/11/2012</p>
@@ -248,13 +240,13 @@
 	</div>
 
 <!--Current Tasks  Page-->	
-	<div data-role="page" data-theme="b" id="current" data-add-back-btn="true">
+	<div data-role="page" data-theme="b" id="current">
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			 <h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a">
+		<div data-role="content" data-theme="b">
 			<div align="center">
 				<a href="additem.html" data-ajax="false">
 				<img src="images/cta_current.png" id="img"/><!-- make cta_current.png-->
@@ -301,13 +293,13 @@
 	</div>
 
 <!--Future Tasks Page-->
-	<div data-role="page" data-theme="b" id="future" data-add-back-btn="true">
+	<div data-role="page" data-theme="b" id="future">
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			 <h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a">
+		<div data-role="content" data-theme="b">
 			<div align="center">
 				<a href="additem.html" data-ajax="false">
 				<img src="images/cta_future.png" id="img"/>
@@ -347,13 +339,13 @@
 
 
 <!--Collabrative Page-->
-	<div data-role="page" data-theme="b" id="collabrative" data-add-back-btn="true">
+	<div data-role="page" data-theme="b" id="collabrative">
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			<h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a">
+		<div data-role="content" data-theme="b">
 			<div align="center">
 				<a href="additem.html" data-ajax="false" >
 				<img src="images/cta_collabrative.png" id="img"/><!--  cta_collabrative.png-->
@@ -399,13 +391,13 @@
 	</div>	
 
 <!--Short Term  Page-->
-	<div data-role="page" data-theme="b" id="short" data-add-back-btn="true">
+	<div data-role="page" data-theme="b" id="short">
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			 <h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a">
+		<div data-role="content" data-theme="b">
 			<div align="center">
 				<a href="additem.html" data-ajax="false">
 				<img src="images/cta_short.png" id="img"/>
@@ -437,13 +429,13 @@
 	</div>		
 
 <!--Long Term Page-->
-	<div data-role="page" data-theme="b" id="long" data-add-back-btn="true">
+	<div data-role="page" data-theme="b" id="long">
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			 <h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a">
+		<div data-role="content" data-theme="b">
 			<div align="center">
 				<a href="additem.html" data-ajax="false">
 				<img src="images/cta_long.png" id="img"/><!-- make cta_long.png-->
@@ -489,13 +481,13 @@
 	</div>
 
 <!--Example Page-->
-	<div data-role="page" data-theme="b" id="example" data-add-back-btn="true">
-		<!--<a href="#home" data-direction="reverse" style="text-decoration:none" >-->
+	<div data-role="page" data-theme="b" id="example">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="b" align="center" >
 			 <h3 >Task Master</h3>
 			</div>
 		</a>
-		<div data-role="content" data-theme="a">
+		<div data-role="content" data-theme="b">
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
 					<h3>Task Name</h3>

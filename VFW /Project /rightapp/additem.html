@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Derek Bertubin -->
-<!-- MiU Project 1 -->
-<!-- Term 1202 -->
+<!-- VFW Project 1 -->
+<!-- Term 1111 -->
 <html>
 	<head>
 		<meta charset="utf-8"/> 
@@ -10,36 +10,36 @@
 		<meta name="keywords" content="html5, VFW, visual frameworks, Full Sail University, Derek Bertubin," />
 		<meta name="robots"  content="index, follow " />
 		<meta name="viewport"  content="user-scalable=no, width=device-width" />
-		<title>MiU Project HTML Document Add Item</title>
+		<title>MiU Project HTML Document Add Task</title>
 		<link href="css/styles.css" rel="stylesheet" />
 				<!-- List Drop Down -->
 	</head>
 	<body>
 		<a href="index.html" style="text-decoration:none">
-			<div data-role="header" data-theme="a" data-position="fixed" align="center" >
-				<h3>FriendZone</h3>
+			<div data-role="header" data-theme="b" data-position="fixed" align="center" >
+				<h3>Task Master</h3>
 			</div>
 		</a>
 		</header>
 			<nav>
-				<a href="#" id="clear">Clear Stored Items</a> 
-				<a href="#" id="displayLink" >Display Items</a>
-				<a href="additem.html" id="addNew" style="display:none;">Add Somthing New To Do!</a>
+				<a href="#" id="clear">Clear Stored Tasks</a> 
+				<a href="#" id="displayLink" >Display Tasks</a>
+				<a href="additem.html" id="addNew" style="display:none;">Add New Task</a>
 				<a href="index.html" id="escape">Home</a>
 			</nav>			
 		<form action="#" method="post" id="addTask">		
 			<!--<fieldset id="taskFieldSet">-->
-				<h2 id= "addLabel">Add Something New to Do!</h2>
+				<h2 id= "addLabel">Add a Task</h2>
 				<span>* fields are required</span>
 				<ul id="errors"></ul>
 				<label id="select"><label for="group">*Select Priority:</label></label>		
-				<label id="taskInfo"><label for="info">Item Info:</label></label>			
-				<label for="taskName">*Item Name:</label><input type="text" id="taskName"/>				
-				<label for="taskLength">Item Length (in minutes, 5-120):</label><input type="range" min="5" max="120" id="taskLength" onchange=setSlideValue(this.value); />
+				<label id="taskInfo"><label for="info">Task Info:</label></label>			
+				<label for="taskName">*Task Name:</label><input type="text" id="taskName"/>				
+				<label for="taskLength">Task Length (in minutes, 5-120):</label><input type="range" min="5" max="120" id="taskLength" onchange=setSlideValue(this.value); />
 				<label for="completeBy">Complete By: (yyyy-mm-dd)</label><input type="date" name="completeBy" id="completeBy"/>	
 				<label for="notes">Notes:</label><textarea id ="notes"></textarea>					
 			</fieldset>
-			<input type="submit" value="Save Item" id= "submit"/>
+			<input type="submit" value="Save Task" id= "submit"/>
     		</form>			
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/json.js"></script>	
