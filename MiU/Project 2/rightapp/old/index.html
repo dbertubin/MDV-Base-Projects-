@@ -1,0 +1,522 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Task Master - Right</title>
+
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+<!--Home Page-->		
+	<div data-role="page" data-theme="b" id="home">
+		<a href="#home" style="text-decoration:none">
+			<div data-role="header" data-theme="b" data-position="fixed" align="center" >
+				<h3>Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content">
+			<div align="center">
+				<a href="additem.html" >
+					<img src="images/calltoaction.png" id="img"/> <!-- add image here -->
+				</a>
+		</div>
+		</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-theme="a" data-filter="true" data-divider-theme="c">
+					<li>
+						<a href="#listAll" data-icon="arrow-r">
+							<h3>List All Tasks</h3>
+						</a>
+					</li>
+					<li data-role="list-divider" >
+							Task Type Categories
+					</li>
+					<li data-role="list-divider">
+						<a href="#current" data-icon="arrow-r">
+							<h3>Current Projects</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#future" data-icon="arrow-r">
+							<h3>Future Projects</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#collabrative" data-icon="arrow-r">
+							<h3>Collabrative Projects</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#short" data-icon="arrow-r">
+							<h3>Short Term Goals</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#long" data-icon="arrow-r">
+							<h3>Long Term Goals</h3>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+			<div href="additem.html" data-role="footer" data-theme="b" data-position="fixed">
+			<h4> Add a Task!</h4>
+		</div>
+
+	</div>
+
+<!--List All Page-->	
+	<div data-role="page" data-theme="b" id="listAll" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="b" align="center" >
+			 <h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a" >
+			<div align="center">
+				<a href="additem.html" >
+				<img src="images/calltoaction.png" id="img"/>
+				</a>
+			</div>
+			</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-filter="true">
+
+					<li>
+						<a href="#example">
+							<img src="images/current.png"><!-- MAKE CURRENT PNG-->
+							<h2>Test App</h2>
+							<p>Due: 01/11/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png"><!-- MAKE FUTURE PNG -->
+							<h2>Finish this Class</h2>
+							<p>Due: 02/24/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png"><!-- MAKE collabrative PNG -->
+							<h2>Change the World</h2>
+							<p>Due: Today</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png">
+							<h2>Work on Personal Relationships</h2>
+							<p>Due: 02/14/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/short.png">
+							<h2>Stop and Smell the Roses</h2>
+							<p>Due: Tomorrow</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Finish this Degree</h2>
+							<p>Due:02/12/2014</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>Go to the Movies</h2>
+							<p>Due: 01/14/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Celebrate Graduation</h2>
+							<p>Due:02/12/2014</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>Take a Road Trip</h2>
+							<p>Due: 12/18/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/short.png">
+							<h2>Think of things to do</h2>
+							<p>Due: Tomorrow</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Become a Teacher</h2>
+							<p>Due:03/12/2018</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Master the Universe</h2>
+							<p>Due:12/21/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png">
+							<h2>Buy a house!</h2>
+							<p>Due: 01/01/2016</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/current.png">
+							<h2>Build Mobile App </h2>
+							<p>Due: 01/11/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>CLIMB STEPS WITH GUSTAVO</h2>
+							<p>Due: 01/16/2012</p>
+						</a>
+					</li>					
+					<li>
+						<a href="#example">
+							<img src="images/current.png">
+							<h2>Exercise</h2>
+							<p>Due: 01/18/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/current.png">
+							<h2>Finish Week 3 Project</h2>
+							<p>Due: 01/18/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png">
+							<h2>Take ChI Gong Lessons</h2>
+							<p>Due: 01/01/2013</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png">
+							<h2>Learn how to channel</h2>
+							<p>Due: 07/01/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>Go to a  zen temple with Sonia</h2>
+							<p>Due: 12/18/2012</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed" >
+			<h4>Add a Task!</h4>
+		</div>
+	</div>
+
+<!--Current Tasks  Page-->	
+	<div data-role="page" data-theme="b" id="current" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="b" align="center" >
+			 <h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+			<div align="center">
+				<a href="additem.html" data-ajax="false">
+				<img src="images/cta_current.png" id="img"/><!-- make cta_current.png-->
+				</a>
+			</div>
+			</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-filter="true">
+					<li>
+						<a href="#example">
+							<img src="images/current.png"><!-- MAKE CURRENT PNG-->
+							<h2>Test App</h2>
+							<p>Due: 01/11/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/current.png">
+							<h2>Build Mobile App </h2>
+							<p>Due: 01/11/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/current.png">
+							<h2>Exercise</h2>
+							<p>Due: 01/18/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/current.png">
+							<h2>Finish Week 3 Project</h2>
+							<p>Due: 01/18/2012</p>
+						</a>
+					</li>
+
+				</ul>
+			</div>	
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h4>Add a Task!</h4>
+		</div>
+	</div>
+
+<!--Future Tasks Page-->
+	<div data-role="page" data-theme="b" id="future" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="b" align="center" >
+			 <h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+			<div align="center">
+				<a href="additem.html" data-ajax="false">
+				<img src="images/cta_future.png" id="img"/>
+				</a>
+			</div>
+			</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-filter="true">
+					<li>
+						<a href="#example">
+							<img src="images/future.png"><!-- MAKE FUTURE PNG -->
+							<h2>Finish this Class</h2>
+							<p>Due: 02/24/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png">
+							<h2>Work on Personal Relationships</h2>
+							<p>Due: 02/14/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/future.png">
+							<h2>Buy a house!</h2>
+							<p>Due: 01/01/2016</p>
+						</a>
+					</li>
+				</ul>
+			</div>				
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed" >
+			<h4>Add a Task!</h4>
+		</div>
+	</div>
+
+
+<!--Collabrative Page-->
+	<div data-role="page" data-theme="b" id="collabrative" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="b" align="center" >
+			<h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+			<div align="center">
+				<a href="additem.html" data-ajax="false" >
+				<img src="images/cta_collabrative.png" id="img"/><!--  cta_collabrative.png-->
+				</a>
+			</div>
+			</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-filter="true">
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>Go to the Movies</h2>
+							<p>Due: 01/14/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>Take a Road Trip</h2>
+							<p>Due: 12/18/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>CLIMB STEPS WITH GUSTAVO</h2>
+							<p>Due: 01/16/2012</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/collabrative.png">
+							<h2>Go to a  zen temple with Sonia</h2>
+							<p>Due: 12/18/2012</p>
+						</a>
+					</li>
+				</ul>
+			</div>				
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h4>Add a Task!</h4>
+		</div>
+	</div>	
+
+<!--Short Term  Page-->
+	<div data-role="page" data-theme="b" id="short" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="b" align="center" >
+			 <h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+			<div align="center">
+				<a href="additem.html" data-ajax="false">
+				<img src="images/cta_short.png" id="img"/>
+				</a>
+			</div>
+			</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-filter="true">
+					<li>
+						<a href="#example">
+							<img src="images/short.png">
+							<h2>Stop and Smell the Roses</h2>
+							<p>Due: Tomorrow</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/short.png">
+							<h2>Think of things to do</h2>
+							<p>Due: Tomorrow</p>
+						</a>
+					</li>
+				</ul>
+			</div>				
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h4>Add a Task!</h4>
+		</div>
+	</div>		
+
+<!--Long Term Page-->
+	<div data-role="page" data-theme="b" id="long" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="b" align="center" >
+			 <h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+			<div align="center">
+				<a href="additem.html" data-ajax="false">
+				<img src="images/cta_long.png" id="img"/><!-- make cta_long.png-->
+				</a>
+			</div>
+			</br>
+			<div>
+				<ul class="ui-listview" data-role="listview" data-filter="true">
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Finish this Degree</h2>
+							<p>Due:02/12/2014</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Celebrate Graduation</h2>
+							<p>Due:02/12/2014</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Become a Teacher</h2>
+							<p>Due:03/12/2018</p>
+						</a>
+					</li>
+					<li>
+						<a href="#example">
+							<img src="images/long.png">
+							<h2>Master the Universe</h2>
+							<p>Due:12/21/2012</p>
+						</a>
+					</li>
+				</ul>
+			</div>				
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h4>Add a Task!</h4>
+		</div>
+	</div>
+
+<!--Example Page-->
+	<div data-role="page" data-theme="b" id="example" data-add-back-btn="true">
+		<!--<a href="#home" data-direction="reverse" style="text-decoration:none" >-->
+			<div data-role="header" data-theme="b" align="center" >
+			 <h3 >Task Master</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<h3>Task Name</h3>
+					<p>Due: MM/DD/YYYY</p>
+				</div>
+			</div>
+			<h4>Notes:</h4>
+			<p>Task notes or details would be listed here.  There is a lot of things that  I will need to add to this page. Like the edit bottons and all of that good stuff. </p>	
+
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h4>Add a Task!</h4>
+		</div>
+	</div>
+
+
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js" />
+	<script type="text/javascript" src="js/json.js" />
+</body>
+</html>

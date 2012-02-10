@@ -231,7 +231,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 // Var defaults 
-	var priorityGroups = ["--From Highest to Lowest of Priority--", "A","B","C"];
+	var priorityGroups = ["--Choose Type of Thing to Do--", "Current Things to Do","Future Things to Do","Things to Do with Friends","Bucket List","Shared Bucket Lists"];
 	//	var	selectDueValue = "No";  // 
 	errMsg = $("errors");
 	makeGroup();
