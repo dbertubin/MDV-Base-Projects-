@@ -11,7 +11,7 @@ html {
 ul{ 
     list-style: none;
     text-align: left;
-    padding: 0px;
+    padding: 5px;
     margin-top:0px;
 }
 
@@ -39,7 +39,7 @@ nav{
 }
 form{
     text-shadow: 0px 1px 0px #b8bac6;
-    background: #9FABB0;
+    background: #70b0e0;
     margin:10px;
     padding: 10px;
     /*margin: 0px;*/
@@ -61,24 +61,36 @@ h2{
 }
 h3{
     font-weight: bold;
-    font-size: 25px;
-    padding-left:0px;
-    height: 25px;
-    margin:0px;
-    margin-bottom:0px;
-}
-
-h1{
-    font-weight: bold;
-    font-size: 36px;
+    font-size: 20px;
     padding-left:10px;
     height: 20px;
     margin:5px;
-    margin-bottom:5px;
+    margin-bottom:10px;
 }
-h4{
-    height:10px;
+
+h1{
+    text-align: center; /*---7 css---*/
+    text-shadow: 0px 1px 0px #e5e5ee;
+    margin-top:10px;
+    background-color: #B8C0DB;
+    margin-bottom: 0px ;
+    margin-top: 0px;
+    padding: 0px;
+    height:40px;
+    /*border:1px solid #000000;*/
+    /*height: auto ; /*---8 css---*/
+    overflow: auto ; /*---9 css---*/
+    visibility: visible ; /*---10 css---*/
+background: rgb(104,187,242); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(104,187,242,1) 0%, rgba(99,147,193,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(104,187,242,1)), color-stop(100%,rgba(99,147,193,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(104,187,242,1) 0%,rgba(99,147,193,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(104,187,242,1) 0%,rgba(99,147,193,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(104,187,242,1) 0%,rgba(99,147,193,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(104,187,242,1) 0%,rgba(99,147,193,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68bbf2', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
 }
+
 p{
     margin: 10px;
 }	
@@ -133,14 +145,16 @@ textarea{
     text-align: center;
 }
 .cta{
-    margin:15px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom:2px;
     border-style:solid;
     border-radius: 10px 10px 10px 10px;
-    padding:11px;
+    padding:10px;
     background: #9FABB0;
     text-shadow: 0px 1px 0px #b8bac6;
     background: #9FABB0;
-    font-size:  14px;
+    font-size:  18px;
     text-align: center;
     
 }
@@ -152,28 +166,10 @@ textarea{
     width:65px;
     padding:5px;
 }
-.ui-listview{
-    width: auto;
-}
-#img-add{
-    margin-top:20px;
-    text-shadow: 0px 1px 0px #b8bac6;
-    background: #9FABB0;
-    margin:10px;
-    padding: 10px;
-    /*margin: 0px;*/
-    /*background: #FFF;*/
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    border-radius:4px;
-    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-    -moz-box-shadow:0px 0px 5px #000000;
-    -webkit-box-shadow:0px 0px 5px #000000;
-    box-shadow:0px 0px 5px #000000;
-}
 #header{
     margin-top:0px;
-    padding-top:0px;
+    padding-top:15px;
+    text-align: center;
 }
 #search{
     margin-left: 20px;
@@ -242,15 +238,13 @@ textarea{
     text-shadow: 0px 1px 0px #e5e5ee;
 }
 #img{
-    margin-left :0px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4px;
     /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
     -moz-box-shadow:0px 0px 5px #000000;
     -webkit-box-shadow:0px 0px 5px #000000;
-    box-shadow:0px 0px 5px #000000;
-    margin-bottom:0px;
+    box-shadow:0px 0px 5px #000000;   
 }
 #start{
     margin-left:90px;
@@ -341,32 +335,4 @@ textarea{
 #escape{
     margin:5px;
 }
-#right{
-    -moz-box-shadow: 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
-    box-shadow: 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fcfcfc), color-stop(1, #cccccc) );
-    background:-moz-linear-gradient( center top, #fcfcfc 5%, #cccccc 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#cccccc');
-    background-color:#fcfcfc;
-    -moz-border-radius:20px;
-    -webkit-border-radius:20px;
-    border-radius:20px;
-    border:1px solid #000000;
-    display:inline-block;
-    color:#000000;
-    font-family:arial;
-    font-size:18px;
-    font-weight:bold;
-    padding:3px 58px;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #ffffff;
-    margin-left: 50px;
-    text-align:center;
-    margin-bottom:10px;
-}   
-
-.ui-grid-a{
-    text-decoration: none;
-    margin-left:10px;
-}
+#bt:margin
