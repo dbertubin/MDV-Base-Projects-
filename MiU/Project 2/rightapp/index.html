@@ -42,7 +42,7 @@
 			<img src="images/calltoaction-new.png" id="img"/>
 			<p>Add things you want to do! Events, Road trips or even a Bucket list!</p>
 			<!--<h3 id= "start">Start Here!</h3>-->
-			<a href="additem.html" id="add" data-ajax="false">Add Something to Do!</a>
+			<a href="#form" id="add" data-ajax="true">Add Something to Do!</a>
 		</div>
 		</br>
 		<div>
@@ -543,7 +543,20 @@
 		</div>
 	</div>
 
-
+<!--Form -->
+	<<div data-role="page" data-theme="a" id="form" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="a" align="center" >
+			 <h3 >FriendZone</h3>
+			</div>
+		</a>
+	</div>
+	<div data-role="content">
+		<form action=" " method="post" id="form">
+			<label for="itemname">Name the Thing Want to Do:</label>
+			<input type="text" name="itemname" id="itemname"
+		</form>	
+	</div>
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
