@@ -1,6 +1,6 @@
 // Derek Bertubin
 // MiU Project 3 1202 
-/*window.addEventListener("DOMContentLoaded", function(){
+
 function storeData(key){
 		if(!key){
 			var id 					= Math.floor(Math.random()*1000000001);
@@ -12,41 +12,30 @@ function storeData(key){
 		}
 		//Gather up all our form field values and store in an object.
 		//Oject properties contain array with the form label and input value.
+		//getCheckboxValue();
 		var item 				= {};
-			item.groups		= ["Category:  ", $('#groups').value];
-			item.name			= ["Name the Thing You Want to Do: ", $('#name').value];
-			item.rating			= ["Rate How Excited You Are to DO This! (1=Excited, 5=Super Really Excited!):  ", $('#rating').value];
-			item.comments		= ["Tell me more about what you want to do!:  ", $('#comments').value];
+			item.groups1		= ["Category:  ", $('#groups1').value];
+			item.name			= ["Recommendation Title:  ", $('#name').value];
+			item.rating			= ["Rating (1=bad, 5=amazing):  ", $('#rating').value];
+			item.comments		= ["Comments:  ", $('#comments').value];
+			item.phonenum		= ["Phone Number:  ", $('#phonenum').value];
+			item.email			= ["Email:  ", $('#email').value];
+			item.url			= ["Website:  ", $('#url').value];
+			item.location		= ["Location:  ", $('#location').value];
+		//Save data into Local Storage: Use Stringify to convert our object to a string
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Recommendation Saved");
-		}
-*/
 
-<<<<<<< HEAD
-=======
-/*
->>>>>>> master
+		}
+
 
 $(document).ready(function(){
 
 	var form = $('#form');
 
 	form.validate({
-		invalidHandler: function(form, validator){},
 		submitHandler: function(){
-			//storeData(this.key)
+			storeData(this.key)
 		}
 	});
-<<<<<<< HEAD
 });
-=======
-});
-*/
-
-
-$("#friendform").validate({
-    submitHandler: function(form) {
-        console.log("Call Action");
-    }
-});
->>>>>>> master

@@ -11,7 +11,11 @@ html {
 ul{ 
     list-style: none;
     text-align: left;
+<<<<<<< HEAD
     padding: 5px;
+=======
+    padding: 0px;
+>>>>>>> master
     margin-top:0px;
 }
 
@@ -37,12 +41,17 @@ nav{
     margin: 0px;
     padding:5px;
 }
+<<<<<<< HEAD
 form{
+=======
+/*form{
+>>>>>>> master
     text-shadow: 0px 1px 0px #b8bac6;
     background: #9FABB0;
     margin:10px;
     padding: 10px;
     /*margin: 0px;*/
+<<<<<<< HEAD
     margin-top:0px;
     /*background: #FFF;*/
     -moz-border-radius:4px;
@@ -53,10 +62,23 @@ form{
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
 }
+=======
+/*    margin-top:0px;
+    /*background: #FFF;*/
+/*    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+/*    -moz-box-shadow:0px 0px 5px #000000;
+    -webkit-box-shadow:0px 0px 5px #000000;
+    box-shadow:0px 0px 5px #000000;
+}*/
+>>>>>>> master
 h2{
     font-weight: bold;
     font-size: 20px;
     padding-left:10px;
+<<<<<<< HEAD
 }
 h3{
     font-weight: bold;
@@ -69,12 +91,26 @@ h3{
 h4{
     text-decoration: none;
 }
+=======
+    height: 20px;
+}
+h3{
+    font-weight: bold;
+    font-size: 25px;
+    padding-left:0px;
+    height: 25px;
+    margin:0px;
+    margin-bottom:0px;
+}
+
+>>>>>>> master
 h1{
     font-weight: bold;
     font-size: 36px;
     padding-left:10px;
     height: 20px;
     margin:5px;
+<<<<<<< HEAD
     margin-bottom:10px;
 }
 
@@ -85,18 +121,44 @@ a{
     /*margin: 10px;*/
     text-decoration: none;
 }
+=======
+    margin-bottom:5px;
+}
+h4{
+    height:10px;
+}
+p{
+    margin: 10px;
+}	
+a{
+    /*margin: 10px;*/
+    margin-top:0px;
+    
+}
+
+
+>>>>>>> master
 select{
     width: 280px;
     padding-right:  10px;
     margin-top: 5px;
     text-shadow: 0px 1px 0px #e5e5ee;
 }		
+<<<<<<< HEAD
 label{
     overflow: inherit;
     display: block;/*---11 css---*/
     margin-bottom: 5px;
     font-size:16px;
 }
+=======
+/*label{
+    overflow: inherit;
+    display: block;
+    margin-bottom: 5px;
+    font-size:16px;
+}*/
+>>>>>>> master
 input{
     /*overflow: inherit;
     width: 265px;
@@ -115,8 +177,18 @@ textarea{
     padding-right: 10px;
     margin-bottom: 15px;*/
 }
+<<<<<<< HEAD
 .home{
     }
+=======
+
+label.error{
+    font-size:  18px;
+    display:block;
+    margin: 10px 0;
+    color: #cc0000;
+}
+>>>>>>> master
 .browse{
     margin-left:15px;
     margin-right:15px;
@@ -131,15 +203,27 @@ textarea{
     text-align: center;
 }
 .cta{
+<<<<<<< HEAD
     margin:10px;
     border-style:solid;
     border-radius: 10px 10px 10px 10px;
     padding:5px;
+=======
+    margin:15px;
+    border-style:solid;
+    border-radius: 10px 10px 10px 10px;
+    padding:11px;
+>>>>>>> master
     background: #9FABB0;
     text-shadow: 0px 1px 0px #b8bac6;
     background: #9FABB0;
     font-size:  14px;
+<<<<<<< HEAD
     text-align: center;  
+=======
+    text-align: center;
+    
+>>>>>>> master
 }
 .searchfield{
     width:200px;
@@ -149,6 +233,7 @@ textarea{
     width:65px;
     padding:5px;
 }
+<<<<<<< HEAD
 .ui-grid-a{
     text-decoration: none;
     margin-left:10px;
@@ -176,6 +261,26 @@ textarea{
     margin-left: 50px;
     text-align:center;
     margin-bottom:10px;
+=======
+.ui-listview{
+    width: auto;
+}
+#img-add{
+    margin-top:20px;
+    text-shadow: 0px 1px 0px #b8bac6;
+    background: #9FABB0;
+    margin:10px;
+    padding: 10px;
+    /*margin: 0px;*/
+    /*background: #FFF;*/
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow:0px 0px 5px #000000;
+    -webkit-box-shadow:0px 0px 5px #000000;
+    box-shadow:0px 0px 5px #000000;
+>>>>>>> master
 }
 #header{
     margin-top:0px;
@@ -248,6 +353,7 @@ textarea{
     text-shadow: 0px 1px 0px #e5e5ee;
 }
 #img{
+<<<<<<< HEAD
     margin-left:15px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -259,6 +365,9 @@ textarea{
     margin-bottom:10px;
 }
 #calltoaction{
+=======
+    margin-left :0px;
+>>>>>>> master
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4px;
@@ -266,7 +375,11 @@ textarea{
     -moz-box-shadow:0px 0px 5px #000000;
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
+<<<<<<< HEAD
     margin-bottom:10px;
+=======
+    margin-bottom:0px;
+>>>>>>> master
 }
 #start{
     margin-left:90px;
@@ -357,4 +470,32 @@ textarea{
 #escape{
     margin:5px;
 }
+<<<<<<< HEAD
 #bt:margin
+=======
+#right{
+    -moz-box-shadow: 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
+    box-shadow: 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fcfcfc), color-stop(1, #cccccc) );
+    background:-moz-linear-gradient( center top, #fcfcfc 5%, #cccccc 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#cccccc');
+    background-color:#fcfcfc;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius:20px;
+    border:1px solid #000000;
+    display:inline-block;
+    color:#000000;
+    font-family:arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:3px 58px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+    margin-left: 50px;
+    text-align:center;
+    margin-bottom:10px;
+}   
+
+>>>>>>> master
