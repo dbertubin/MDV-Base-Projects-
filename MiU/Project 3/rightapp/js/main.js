@@ -22,6 +22,7 @@ function storeData(key){
 		}
 */
 
+/*
 
 $(document).ready(function(){
 
@@ -33,4 +34,12 @@ $(document).ready(function(){
 			//storeData(this.key)
 		}
 	});
+});
+*/
+
+
+$("#friendform").validate({
+    submitHandler: function(form) {
+        console.log("Call Action");
+    }
 });

@@ -119,6 +119,13 @@ textarea{
     padding-right: 10px;
     margin-bottom: 15px;*/
 }
+
+label.error{
+    font-size:  18px;
+    display:block;
+    margin: 10px 0;
+    color: #cc0000;
+}
 .browse{
     margin-left:15px;
     margin-right:15px;
