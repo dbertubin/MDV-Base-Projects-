@@ -2,7 +2,8 @@
 <!-- Derek Bertubin -->
 <!-- MiU Project 1 -->
 <!-- Term 1202 -->
-<html>
+	<!--<html>
+
 	<head>
 		<meta charset="utf-8"/> 
 		
@@ -12,7 +13,7 @@
 		<meta name="viewport"  content="user-scalable=no, width=device-width" />
 		<title>MiU Project HTML Document Add Item</title>
 		<link href="css/styles.css" rel="stylesheet" />
-				<!-- List Drop Down -->
+				<!-- List Drop Down
 	</head>
 	<body>
 		<a href="index.html" style="text-decoration:none">
@@ -28,7 +29,7 @@
 				<a href="index.html" id="escape">Home</a>
 			</nav>			
 		<form action="#" method="post" id="addTask">		
-			<!--<fieldset id="taskFieldSet">-->
+			<!--<fieldset id="taskFieldSet">
 				<h2 id= "addLabel">Add Something New to Do!</h2>
 				<span>* fields are required</span>
 				<ul id="errors"></ul>
@@ -44,4 +45,48 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/json.js"></script>	
 	</body>
+</html>-->
+
+ 
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>FriendZone</title>
+
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+		<div data-role="page" data-theme="a" id="form" data-add-back-btn="true">
+			<a href="#home" data-direction="reverse" style="text-decoration:none" >
+				<div data-role="header" data-theme="a" align="center" >
+				 <h3 >FriendZone</h3>
+				</div>
+			</a>
+		</div>
+		<div data-role="content">
+			<form action=" " method="post" id="form">
+				<div data-role="fieldcontain">
+					<label for="itemname">Name the Thing Want to Do:</label>
+					<input type="text" name="itemname" id="itemname"/>
+				</div>
+			</form>	
+		</div>
+</body>	
+
 </html>
