@@ -12,13 +12,19 @@ ul{
     list-style: none;
     text-align: left;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 0px;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     padding: 5px;
 =======
     padding: 0px;
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
     margin-top:0px;
 }
@@ -46,13 +52,19 @@ nav{
     padding:5px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*form{
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 form{
 =======
 /*form{
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
     text-shadow: 0px 1px 0px #b8bac6;
     background: #9FABB0;
@@ -60,8 +72,11 @@ form{
     padding: 10px;
     /*margin: 0px;*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     margin-top:0px;
     /*background: #FFF;*/
     -moz-border-radius:4px;
@@ -72,6 +87,9 @@ form{
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
 }
+=======
+<<<<<<< HEAD
+>>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
 /*    margin-top:0px;
@@ -85,6 +103,10 @@ form{
     box-shadow:0px 0px 5px #000000;
 }*/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -93,8 +115,11 @@ h2{
     font-size: 20px;
     padding-left:10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 }
 h3{
     font-weight: bold;
@@ -107,6 +132,9 @@ h3{
 h4{
     text-decoration: none;
 }
+=======
+<<<<<<< HEAD
+>>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
     height: 20px;
@@ -121,6 +149,10 @@ h3{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -131,8 +163,11 @@ h1{
     height: 20px;
     margin:5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     margin-bottom:10px;
 }
 
@@ -143,6 +178,9 @@ a{
     /*margin: 10px;*/
     text-decoration: none;
 }
+=======
+<<<<<<< HEAD
+>>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
     margin-bottom:5px;
@@ -161,6 +199,10 @@ a{
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -171,14 +213,20 @@ select{
     text-shadow: 0px 1px 0px #e5e5ee;
 }		
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 label{
     overflow: inherit;
     display: block;/*---11 css---*/
     margin-bottom: 5px;
     font-size:16px;
 }
+=======
+<<<<<<< HEAD
+>>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
 /*label{
@@ -188,6 +236,10 @@ label{
     font-size:16px;
 }*/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -210,8 +262,14 @@ textarea{
     margin-bottom: 15px;*/
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+.home{
+    }
+=======
+>>>>>>> gh-pages
+=======
 .home{
     }
 =======
@@ -224,6 +282,10 @@ label.error{
     color: #cc0000;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -242,12 +304,18 @@ label.error{
 }
 .cta{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     margin:10px;
     border-style:solid;
     border-radius: 10px 10px 10px 10px;
     padding:5px;
+=======
+<<<<<<< HEAD
+>>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
     margin:15px;
@@ -255,6 +323,10 @@ label.error{
     border-radius: 10px 10px 10px 10px;
     padding:11px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -263,15 +335,21 @@ label.error{
     background: #9FABB0;
     font-size:  14px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     text-align: center;
     
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     text-align: center;  
 =======
     text-align: center;
     
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 }
 .searchfield{
@@ -283,8 +361,11 @@ label.error{
     padding:5px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 .ui-grid-a{
     text-decoration: none;
     margin-left:10px;
@@ -313,6 +394,9 @@ label.error{
     text-align:center;
     margin-bottom:10px;
 =======
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 .ui-listview{
     width: auto;
@@ -333,6 +417,10 @@ label.error{
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
@@ -409,9 +497,12 @@ label.error{
 }
 #img{
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-left :0px;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     margin-left:15px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -426,6 +517,9 @@ label.error{
 =======
     margin-left :0px;
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -435,13 +529,19 @@ label.error{
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-bottom:0px;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
     margin-bottom:10px;
 =======
     margin-bottom:0px;
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 }
 #start{
@@ -534,8 +634,13 @@ label.error{
     margin:5px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+#bt:margin
+=======
+>>>>>>> gh-pages
+=======
 #bt:margin
 =======
 >>>>>>> gh-pages
@@ -565,6 +670,10 @@ label.error{
 }   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages

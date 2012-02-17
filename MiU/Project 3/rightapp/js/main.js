@@ -23,9 +23,15 @@ function storeData(key){
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 =======
 <<<<<<< HEAD
+=======
+/*
+>>>>>>> master
+>>>>>>> gh-pages
+=======
 =======
 /*
 >>>>>>> master
@@ -42,8 +48,13 @@ $(document).ready(function(){
 		}
 	});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+});
+=======
+>>>>>>> gh-pages
+=======
 });
 =======
 >>>>>>> gh-pages
@@ -57,6 +68,10 @@ $("#friendform").validate({
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages

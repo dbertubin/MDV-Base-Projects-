@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 // VFW 
 // Author: Derek Bertubin 
 // Term : 1111
@@ -249,6 +252,9 @@ window.addEventListener("DOMContentLoaded", function(){
             setValue.addEventListener(blur, setSlideValue);
 });	
 =======
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 // Derek Bertubin
 // MiU Project 3 1202 
@@ -296,6 +302,10 @@ $("#friendform").validate({
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
