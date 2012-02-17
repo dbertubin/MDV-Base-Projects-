@@ -23,8 +23,24 @@ function storeData(key){
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /*
+>>>>>>> master
+=======
+<<<<<<< HEAD
+/*
+=======
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> master
+>>>>>>> gh-pages
+=======
+=======
+/*
+>>>>>>> master
+>>>>>>> gh-pages
 >>>>>>> master
 
 $(document).ready(function(){
@@ -38,8 +54,21 @@ $(document).ready(function(){
 		}
 	});
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> gh-pages
+=======
+});
+=======
+>>>>>>> gh-pages
+>>>>>>> master
 });
 */
 
@@ -49,4 +78,15 @@ $("#friendform").validate({
         console.log("Call Action");
     }
 });
+<<<<<<< HEAD
+>>>>>>> master
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 >>>>>>> master
