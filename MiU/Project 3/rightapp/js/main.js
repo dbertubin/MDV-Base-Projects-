@@ -22,7 +22,14 @@ function storeData(key){
 		}
 */
 
+<<<<<<< HEAD
 /*
+=======
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> master
+>>>>>>> gh-pages
 
 $(document).ready(function(){
 
@@ -34,6 +41,12 @@ $(document).ready(function(){
 			//storeData(this.key)
 		}
 	});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> gh-pages
 });
 */
 
@@ -43,3 +56,7 @@ $("#friendform").validate({
         console.log("Call Action");
     }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
