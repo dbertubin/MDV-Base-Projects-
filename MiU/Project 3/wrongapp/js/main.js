@@ -4,6 +4,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> gh-pages
+>>>>>>> master
 =======
 >>>>>>> gh-pages
 >>>>>>> master
@@ -256,8 +260,14 @@ window.addEventListener("DOMContentLoaded", function(){
 });	
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> gh-pages
+=======
+>>>>>>> gh-pages
+>>>>>>> master
+=======
 >>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
@@ -308,9 +318,12 @@ $("#friendform").validate({
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> master
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 <<<<<<< HEAD
 =======
 >>>>>>> master
@@ -318,4 +331,7 @@ $("#friendform").validate({
 =======
 >>>>>>> master
 >>>>>>> gh-pages
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

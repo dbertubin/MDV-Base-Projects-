@@ -24,11 +24,14 @@ function storeData(key){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /*
 >>>>>>> master
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 /*
 =======
 <<<<<<< HEAD
@@ -41,6 +44,9 @@ function storeData(key){
 /*
 >>>>>>> master
 >>>>>>> gh-pages
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 $(document).ready(function(){
@@ -55,10 +61,13 @@ $(document).ready(function(){
 	});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 <<<<<<< HEAD
 });
@@ -68,6 +77,9 @@ $(document).ready(function(){
 });
 =======
 >>>>>>> gh-pages
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 });
 */
@@ -79,9 +91,12 @@ $("#friendform").validate({
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> master
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> master
 <<<<<<< HEAD
 =======
 >>>>>>> master
@@ -89,4 +104,7 @@ $("#friendform").validate({
 =======
 >>>>>>> master
 >>>>>>> gh-pages
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
