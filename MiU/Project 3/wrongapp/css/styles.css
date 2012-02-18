@@ -11,67 +11,7 @@ html {
 ul{ 
     list-style: none;
     text-align: left;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
     padding: 0px;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-    padding: 5px;
-=======
-    padding: 0px;
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
     margin-top:0px;
 }
 
@@ -97,131 +37,12 @@ nav{
     margin: 0px;
     padding:5px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
 /*form{
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-form{
-=======
-/*form{
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
     text-shadow: 0px 1px 0px #b8bac6;
     background: #9FABB0;
     margin:10px;
     padding: 10px;
     /*margin: 0px;*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-    margin-top:0px;
-    /*background: #FFF;*/
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    border-radius:4px;
-    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-    -moz-box-shadow:0px 0px 5px #000000;
-    -webkit-box-shadow:0px 0px 5px #000000;
-    box-shadow:0px 0px 5px #000000;
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
 /*    margin-top:0px;
     /*background: #FFF;*/
 /*    -moz-border-radius:4px;
@@ -232,107 +53,10 @@ form{
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
 }*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
 h2{
     font-weight: bold;
     font-size: 20px;
     padding-left:10px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-}
-h3{
-    font-weight: bold;
-    font-size: 20px;
-    padding-left:10px;
-    height: 25px;
-    margin:5px;
-    margin-bottom:10px;
-}
-h4{
-    text-decoration: none;
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
     height: 20px;
 }
 h3{
@@ -344,107 +68,12 @@ h3{
     margin-bottom:0px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
 h1{
     font-weight: bold;
     font-size: 36px;
     padding-left:10px;
     height: 20px;
     margin:5px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-    margin-bottom:10px;
-}
-
-p{
-    margin-left: 10px;
-}	
-a{
-    /*margin: 10px;*/
-    text-decoration: none;
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
     margin-bottom:5px;
 }
 h4{
@@ -460,145 +89,18 @@ a{
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
 select{
     width: 280px;
     padding-right:  10px;
     margin-top: 5px;
     text-shadow: 0px 1px 0px #e5e5ee;
 }		
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-label{
-    overflow: inherit;
-    display: block;/*---11 css---*/
-    margin-bottom: 5px;
-    font-size:16px;
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
 /*label{
     overflow: inherit;
     display: block;
     margin-bottom: 5px;
     font-size:16px;
 }*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
 input{
     /*overflow: inherit;
     width: 265px;
@@ -617,93 +119,13 @@ textarea{
     padding-right: 10px;
     margin-bottom: 15px;*/
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-.home{
-    }
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-.home{
-    }
-=======
->>>>>>> gh-pages
-=======
-.home{
-    }
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-
 label.error{
     font-size:  18px;
     display:block;
     margin: 10px 0;
     color: #cc0000;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-.browse{
+}.browse{
     margin-left:15px;
     margin-right:15px;
     margin-bottom:10px;
@@ -717,166 +139,16 @@ label.error{
     text-align: center;
 }
 .cta{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-    margin:10px;
-    border-style:solid;
-    border-radius: 10px 10px 10px 10px;
-    padding:5px;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
     margin:15px;
     border-style:solid;
     border-radius: 10px 10px 10px 10px;
     padding:11px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
     background: #9FABB0;
     text-shadow: 0px 1px 0px #b8bac6;
     background: #9FABB0;
     font-size:  14px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
     text-align: center;
     
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-    text-align: center;  
-=======
-    text-align: center;
-    
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
 }
 .searchfield{
     width:200px;
@@ -886,82 +158,6 @@ label.error{
     width:65px;
     padding:5px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-.ui-grid-a{
-    text-decoration: none;
-    margin-left:10px;
-}
-#right{
-    -moz-box-shadow: 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
-    box-shadow: 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fcfcfc), color-stop(1, #cccccc) );
-    background:-moz-linear-gradient( center top, #fcfcfc 5%, #cccccc 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#cccccc');
-    background-color:#fcfcfc;
-    -moz-border-radius:20px;
-    -webkit-border-radius:20px;
-    border-radius:20px;
-    border:1px solid #000000;
-    display:inline-block;
-    color:#000000;
-    font-family:arial;
-    font-size:18px;
-    font-weight:bold;
-    padding:3px 58px;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #ffffff;
-    margin-left: 50px;
-    text-align:center;
-    margin-bottom:10px;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
 .ui-listview{
     width: auto;
 }
@@ -980,42 +176,6 @@ label.error{
     -moz-box-shadow:0px 0px 5px #000000;
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
 }
 #header{
     margin-top:0px;
@@ -1088,39 +248,7 @@ label.error{
     text-shadow: 0px 1px 0px #e5e5ee;
 }
 #img{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
     margin-left :0px;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-    margin-left:15px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4px;
@@ -1128,105 +256,7 @@ label.error{
     -moz-box-shadow:0px 0px 5px #000000;
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
-    margin-bottom:10px;
-}
-#calltoaction{
-=======
-    margin-left :0px;
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    border-radius:4px;
-    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-    -moz-box-shadow:0px 0px 5px #000000;
-    -webkit-box-shadow:0px 0px 5px #000000;
-    box-shadow:0px 0px 5px #000000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
     margin-bottom:0px;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-    margin-bottom:10px;
-=======
-    margin-bottom:0px;
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
 }
 #start{
     margin-left:90px;
@@ -1317,46 +347,6 @@ label.error{
 #escape{
     margin:5px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-#bt:margin
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-#bt:margin
-=======
->>>>>>> gh-pages
-=======
-#bt:margin
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
 #right{
     -moz-box-shadow: 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
@@ -1381,40 +371,3 @@ label.error{
     text-align:center;
     margin-bottom:10px;
 }   
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages

@@ -1,35 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
 // VFW 
 // Author: Derek Bertubin 
 // Term : 1111
 
 // Wait until the DOM is ready
-window.addEventListener("DOMContentLoaded", function(){
+//	window.addEventListener("DOMContentLoaded", function(){
 // alert(localStorage.value(0))	
 	//getElementById function 
-	function $(x){	
+/*	function $(x){	
 		var theElement = document.getElementById(x);
  		return theElement;
   	};
@@ -268,32 +245,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var setValue = $("taskLength");
             setValue.addEventListener(blur, setSlideValue);
 });	
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
-=======
->>>>>>> gh-pages
-=======
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
->>>>>>> master
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
+*/
 // Derek Bertubin
 // MiU Project 3 1202 
 /*window.addEventListener("DOMContentLoaded", function(){
@@ -339,39 +291,4 @@ $("#friendform").validate({
         console.log("Call Action");
     }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> gh-pages
->>>>>>> master
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> gh-pages
-=======
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
->>>>>>> gh-pages
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
-=======
->>>>>>> master
-=======
->>>>>>> master
->>>>>>> gh-pages
+
