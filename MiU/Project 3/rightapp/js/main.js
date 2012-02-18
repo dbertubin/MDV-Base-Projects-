@@ -24,6 +24,17 @@ function storeData(key){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> master
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 /*
 =======
 <<<<<<< HEAD
@@ -34,6 +45,13 @@ function storeData(key){
 =======
 =======
 /*
+>>>>>>> master
+>>>>>>> gh-pages
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 >>>>>>> gh-pages
 
@@ -49,6 +67,16 @@ $(document).ready(function(){
 	});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+});
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> gh-pages
 =======
 <<<<<<< HEAD
 });
@@ -57,6 +85,13 @@ $(document).ready(function(){
 =======
 });
 =======
+>>>>>>> gh-pages
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 >>>>>>> gh-pages
 });
 */
@@ -69,9 +104,25 @@ $("#friendform").validate({
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
 =======
 >>>>>>> master
 >>>>>>> gh-pages
+=======
+>>>>>>> master
+>>>>>>> gh-pages
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
 =======
 >>>>>>> master
 >>>>>>> gh-pages
