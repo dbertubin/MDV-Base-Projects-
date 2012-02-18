@@ -4,9 +4,12 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> gh-pages
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 <<<<<<< HEAD
 =======
 >>>>>>> gh-pages
@@ -14,6 +17,9 @@
 =======
 >>>>>>> gh-pages
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 // VFW 
 // Author: Derek Bertubin 
@@ -265,11 +271,14 @@ window.addEventListener("DOMContentLoaded", function(){
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> gh-pages
 =======
 >>>>>>> gh-pages
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 =======
 <<<<<<< HEAD
 >>>>>>> gh-pages
@@ -281,6 +290,9 @@ window.addEventListener("DOMContentLoaded", function(){
 =======
 >>>>>>> gh-pages
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 // Derek Bertubin
 // MiU Project 3 1202 
@@ -330,13 +342,19 @@ $("#friendform").validate({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> gh-pages
 >>>>>>> master
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> gh-pages
+=======
 >>>>>>> gh-pages
 =======
 >>>>>>> master
@@ -345,8 +363,14 @@ $("#friendform").validate({
 >>>>>>> master
 >>>>>>> gh-pages
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
+>>>>>>> gh-pages
+=======
 >>>>>>> master
 =======
 >>>>>>> master
