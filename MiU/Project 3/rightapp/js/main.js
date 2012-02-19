@@ -38,11 +38,20 @@ $(document).ready(function(){
 
 });
 */
+var parseFriendForm = function (data){
+	console.log(data);
+};
 
-
-$("#friendform").validate({
-    submitHandler: function(form) {
-        console.log("Call Action");
-    }
+$(document).ready(function(){
+	var fzform= $("#friendform");
+	
+	fzform.validate({
+		invalidHandler: function(form, validate){},
+		submitHandler: function(){
+			var data = fzform.serializeArray();
+			parseFriendForm(data);
+		}
+	});
 });
+
 

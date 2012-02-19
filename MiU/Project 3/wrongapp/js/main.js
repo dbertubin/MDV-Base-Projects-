@@ -270,25 +270,22 @@ function storeData(key){
 		}
 */
 
-/*
+
+
+var parseFriendForm = function (data){
+	console.log(data);
+};
 
 $(document).ready(function(){
-
-	var form = $('#form');
-
-	form.validate({
-		invalidHandler: function(form, validator){},
+	var fzform= $("#friendform");
+	
+	fzform.validate({
+		invalidHandler: function(form, validate){},
 		submitHandler: function(){
-			//storeData(this.key)
+			var data = fzform.serializeArray();
+			parseFriendForm(data);
 		}
 	});
 });
-*/
 
-
-$("#friendform").validate({
-    submitHandler: function(form) {
-        console.log("Call Action");
-    }
-});
 
