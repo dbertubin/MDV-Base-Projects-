@@ -88,6 +88,9 @@ a{
     
 }
 
+.ui-btn-inner, .ui-btn-corner-all{
+    
+}
 
 select{
     width: 280px;

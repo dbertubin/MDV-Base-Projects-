@@ -15,15 +15,16 @@
 	<meta http-equiv="cleartype" content="on">
 
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/themes/fz.min.css" />	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
 	<link rel="stylesheet" href="css/styles.css" />
-
+	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
 <body>
-
+	
 <!--Home Page-->		
 	<div data-role="page" data-theme="a" id="home">
 		<a href="#home" style="text-decoration:none">
@@ -549,9 +550,8 @@
 				</a>
 		</div>
 		<p align="center"><em>Fill in the details of what you want to do!</em></p>
-		<form action=" " method="post" id="friendform" name="friendform">
-		<form action="#" method="post" id="form">
-		<form action=" " method="post" id="friendform" name="friendform">
+		<form action="#" method="post" id="friendform" name="friendform">
+		
 			<!-- Select -->
  			<div data-role="fieldcontain">
  				<label for="things-category">Category</label> 
@@ -572,7 +572,7 @@
   			
   			<div data-role="fieldcontain">
 	  			<label for="rating">Rate How Excited You Are to DO This! (1=Excited, 5=Super Really Excited!):</label>
-	  			<input type="range" value="0" min="0" max="5" name="rating" id="rating" />
+	  			<input type="range" value="3"min="1" max="5" name="rating" id="rating" />
   			</div>
   			
 			<div data-role="fieldcontain">
@@ -584,8 +584,8 @@
 	  			<label for="comments">Tell me more about what you want to do!:</label>
 	  			<textarea name="comments" id="comments" class="required" placeholder="Exciting things go here here!"></textarea>
 			</div>
-	  			<input type="reset" value="Cancel"/>
-				<input type="submit" value="Save" id=submit"/>	
+	  			<input type="submit" value="Save" id=submit" data-theme="c	"/>
+				<input type="reset" value="Cancel"/>
 	  		</div>
   			
 		</form>	
