@@ -147,10 +147,14 @@ label.error{
     border-radius: 10px 10px 10px 10px;
     padding:11px;
     background: #9FABB0;
-    text-shadow: 0px 1px 0px #b8bac6;
+    text-shadow: 0px 1px 0px #555561;
     background: #9FABB0;
     font-size:  14px;
+    font-weight: bolder;
     text-align: center;
+    -moz-box-shadow:0px 0px 10px #000000;
+    -webkit-box-shadow:0px 0px 10px #000000;
+    box-shadow:0px 0px 10px #000000;
     
 }
 .searchfield{
@@ -176,9 +180,9 @@ label.error{
     -webkit-border-radius:4px;
     border-radius:4px;
     /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-    -moz-box-shadow:0px 0px 5px #000000;
-    -webkit-box-shadow:0px 0px 5px #000000;
-    box-shadow:0px 0px 5px #000000;
+    -moz-box-shadow:0px 0px 10px #000000;
+    -webkit-box-shadow:0px 0px 10px #000000;
+    box-shadow:0px 0px 10px #000000;
 }
 #header{
     margin-top:0px;
