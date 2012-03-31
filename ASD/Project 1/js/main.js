@@ -1,22 +1,24 @@
+// Bertubin, Derek
+//Project  1 ASD 1204 
+
 $(document).ready(function(){
 	
 	toggleControls("off");
 	
-	var form = $("#form")
+	var fxForm = $("#form")
 
-	form.validate({
+	fxForm.validate({
 		submitHandler: function(){
 			var data = form.serializeArray();
 			storeData(data)
 			console.log(data);
 		}
-});
-
-
-function toggleControls(n){
+	});
+	
+	function toggleControls(n){
 	    switch(n){
 		    case "on":
-		    	$("#form").css("display" , "none");
+		    	$("#fzForm").css("display" , "none");
 		    	$("#clearLink").css("display " , "inline");
 		    	$("#displayLink").css("display" , "none");
 		    	$("#addLInk").css("display " , "inline");
@@ -31,11 +33,11 @@ function toggleControls(n){
 	    	default:
                         return false;
 		}
+	}
+	
+	function formBack(){
+		toggleControls("off");
 	}	
-function formBack(){
-	toggleControls("off");
-}	
-
 
 	// Store Data 	
 	function storeData(key){
@@ -46,7 +48,7 @@ function formBack(){
 		}
 			 	
 		var item 			= {};
-			item.groups 	= ["Group:", $("groups").value];
+			item.groups 	= ["Group:", data[0].value];
 			item.taskName	= ["Task Name:", data[1].value];
 			item.taskLength = ["Task Length:", data[2].value];
 			item.completeBy = ["Complete By:", data[3].value];
@@ -55,28 +57,19 @@ function formBack(){
 		console.log(id, JSON.stringify(item))
 		alert("Task Saved!");
 	}
-        
-/*	function setSlideValue () {
-            var slideValue = $("taskLength").value;
-            
-        }
-*/            
-        
-        
-	// Write date from the local storage to the browser
+         
+// Write date from the local storage to the browser
 	function getData(){
+		toggleControls("on");
 		if (localStorage.length === 0) {
 			autoFillData();
 			alert("There are no tasks saved so default data was added.");	
 		}
-		toggleControls("on");
-		
-		
 		var makeDiv = $("<div></div>");
 		makeDiv.attr("id", "items");
 		var makeList = $("<ul></ul>");
 		makeDiv.append(makeList);
-		$("#form").after(makeDiv);
+		$("#fzForm").after(makeDiv);
 		$("#items").css("display", "block");
 		for(var i =0, j=localStorage.length; i<j; i++ ){
 			var makeLi = $("<li></li>");
@@ -103,12 +96,12 @@ function formBack(){
 		}
 	}
 	function getImage (catName, makeSubList) {
-            var imageLi = $("<li></li>");
-            makeSubList.append(imageLi);
-            var newImg = $("<img></img>");
-            var setSrc = newImg.attr("src", "images/"+catName+".png");
-            newImg.attr("id", "img");
-            imageLi.append(newImg);
+		var imageLi = $("<li></li>");
+		makeSubList.append(imageLi);
+		var newImg = $("<img></img>");
+		var setSrc = newImg.attr("src", "images/"+catName+".png");
+		newImg.attr("id", "img");
+		imageLi.append(newImg);
         }
 	function makeItemLinks (key,linksLi){
 	// add single item  edit link
@@ -185,7 +178,7 @@ function formBack(){
                 var id 		= Math.floor(Math.random()*1000000001);
                 localStorage.setItem(id, JSON.stringify(json[n]));
             }
-    }
+	}
 /*	function validate (e) {
             
 	// defineing elements that we need to validate
@@ -231,13 +224,13 @@ function formBack(){
 			storeData(this.key);
 		}
 	}*/ 
-// Var defaults 
+/* Var defaults 
 	var priorityGroups = ["--Choose Type of Thing to Do--", "Current Things to Do","Future Things to Do","Things to Do with Friends","Bucket List","Shared Bucket Lists"];
 	//	var	selectDueValue = "No";  // 
 	errMsg = $("errors");
 	makeGroup();
 	//Set up Links & Submit Click Events 
-
+*/
 	
 	$("#displayLink").bind("click", getData);
 	$("#clearLInk").bind("click", clearLocal);
