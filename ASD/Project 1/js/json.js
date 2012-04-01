@@ -1,6 +1,4 @@
-// VFW 
-// Author: Derek Bertubin 
-// Term : 1111
+
  var json = {
                 "task1" : {
                         "groups" : ["Group:" , "Current Things to Do"],
@@ -15,7 +13,7 @@
                         "taskLength" : ["Task Length:", "2"],
                         "completeBy" : [ "Complete By:", "2011-12-12"],
                         "notes": ["Notes:", "Notes go here again!"]   
-                } ,
+                } , 
                 "task3" : {
                         "groups" : ["Group:" , "B"],
                         "taskName" : ["Task Name:", "Test Clear Data"],
@@ -154,4 +152,5 @@
                         "taskLength" : ["Task Length:", "2"],
                         "completeBy" : [ "Complete By:", "2011-12-12"],
                         "notes": ["Notes:", "Notes go here again!"]  
-            };
+               }
+ }              

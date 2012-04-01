@@ -2,28 +2,30 @@
 <html lang="en">
 <head>
 
-	<meta charset="utf-8">
+	<meta charset="utf-8"/>
 
 	<title>FriendZone</title>
 
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="HandheldFriendly" content="True">
+	<meta name="HandheldFriendly" content="True"/>
 	<meta name="MobileOptimized" content="320"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="cleartype" content="on"/>
 
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="css/themes/fz.min.css" />	
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<!--<link rel="stylesheet" href="css/styles.css" />-->
+	<link rel="stylesheet" href="css/styles.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
 <body>
+
+
 	
 <!--Home Page-->		
 	<div data-role="page" data-theme="a" id="home">
@@ -37,9 +39,8 @@
 			<img src="images/calltoaction-new.png" id="img"/>
 			<p>Add things you want to do! Events, Road trips or even a Bucket list!</p>
 			<!--<h3 id= "start">Start Here!</h3>-->
-			<a href="#form" id="add" > Add Something to Do!</a>
+			<a href="#form" id="add" data-ajax="false"> Add Something to Do!</a>
 		</div>
-		</br>
 		<div>
 			<ul class="ui-listview" data-role="listview" data-theme="a" data-filter="true" data-divider-theme="c">
 				<li>
@@ -81,7 +82,6 @@
 			<div href="#form" data-role="footer" data-theme="a" data-position="fixed">
 			
 		</div>
-
 	</div>
 
 <!--List All Page-->	
@@ -97,7 +97,6 @@
 				<img src="images/calltoaction-new.png" id="img"/>
 				</a>
 			</div>
-			</br>
 			<div>
 			
 				<ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
@@ -106,42 +105,42 @@
 					</li>	
 					<li>
 						<a href="#example">
-							<img src="images/current.png"><!-- MAKE CURRENT PNG-->
+							<img src="images/current.png"/><!-- MAKE CURRENT PNG-->
 							<h2>Record Reflection</h2>
 							<p>Due: Today</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png"><!-- MAKE collabrative PNG -->
+							<img src="images/collabrative.png"/><!-- MAKE collabrative PNG -->
 							<h2>Change the World</h2>
 							<p>Due: Today</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Stop and Smell the Roses</h2>
 							<p>Due: Tomorrow</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png">
+							<img src="images/current.png"/>
 							<h2>Build Mobile App </h2>
 							<p>Due: 02/11/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/bucket.png">
+							<img src="images/bucket.png"/>
 							<h2>Work on Personal Relationships</h2>
 							<p>Due: 02/14/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Go to the Movies</h2>
 							<p>Due: 02/14/2012</p>
 						</a>
@@ -149,91 +148,91 @@
 					
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Start Kick Boxing</h2>
 							<p>Due: 02/16/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png">
+							<img src="images/current.png"/>
 							<h2>Exercise</h2>
 							<p>Due: 02/18/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png">
+							<img src="images/current.png"/>
 							<h2>Finish Week 3 Project</h2>
 							<p>Due: 02/18/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/future.png"><!-- MAKE FUTURE PNG -->
+							<img src="images/future.png"/><!-- MAKE FUTURE PNG -->
 							<h2>Finish this Class</h2>
 							<p>Due: 02/24/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/future.png">
+							<img src="images/future.png"/>
 							<h2>Learn how to channel</h2>
 							<p>Due: 07/01/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Take a Road Trip</h2>
 							<p>Due: 12/18/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Go to a  zen temple with Sonia</h2>
 							<p>Due: 12/18/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Master the Universe</h2>
 							<p>Due:12/21/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/future.png">
+							<img src="images/future.png"/>
 							<h2>Take ChI Gong Lessons</h2>
 							<p>Due: 01/01/2013</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Finish this Degree</h2>
 							<p>Due:02/12/2014</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Celebrate Graduation</h2>
 							<p>Due:02/12/2014</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/future.png">
+							<img src="images/future.png"/>
 							<h2>Buy a house!</h2>
 							<p>Due: 01/01/2016</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Go to Europe</h2>
 							<p>Due:03/12/2018</p>
 						</a>
@@ -259,7 +258,6 @@
 				<img src="images/calltoaction-new.png" id="img"/><!-- make cta_current.png-->
 				</a>
 			</div>
-			</br>
 			<div>
 				<ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
 					<li data-role="list-divider" >
@@ -267,35 +265,35 @@
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png"><!-- MAKE CURRENT PNG-->
+							<img src="images/current.png"/><!-- MAKE CURRENT PNG-->
 							<h2>Record Reflection</h2>
 							<p>Due: 02/09/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png"><!-- MAKE CURRENT PNG-->
+							<img src="images/current.png"/><!-- MAKE CURRENT PNG-->
 							<h2>Test App</h2>
 							<p>Due: 02/11/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png">
+							<img src="images/current.png"/>
 							<h2>Build Mobile App </h2>
 							<p>Due: 02/11/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png">
+							<img src="images/current.png"/>
 							<h2>Exercise</h2>
 							<p>Due: 02/18/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/current.png">
+							<img src="images/current.png"/>
 							<h2>Finish Week 3 Project</h2>
 							<p>Due: 02/18/2012</p>
 						</a>
@@ -321,7 +319,6 @@
 				<img src="images/calltoaction-new.png" id="img"/>
 				</a>
 			</div>
-			</br>
 			<div>
 				<ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
 					<li data-role="list-divider" >
@@ -329,21 +326,21 @@
 					</li>	
 					<li>
 						<a href="#example">
-							<img src="images/future.png"><!-- MAKE FUTURE PNG -->
+							<img src="images/future.png"/><!-- MAKE FUTURE PNG -->
 							<h2>Finish this Class</h2>
 							<p>Due: 02/24/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/future.png">
+							<img src="images/future.png"/>
 							<h2>Work on Personal Relationships</h2>
 							<p>Due: 02/24/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/future.png">
+							<img src="images/future.png"/>
 							<h2>Buy a house!</h2>
 							<p>Due: 01/01/2016</p>
 						</a>
@@ -370,7 +367,6 @@
 				<img src="images/calltoaction-new.png" id="img"/><!--  cta_collabrative.png-->
 				</a>
 			</div>
-			</br>
 			<div>
 				<ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
 					<li data-role="list-divider" >
@@ -378,29 +374,28 @@
 					</li>	
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Go to the Movies</h2>
 							<p>Due: 02/14/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>CLIMB STEPS WITH GUSTAVO</h2>
 							<p>Due: 01/16/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Take a Road Trip</h2>
 							<p>Due: 12/18/2012</p>
 						</a>
 					</li>
-					
 					<li>
 						<a href="#example">
-							<img src="images/collabrative.png">
+							<img src="images/collabrative.png"/>
 							<h2>Go to a  zen temple with Sonia</h2>
 							<p>Due: 12/18/2012</p>
 						</a>
@@ -426,7 +421,6 @@
 				<img src="images/calltoaction-new.png" id="img"/>
 				</a>
 			</div>
-			</br>
 			<div>
 				<ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
 					<li data-role="list-divider" >
@@ -434,14 +428,14 @@
 					</li>	
 					<li>
 						<a href="#example">
-							<img src="images/bucket.png">
+							<img src="images/bucket.png"/>
 							<h2>Stop and Smell the Roses</h2>
 							<p>Due: Tomorrow</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/bucket.png">
+							<img src="images/bucket.png"/>
 							<h2>Think of things to do</h2>
 							<p>Due: Tomorrow</p>
 						</a>
@@ -467,7 +461,6 @@
 				<img src="images/calltoaction-new.png" id="img"/><!-- make cta_long.png-->
 				</a>
 			</div>
-			</br>
 			<div>
 				<ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
 					<li data-role="list-divider" >
@@ -475,28 +468,28 @@
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Finish this Degree</h2>
 							<p>Due:02/12/2014</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Celebrate Graduation</h2>
 							<p>Due:02/12/2014</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Master the Universe</h2>
 							<p>Due:12/21/2012</p>
 						</a>
 					</li>
 					<li>
 						<a href="#example">
-							<img src="images/sharedbucket.png">
+							<img src="images/sharedbucket.png"/>
 							<h2>Become a Teacher</h2>
 							<p>Due:03/12/2018</p>
 						</a>
@@ -515,7 +508,6 @@
 			<div data-role="header" data-theme="a" align="center" >
 			 <h3 >FriendZone</h3>
 			</div>
-		</a>
 		<div data-role="content" data-theme="a">
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
@@ -531,8 +523,79 @@
 		</div>
 	</div>
 
-<!--Form -->
+<!-- New Form-->
 	<div data-role="page" data-theme="a" id="form" data-add-back-btn="true">
+		<a href="#home" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="a" align="center" >
+			 <h3 >FriendZone</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+		</div>
+			<div data-role="content" data-theme="a">
+			<div align="center">
+		</div>
+		<div align="center" id="toggle-btn">
+			<div id="clearLink">
+				<a href="#" data-role="button" value="Clear All"  id="clearLink" >
+					Clear All
+				</a>
+			</div>
+			<div id="displayLink">
+		  		<a href="#" data-role="button" value="Display All" id="displayLink" >
+		  			Display All
+		  		</a>
+	  		</div>
+	  	</div>	
+	  	</div>	
+		<form action="#" method="post" id="friendForm">
+			<p align="center">"Fill in the details of what you want to do!"</p>
+ 			<form action="#" method="post" id="friendForm" name="friendForm">
+			<div data-role="fieldcontain">
+ 				<label for="category">Category</label> 
+ 				<select name="things-category" id="groups" data-native-menu="false" class="required">
+ 					<option data-placeholder="true">--Select Item Type--</option>
+ 					<option value="current">Current Things to Do</option>
+ 					<option value="future">Future Things to Do</option>
+ 					<option value="collabrative">Things to Do With Friends</option>
+ 					<option value="bucket">Bucket List</option>
+ 					<option value="sharedbucket">Shared Bucket Lists</option>
+				</select>	
+ 			</div> 
+ 			<div data-role="fieldcontain">
+	  			<label for="name">Name the Thing You Want to Do:</label>
+	  			<input type="text" name="name" id="name" placeholder="Eg. Something Fun :)" class="required"/>
+  			</div>
+  			<div data-role="fieldcontain">
+	  			<label for="rating">Rate How Excited You Are to DO This! (1=Excited, 5=Super Really Excited!):</label>
+	  			<input type="range" value="3" min="1" max="5" name="rating" id="rating" />
+  			</div>
+  			<div data-role="fieldcontain">
+	  			<label for= "date" >"When do you want to do this by?"</label>
+				<input type="date" name="date" id="date" placeholder="Please Select a Date!" class= "required"/>
+			</div>
+  			<div data-role="fieldcontain">
+	  			<label for="comments">Tell me more about what you want to do!:</label>
+	  			<textarea name="comments" id="comments" class="required" placeholder="Exciting things go here here!"></textarea>
+  			</div>
+  			<div >
+	  			<div>
+	  				<input type="submit" value="Save" id="submit"/><!--id="submit"--> 		
+				</div>
+				<div>
+					<a href="#" data-role="button" value="Cancel" id="cancel">
+						Cancel
+					</a>
+				</div>
+  			</div>
+  			
+		</form>	
+	</div>
+
+
+
+<!--Form -->
+<!--	<div data-role="page" data-theme="a" id="form" data-add-back-btn="true">
 		<a href="#home" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="a" align="center" >
 			 <h3 >FriendZone</h3>
@@ -542,12 +605,12 @@
 			<div align="center">
 				<a href="#form" data-ajax="false">
 				<img src="images/calltoaction-new.png" id="img"/><!-- make cta_long.png-->
-				</a>
-		</div>
+<!--				</a>-->
+<!--		</div>
 		<p align="center"><em>Fill in the details of what you want to do!</em></p>
 		<form action="#" method="post" id="friendform" name="friendform">
 			<!-- Select -->
- 			<div data-role="fieldcontain">
+ <!--			<div data-role="fieldcontain">
  				<label for="things-category">Category</label> 
  				<select name="things-category" id="group1" data-native-menu="false" class="required">
  					<option data-placeholder="true">--Select Item Type--</option>
@@ -559,7 +622,7 @@
  				</select>
  			</div>
 			<!--Item Name-->
- 			<div data-role="fieldcontain">
+ <!--			<div data-role="fieldcontain">
 	  			<label for="name">Name the Thing You Want to Do:</label>
 	  			<input type="text" name="name" id="name" placeholder="Eg. Something Fun :)" class="required"/>
   			</div>
@@ -595,8 +658,6 @@
 	<script type="text/javascript" src="js/libs/additional-methods.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/json.js"></script>
-
-
 
 </body>
 </html>

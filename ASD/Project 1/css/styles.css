@@ -221,9 +221,6 @@ label.error{
 #clear{
     margin: 5px 
 }
-#displayLink{
-    margin: 5px;
-}
 #displayed{
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -305,36 +302,7 @@ label.error{
     padding-left:10px;
     padding-right:10px;
 }
-#clear,#displayLink,#editLink,#deleteLink,#addNew,#escape{
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #dfdfdf) );
-	background:-moz-linear-gradient( center top, #ffffff 5%, #dfdfdf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dfdfdf');
-	background-color:#ffffff;
-	-moz-border-radius:42px;
-	-webkit-border-radius:42px;
-	border-radius:42px;
-	border:1px solid #B8C0DB;
-	display:inline-block;
-	color:#000000;
-	font-family:arial;
-	font-size:12px;
-	font-weight:bold;
-	padding:1px 12px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #ffffff;
-}
-#clear:hover,#displayLink:hover,#editLink:hover,#deleteLink:hover,#addNew:hover,#escape:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ffffff) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ffffff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ffffff');
-	background-color:#dfdfdf;
-}
-#clear,#displayLink,#editLink,#deleteLink,#addNew:active,#escape:active{
-	position:relative;
-	top:1px;   
+
 }
 #deleteLink{
     margin-top: 2px;

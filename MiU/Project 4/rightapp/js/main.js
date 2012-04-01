@@ -50,6 +50,7 @@ $(document).ready(function(){
 		submitHandler: function(){
 			var data = fzform.serializeArray();
 			parseFriendForm(data);
+			alert("Fun Saved!");
 		}
 	});
 });

@@ -37,22 +37,22 @@ nav{
     margin: 0px;
     padding:5px;
 }
-form{
+/*form{
     text-shadow: 0px 1px 0px #b8bac6;
     background: #70b0e0;
     margin:10px;
     padding: 10px;
-    /*margin: 0px;*/
+    /*margin: 0px;
     margin-top:0px;
-    /*background: #FFF;*/
+    /*background: #FFF;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4px;
-    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+
     -moz-box-shadow:0px 0px 5px #000000;
     -webkit-box-shadow:0px 0px 5px #000000;
     box-shadow:0px 0px 5px #000000;
-}
+}*/
 h2{
     font-weight: bold;
     font-size: 20px;
@@ -204,9 +204,9 @@ textarea{
 #clear{
     margin: 5px 
 }
-#displayLink{
+/*#displayLink{
     margin: 5px;
-}
+}*/
 #displayed{
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -286,6 +286,7 @@ textarea{
     padding-left:10px;
     padding-right:10px;
 }
+/*
 #clear,#displayLink,#editLink,#deleteLink,#addNew,#escape{
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -316,7 +317,7 @@ textarea{
 #clear,#displayLink,#editLink,#deleteLink,#addNew:active,#escape:active{
 	position:relative;
 	top:1px;   
-}
+}*/
 #deleteLink{
     margin-top: 2px;
 }
