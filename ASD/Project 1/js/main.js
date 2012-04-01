@@ -5,9 +5,9 @@ $(document).ready(function(){
 	
 	toggleControls("off");
 	
-	var fxForm = $("#form")
+	var fzForm = $("#form")
 
-	fxForm.validate({
+	fzForm.validate({
 		submitHandler: function(){
 			var data = form.serializeArray();
 			storeData(data)
@@ -53,7 +53,7 @@ $(document).ready(function(){
 			item.taskLength = ["Task Length:", data[2].value];
 			item.completeBy = ["Complete By:", data[3].value];
 			item.notes 		= ["Notes:", data[4].value];	
-		localStorage.setItem(id, JSON.stringify(item));
+		localStorage.setItem itemid, JSON.stringify(item)
 		console.log(id, JSON.stringify(item))
 		alert("Task Saved!");
 	}
