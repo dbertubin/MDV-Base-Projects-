@@ -19,15 +19,15 @@ $(document).ready(function(){
 	    switch(n){
 		    case "on":
 		    	$("#fzForm").css("display" , "none");
-		    	$("#clearLink").css("display " , "inline");
+		    	$("#clear").css("display " , "inline");
 		    	$("#displayLink").css("display" , "none");
-		    	$("#addLInk").css("display " , "inline");
+		    	$("#addNew").css("display " , "inline");
 		    	break;
 	    	case "off":
 	    		$("#form").css("display" , "block");
-	    		$("#clearThing").css("display" , "block");
-		    	$("#displayThing").css("display" , "block");
-		        $("#addThing").css("display" , "block");
+	    		$("#clear").css("display" , "block");
+		    	$("#displayLink").css("display" , "block");
+		        $("#addNew").css("display" , "block");
                         $("#items").css("display" , "block");
 		    	break;
 	    	default:
@@ -47,14 +47,14 @@ $(document).ready(function(){
 			id = key;
 		}
 			 	
-		var item 			= {};
-			item.groups 	= ["Group:", data[0].value];
-			item.taskName	= ["Task Name:", data[1].value];
-			item.taskLength = ["Task Length:", data[2].value];
-			item.completeBy = ["Complete By:", data[3].value];
-			item.notes 		= ["Notes:", data[4].value];	
-		localStorage.setItem itemid, JSON.stringify(item)
-		console.log(id, JSON.stringify(item))
+		var item 				= {};
+			item.groups 		= ["Group:", 			data[0].value];
+			item.taskName	= ["Task Name:", 		data[1].value];
+			item.taskLength 	= ["Task Length:", 		data[2].value];
+			item.completeBy 	= ["Complete By:", 	data[3].value];
+			item.notes 		= ["Notes:", 			data[4].value];	
+		localStorage.setItem(id, JSON.stringify(item));
+		console.log itemId,  JSON.stringify(item)
 		alert("Task Saved!");
 	}
          
