@@ -2,18 +2,9 @@
 //Project  1 ASD 1204 
 
 $(document).ready(function(){
-	
-	toggleControls("off");
-	
-	var fzForm = $("#form")
 
-	fzForm.validate({
-		submitHandler: function(){
-			var data = form.serializeArray();
-			storeData(data)
-			console.log(data);
-		}
-	});
+	
+	var fzForm = $("#form");
 	
 	function toggleControls(n){
 	    switch(n){
@@ -48,17 +39,25 @@ $(document).ready(function(){
 		}
 			 	
 		var item 				= {};
-			item.groups 		= ["Group:", 			data[0].value];
-			item.taskName	= ["Task Name:", 		data[1].value];
-			item.taskLength 	= ["Task Length:", 		data[2].value];
-			item.completeBy 	= ["Complete By:", 	data[3].value];
-			item.notes 		= ["Notes:", 			data[4].value];	
+			item.groups 		= ["Group:", 			$("groups").value];
+			item.taskName	= ["Task Name:", 		$("taskName").value];
+			item.taskLength 	= ["Task Length:", 		$("taskLength").value];
+			item.completeBy 	= ["Complete By:", 	$("completeBy").value];
+			item.notes 		= ["Notes:", 			$("notes").value];	
 		localStorage.setItem(id, JSON.stringify(item));
-		console.log itemId,  JSON.stringify(item)
 		alert("Task Saved!");
 	}
          
 // Write date from the local storage to the browser
+	function autoFillData () {
+           
+// Store the Json object in to LS
+            for ( var n in json) {
+                var id 		= Math.floor(Math.random()*1000000001);
+                localStorage.setItem(id, JSON.stringify(json[n]));
+            }
+	}
+
 	function getData(){
 		toggleControls("on");
 		if (localStorage.length === 0) {
@@ -103,6 +102,29 @@ $(document).ready(function(){
 		newImg.attr("id", "img");
 		imageLi.append(newImg);
         }
+	
+	function editItem() {
+	// Grab the datafrom local Storage 
+		var value = localStorage.getItem(this.key);
+		var item = jQuery.parseJSON(value);
+	//Show the form 
+		toggleControls("off");
+	// populate form fields with current local stortage values.	
+		$("#groups").value(item.groups[1]);
+		$("#taskName").value(item.taskName[1]);
+		$("#taskLength").value(item.taskLength[1]);
+		$("#completeBy").value(item.completeBy[1]);
+		$("#notes").value(item.notes[1]);
+		save.unbind("click", storeData);
+		$("#submit").value("Edit Task");
+		var editSubmit = $("#submit");
+	// save key value established in the in this funct is a prop of  the editSubmit 
+	//editSubmit .addEventListener("click", validate);
+		editSubmit.bind("click", form.validate);
+		editSubmit.key = this.key;
+		
+	}
+	
 	function makeItemLinks (key,linksLi){
 	// add single item  edit link
 		var editLink =  $("<a></a>");
@@ -128,28 +150,7 @@ $(document).ready(function(){
 		linksLi.append(deleteLink);
 	}		
 
-	function editItem() {
-	// Grab the datafrom local Storage 
-		var value = localStorage.getItem(this.key);
-		var item = jQuery.parseJSON(value);
-	//Show the form 
-		toggleControls("off");
-	// populate form fields with current local stortage values.	
-		$("#groups").value(item.groups[1]);
-		$("#taskName").value(item.taskName[1]);
-		$("#taskLength").value(item.taskLength[1]);
-		$("#completeBy").value(item.completeBy[1]);
-		$("#notes").value(item.notes[1]);
 
-		save.unbind("click", storeData);
-		$("#submit").value("Edit Task");
-		var editSubmit = $("#submit");
-	// save key value established in the in this funct is a prop of  the editSubmit 
-	//editSubmit .addEventListener("click", validate);
-		editSubmit.bind("click", form.validate);
-		editSubmit.key = this.key;
-		
-	}
 	function deleteItem(){
 		var ask = confirm(" Are you sure that you want to delete this Task?");
 		if (ask){
@@ -171,14 +172,16 @@ $(document).ready(function(){
 		}
 	}
 
-	function autoFillData () {
-           
-            // Store the Json object in to LS
-            for ( var n in json) {
-                var id 		= Math.floor(Math.random()*1000000001);
-                localStorage.setItem(id, JSON.stringify(json[n]));
-            }
-	}
+
+	
+// Validation 	
+	fzForm.validate({
+		submitHandler: function(){
+			var data = fzForm.serializeArray();
+			storeData(data);
+			console.log(data);
+		}
+	});
 /*	function validate (e) {
             
 	// defineing elements that we need to validate
