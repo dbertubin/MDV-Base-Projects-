@@ -14,6 +14,7 @@
 
 // $(document).ready(function(){
 
+$('#form').live('pageinit', function(){
 	
 	var fzForm = $("#form");
 	
@@ -35,11 +36,11 @@
 	    	default:
                         return false;
 		}
-	}
+	};
 	
 	var formBack = function (){
 		toggleControls("off");
-	}	
+	};	
 
 // Store Data
 	var storeData = function (key){
@@ -47,7 +48,7 @@
 			var id 		= Math.floor(Math.random()*100000001);
 		} else {
 			id = key;
-		}
+		};
 			 	
 		var item 				= {};
 			item.groups 		= ["Group:", 			$("groups").value];
@@ -57,7 +58,7 @@
 			item.notes 		= ["Notes:", 			$("notes").value];	
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Task Saved!");
-	}
+	};
          
 // Write date from the local storage to the browser
 	var autoFillData function  () {
@@ -65,14 +66,13 @@
                 var id 		= Math.floor(Math.random()*1000000001);
                 localStorage.setItem(id, JSON.stringify(json[n]));
             }
-	}
-           
+	}; 
 // Store the Json object in to LS
             for ( var n in json) {
                 var id 		= Math.floor(Math.random()*1000000001);
                 localStorage.setItem(id, JSON.stringify(json[n]));
             }
-	}
+	
 
 	var getData = function (){
 		toggleControls("on");
@@ -80,6 +80,7 @@
 			autoFillData();
 			alert("There are no tasks saved so default data was added.");	
 		}
+	};
 	
 // Edit Item 
 	var editItem = function () {
@@ -104,7 +105,7 @@
 		editSubmit.bind("click", fzForm.validate);
 		editSubmit.key = this.key;
 		
-	}
+	};
 	
 	var deleteItem = function (){
 		var ask = confirm(" Are you sure that you want to delete this Task?");
@@ -115,7 +116,7 @@
 		} else {
 			alert("Task was not Deleted!");
 		}
-	}
+	};
 	
 	var makeItemLinks = function  (key,linksLi){// add single item  edit link
 		var editLink =  $("<a></a>");
@@ -135,7 +136,7 @@
 		deleteLink.bind("click", deleteItem);
 		deleteLink.html(deleteText);
 		linksLi.append(deleteLink);
-	}
+	};
 	var getImage =  function  (catName, makeSubList) {
 		var imageLi = $("<li></li>");
 		makeSubList.append(imageLi);
@@ -143,7 +144,7 @@
 		var setSrc = newImg.attr("src", "images/"+catName+".png");
 		newImg.attr("id", "img");
 		imageLi.append(newImg);
-        }		
+        };		
 		var makeDiv = $("<div></div>");
 		makeDiv.attr("id", "items");
 		var makeList = $("<ul></ul>");
@@ -173,8 +174,7 @@
 			}
 			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
 		}
-	}
-
+		
 	var clearLocal = function (){
 		if(localStorage.length === 0){
 		alert("There are no tasks to clear!");	
@@ -184,76 +184,11 @@
                     window.location.reload();
                     return false;
 		}
-	}
-
-
-	
-// Validation 	
-
-/*	function validate (e) {
-            
-	// defineing elements that we need to validate
-		var getGroup 		=  $("groups");
-		var getTaskName 	= $("taskName");
-		var getCompleteBy 	= $("completeBy");
-	// reset error messages
-                errMsg.innerHTML = " "
-                getGroup.style.border 		= "1px solid grey" ;
-                getTaskName.style.border 	= "1px solid grey" ;
-                getCompleteBy.style.border 	= "1px solid grey" ;		
-	//Get  error messages 	
-		var messageArray = []
-	// group validation
-		if (getGroup.value ==="--From Highest to Lowest of Priority--"){
-			var  groupError = "Please select a Priority!";
-			getGroup.style.border = "1px solid red" ;
-			messageArray.push(groupError);
-		};
-		if (getTaskName.value ==="")  {
-			var taskNameError = "Please Enter a Task Name!";
-			getTaskName.style.border = "1px solid red" ;
-			messageArray.push(taskNameError);
-		};
-		var dateRegEx  = /^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/;
-		if (!(dateRegEx.exec(getCompleteBy.value))){
-			var dateError = "Please enter date in yyyy-mm-dd format!";
-			getCompleteBy.style.border = "1px solid red" ;
-			messageArray.push(dateError);
-		};
-		// there were errors display
-		if (messageArray.length >= 1) {
-			for(var i = 0, j= messageArray.length; i<j; i++){
-				var txt = document.createElement("li");
-                                txt.setAttribute("id","txt");
-				txt.style.color = "red"
-				txt.innerHTML = messageArray[i];
-				$("errors").appendChild(txt);
-			}		
-			e.preventDefault();
-			return false;
-		} else {
-			storeData(this.key);
-		}
-	}*/ 
-/* Var defaults 
-	var priorityGroups = ["--Choose Type of Thing to Do--", "Current Things to Do","Future Things to Do","Things to Do with Friends","Bucket List","Shared Bucket Lists"];
-	//	var	selectDueValue = "No";  // 
-	errMsg = $("errors");
-	makeGroup();
-	//Set up Links & Submit Click Events 
-*/
+	};
 	
 	$("#displayLink").bind("click", getData);
 	$("#clearLInk").bind("click", clearLocal);
 	$("#addLink").bind("click", formBack);
 	
-	
-/*	var displayLink = $("displayLink");
-	displayLink.addEventListener("click", getData);
-	var clearLink = $("clear");
-	clearLink.addEventListener("click", clearLocal)
-	
-        var setValue = $("taskLength");
-            setValue.addEventListener(blur, setSlideValue);
-*/
+
 });	
