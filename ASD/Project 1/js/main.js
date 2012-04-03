@@ -1,7 +1,18 @@
 // Bertubin, Derek
-//Project  1 ASD 1204 
+//Project  2 ASD 1204 
 
-$(document).ready(function(){
+
+// Todo for week 2
+
+// Add $("home").live("pageinit", function(){...});
+
+// convert Function  makeList to var makeList = function(){};
+
+// Go back to wimba and get more pointers 
+
+
+
+// $(document).ready(function(){
 
 	
 	var fzForm = $("#form");
@@ -30,7 +41,7 @@ $(document).ready(function(){
 		toggleControls("off");
 	}	
 
-	// Store Data 	
+// Store Data
 	function storeData(key){
 		if (!key){
 			var id 		= Math.floor(Math.random()*100000001);
@@ -50,6 +61,11 @@ $(document).ready(function(){
          
 // Write date from the local storage to the browser
 	function autoFillData () {
+		for ( var n in json) {
+                var id 		= Math.floor(Math.random()*1000000001);
+                localStorage.setItem(id, JSON.stringify(json[n]));
+            }
+	}
            
 // Store the Json object in to LS
             for ( var n in json) {
@@ -64,6 +80,70 @@ $(document).ready(function(){
 			autoFillData();
 			alert("There are no tasks saved so default data was added.");	
 		}
+	
+// Edit Item 
+	function editItem() {
+	// Grab the datafrom local Storage 
+		var value = localStorage.getItem(this.key);
+		var item = jQuery.parseJSON(value);
+		var save = $("submit");
+	//	save.addEventListener("click", validate);
+	//Show the form 
+		toggleControls("off");
+	// populate form fields with current local stortage values.	
+		$("#groups").value(item.groups[1]);
+		$("#taskName").value(item.taskName[1]);
+		$("#taskLength").value(item.taskLength[1]);
+		$("#completeBy").value(item.completeBy[1]);
+		$("#notes").value(item.notes[1]);
+		save.unbind("click", storeData);
+		$("#submit").value("Edit Task");
+		var editSubmit = $("#submit");
+	// save key value established in the in this funct is a prop of  the editSubmit 
+	//editSubmit .addEventListener("click", validate);
+		editSubmit.bind("click", fzForm.validate);
+		editSubmit.key = this.key;
+		
+	}
+	
+	function deleteItem(){
+		var ask = confirm(" Are you sure that you want to delete this Task?");
+		if (ask){
+			localStorage.removeItem(this.key);
+			alert("Task is Deleted!");
+			window.location.reload();
+		} else {
+			alert("Task was not Deleted!");
+		}
+	}
+	
+	function makeItemLinks (key,linksLi){// add single item  edit link
+		var editLink =  $("<a></a>");
+		editLink.href  = "#";
+		editLink.id = "editLink";
+		editLink.key = key;
+		var editText = "Edit Task";
+		editLink.html(editText);
+		linksLi.append(editLink);
+		editLink.bind("click", editItem);
+// add single delete	
+		var deleteLink =  $("<a></a>");
+		deleteLink.href  =  "#" ;
+		deleteLink.attr("id", "deleteItem");
+		deleteLink.key = key;
+		var deleteText = "Delete Task";
+		deleteLink.bind("click", deleteItem);
+		deleteLink.html(deleteText);
+		linksLi.append(deleteLink);
+	}
+	function getImage (catName, makeSubList) {
+		var imageLi = $("<li></li>");
+		makeSubList.append(imageLi);
+		var newImg = $("<img></img>");
+		var setSrc = newImg.attr("src", "images/"+catName+".png");
+		newImg.attr("id", "img");
+		imageLi.append(newImg);
+        }		
 		var makeDiv = $("<div></div>");
 		makeDiv.attr("id", "items");
 		var makeList = $("<ul></ul>");
@@ -94,73 +174,7 @@ $(document).ready(function(){
 			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
 		}
 	}
-	function getImage (catName, makeSubList) {
-		var imageLi = $("<li></li>");
-		makeSubList.append(imageLi);
-		var newImg = $("<img></img>");
-		var setSrc = newImg.attr("src", "images/"+catName+".png");
-		newImg.attr("id", "img");
-		imageLi.append(newImg);
-        }
-	
-	function editItem() {
-	// Grab the datafrom local Storage 
-		var value = localStorage.getItem(this.key);
-		var item = jQuery.parseJSON(value);
-	//Show the form 
-		toggleControls("off");
-	// populate form fields with current local stortage values.	
-		$("#groups").value(item.groups[1]);
-		$("#taskName").value(item.taskName[1]);
-		$("#taskLength").value(item.taskLength[1]);
-		$("#completeBy").value(item.completeBy[1]);
-		$("#notes").value(item.notes[1]);
-		save.unbind("click", storeData);
-		$("#submit").value("Edit Task");
-		var editSubmit = $("#submit");
-	// save key value established in the in this funct is a prop of  the editSubmit 
-	//editSubmit .addEventListener("click", validate);
-		editSubmit.bind("click", form.validate);
-		editSubmit.key = this.key;
-		
-	}
-	
-	function makeItemLinks (key,linksLi){
-	// add single item  edit link
-		var editLink =  $("<a></a>");
-		editLink.href  = "#";
-		editLink.id = "editLink";
-		editLink.key = key;
-		var editText = "Edit Task";
-		editLink.html(editText);
-		linksLi.append(editLink);
-		editLink.bind("click", editItem);
-	
-	// add link break	
-/*		var breakTag = document.createElement("br");
-		linksLi.appendChild(breakTag);*/
-	// add single delete	
-		var deleteLink =  $("<a></a>");
-		deleteLink.href  =  "#" ;
-		deleteLink.attr("id", "deleteItem");
-		deleteLink.key = key;
-		var deleteText = "Delete Task";
-		deleteLink.bind("click", deleteItem);
-		deleteLink.html(deleteText);
-		linksLi.append(deleteLink);
-	}		
 
-
-	function deleteItem(){
-		var ask = confirm(" Are you sure that you want to delete this Task?");
-		if (ask){
-			localStorage.removeItem(this.key);
-			alert("Task is Deleted!");
-			window.location.reload();
-		} else {
-			alert("Task was not Deleted!");
-		}
-	}
 	function clearLocal(){
 		if(localStorage.length === 0){
 		alert("There are no tasks to clear!");	
@@ -175,13 +189,7 @@ $(document).ready(function(){
 
 	
 // Validation 	
-	fzForm.validate({
-		submitHandler: function(){
-			var data = fzForm.serializeArray();
-			storeData(data);
-			console.log(data);
-		}
-	});
+
 /*	function validate (e) {
             
 	// defineing elements that we need to validate
@@ -244,8 +252,7 @@ $(document).ready(function(){
 	displayLink.addEventListener("click", getData);
 	var clearLink = $("clear");
 	clearLink.addEventListener("click", clearLocal)
-	var save = $("submit");
-	save.addEventListener("click", validate);
+	
         var setValue = $("taskLength");
             setValue.addEventListener(blur, setSlideValue);
 */
