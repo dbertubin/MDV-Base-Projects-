@@ -61,18 +61,12 @@ $('#form').live('pageinit', function(){
 	};
          
 // Write date from the local storage to the browser
-	var autoFillData function  () {
+	var autoFillData = function  () {
 		for ( var n in json) {
                 var id 		= Math.floor(Math.random()*1000000001);
                 localStorage.setItem(id, JSON.stringify(json[n]));
             }
 	}; 
-// Store the Json object in to LS
-            for ( var n in json) {
-                var id 		= Math.floor(Math.random()*1000000001);
-                localStorage.setItem(id, JSON.stringify(json[n]));
-            }
-	
 
 	var getData = function (){
 		toggleControls("on");
