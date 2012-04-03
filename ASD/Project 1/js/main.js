@@ -2,7 +2,7 @@
 //Project  2 ASD 1204 
 
 
-// Todo for week 2
+// Todo for Week 2
 
 // Add $("home").live("pageinit", function(){...});
 
@@ -17,7 +17,7 @@
 	
 	var fzForm = $("#form");
 	
-	function toggleControls(n){
+	var toggleControls = function (n){
 	    switch(n){
 		    case "on":
 		    	$("#fzForm").css("display" , "none");
@@ -37,12 +37,12 @@
 		}
 	}
 	
-	function formBack(){
+	var formBack = function (){
 		toggleControls("off");
 	}	
 
 // Store Data
-	function storeData(key){
+	var storeData = function (key){
 		if (!key){
 			var id 		= Math.floor(Math.random()*100000001);
 		} else {
@@ -60,7 +60,7 @@
 	}
          
 // Write date from the local storage to the browser
-	function autoFillData () {
+	var autoFillData function  () {
 		for ( var n in json) {
                 var id 		= Math.floor(Math.random()*1000000001);
                 localStorage.setItem(id, JSON.stringify(json[n]));
@@ -74,7 +74,7 @@
             }
 	}
 
-	function getData(){
+	var getData = function (){
 		toggleControls("on");
 		if (localStorage.length === 0) {
 			autoFillData();
@@ -82,7 +82,7 @@
 		}
 	
 // Edit Item 
-	function editItem() {
+	var editItem = function () {
 	// Grab the datafrom local Storage 
 		var value = localStorage.getItem(this.key);
 		var item = jQuery.parseJSON(value);
@@ -106,7 +106,7 @@
 		
 	}
 	
-	function deleteItem(){
+	var deleteItem = function (){
 		var ask = confirm(" Are you sure that you want to delete this Task?");
 		if (ask){
 			localStorage.removeItem(this.key);
@@ -117,7 +117,7 @@
 		}
 	}
 	
-	function makeItemLinks (key,linksLi){// add single item  edit link
+	var makeItemLinks = function  (key,linksLi){// add single item  edit link
 		var editLink =  $("<a></a>");
 		editLink.href  = "#";
 		editLink.id = "editLink";
@@ -136,7 +136,7 @@
 		deleteLink.html(deleteText);
 		linksLi.append(deleteLink);
 	}
-	function getImage (catName, makeSubList) {
+	var getImage =  function  (catName, makeSubList) {
 		var imageLi = $("<li></li>");
 		makeSubList.append(imageLi);
 		var newImg = $("<img></img>");
@@ -175,7 +175,7 @@
 		}
 	}
 
-	function clearLocal(){
+	var clearLocal = function (){
 		if(localStorage.length === 0){
 		alert("There are no tasks to clear!");	
 		} else {
