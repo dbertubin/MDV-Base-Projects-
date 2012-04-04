@@ -51,11 +51,11 @@ $('#form').live('pageinit', function(){
 		};
 			 	
 		var item 				= {};
-			item.groups 		= ["Group:", 			$("groups").value];
-			item.taskName	= ["Task Name:", 		$("taskName").value];
-			item.taskLength 	= ["Task Length:", 		$("taskLength").value];
-			item.completeBy 	= ["Complete By:", 	$("completeBy").value];
-			item.notes 		= ["Notes:", 			$("notes").value];	
+			item.groups 		= ["Group:", 			$("#groups").val()];
+			item.taskName	= ["Task Name:", 		$("#taskName").val()];
+			item.taskLength 	= ["Task Length:", 		$("#taskLength").val()];
+			item.completeBy 	= ["Complete By:", 	$("#completeBy").val()];
+			item.notes 		= ["Notes:", 			$("#notes").val()];	
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Task Saved!");
 	};
@@ -86,13 +86,13 @@ $('#form').live('pageinit', function(){
 	//Show the form 
 		toggleControls("off");
 	// populate form fields with current local stortage values.	
-		$("#groups").value(item.groups[1]);
-		$("#taskName").value(item.taskName[1]);
-		$("#taskLength").value(item.taskLength[1]);
-		$("#completeBy").value(item.completeBy[1]);
-		$("#notes").value(item.notes[1]);
+		$("#groups").val(item.groups[1]);
+		$("#taskName").val(item.taskName[1]);
+		$("#taskLength").val(item.taskLength[1]);
+		$("#completeBy").val(item.completeBy[1]);
+		$("#notes").val(item.notes[1]);
 		save.unbind("click", storeData);
-		$("#submit").value("Edit Task");
+		$("#submit").val("Edit Task");
 		var editSubmit = $("#submit");
 	// save key value established in the in this funct is a prop of  the editSubmit 
 	//editSubmit .addEventListener("click", validate);
@@ -146,20 +146,23 @@ $('#form').live('pageinit', function(){
 		$("#fzForm").after(makeDiv);
 		$("#items").css("display", "block");
 		for(var i =0, j=localStorage.length; i<j; i++ ){
+		console.log("run FOR LOOP IN GET IMAGE")
 			var makeLi = $("<li></li>");
 			var linksLi =$("<li></li>");
 		        linksLi.attr("id" , "linksLi");
-			makeList.appendChild(makeLi);
+			makeList.append(makeLi);
 		        //makeList.setAttribute("id","listed");
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
+			console.log(value)
 			//Convert string from loc stor val back to an object using JSON.parse()
 			var object = JSON.parse(value);
 			var makeSubList = $("<ul></ul>");
 			makeLi.append(makeSubList);
-			getImage(object.groups[1], makeSubList);
+//			getImage(object.groups[1], makeSubList);
 			for( var n in object){
-			    var makeSubLi = document.createElement("li");
+				console.log(object)	
+			    var makeSubLi = $("<li><li>");
                             makeSubList.append(makeSubLi);
 			    var optSubText = object[n][0] +" " + object[n][1];
 			    makeSubLi.innerHTML = optSubText;
@@ -168,7 +171,6 @@ $('#form').live('pageinit', function(){
 			}
 			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
 		}
-		
 	var clearLocal = function (){
 		if(localStorage.length === 0){
 		alert("There are no tasks to clear!");	
