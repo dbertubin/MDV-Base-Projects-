@@ -14,4 +14,4 @@
                         "completeBy" : [ "Complete By:", "2011-12-12"],
                         "notes": ["Notes:", "Notes go here again!"]   
                 } 
- }              
+ };             

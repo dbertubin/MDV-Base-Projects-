@@ -24,7 +24,8 @@ $('#form').live('pageinit', function(){
 		    	$("#friendForm").css("display" , "none");
 		    	$("#clear").css("display " , "inline");
 		    	$("#displayLink").css("display" , "none");
-		    	$("#addNew").css("display " , "inline");
+		    	$("#addNew").css("display " , "block");
+			$('#items').css("display" , "block");
 		    	break;
 	    	case "off":
 	    		$("#friendForm").css("display" , "block");
@@ -74,32 +75,29 @@ $('#form').live('pageinit', function(){
 		makeDiv.attr("id", "items");
 		var makeList = $("<ul></ul>");
 		makeDiv.append(makeList);
-		$("#fzForm").after(makeDiv);
+		$("#friendForm").after(makeDiv);
 		$("#items").css("display", "block");
 		for(var i =0, j=localStorage.length; i<j; i++ ){
-		console.log("run FOR LOOP IN GET IMAGE");
+			console.log(json)
 			var makeLi = $("<li></li>");
 			var linksLi =$("<li></li>");
 		        linksLi.attr("id" , "linksLi");
 			makeList.append(makeLi);
-		        //makeList.setAttribute("id","listed");
+		        makeList.attr("id","listed");
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
-			console.log(value);
 			//Convert string from loc stor val back to an object using JSON.parse()
-			var object = JSON.parse(value);
-			console.log(object);	
+			var object = JSON.parse(value);	
 			var makeSubList = $("<ul></ul>");
 			makeLi.append(makeSubList);
-//			getImage(object.groups[1], makeSubList);
+			getImage(object.groups[1], makeSubList);
 			for( var n in object){
-				console.log(object);	
-			    var makeSubLi = $("<li><li>");
-                makeSubList.append(makeSubLi);
-			    var optSubText = object[n][0] +" " + object[n][1];
-			    makeSubLi.innerHTML = optSubText;
-                makeSubList.attr("id","displayed");
-			    makeSubList.append(linksLi);
+				var makeSubLi = $("<li><li>");
+				makeSubList.append(makeSubLi);
+				var optSubText = object[n][0] +" " + object[n][1];
+				makeSubLi.innerHTML = optSubText;
+				makeSubList.attr("id","displayed");
+				makeSubList.append(linksLi);
 			}
 			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
 		}
@@ -186,7 +184,8 @@ $('#form').live('pageinit', function(){
                 var id 		= Math.floor(Math.random()*1000000001);
                 localStorage.setItem(id, JSON.stringify(json[n]));
             }
-	}; 	
+	};
+	
 	$("#submit").bind("click", storeData);
 	$("#displayLink").bind("click", getData);
 	$("#clearLink").bind("click", clearLocal);
