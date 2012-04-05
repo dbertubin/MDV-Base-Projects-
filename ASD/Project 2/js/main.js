@@ -10,8 +10,6 @@
 
 // Write out additional JSON Objects 
 
-// fix image names to correespond to group names so that getImage works//
-
 //  Data from at least 3 formats in static !les is successfully imported into app variables.
 
 /* Imported data is successfully displayed visually in the app
@@ -27,8 +25,20 @@
 
 $('#form').live('pageinit', function(){
 	
-	var fzForm = $("#form");
-	
+	var validate = function(){
+		var parseFriendForm = function (data){
+		console.log(data);
+		};
+		var fzform= $("#friendForm");
+			fzform.validate({
+			invalidHandler: function(form, validate){},
+			submitHandler: function(){
+				var data = fzform.serializeArray();
+				parseFriendForm(data);
+				alert("Fun Saved!");
+			}
+		})
+	};
 	var toggleControls = function (n){
 	    switch(n){
 		    case "on":
@@ -113,7 +123,7 @@ $('#form').live('pageinit', function(){
 			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
 		}
 	};
-	
+// Note for getImage ***  the  group value names may need to be changed in the furture to the full name of the group 	
 	var getImage =  function  (catName, makeSubList) {
 		var imageLi = $("<li></li>");
 		makeSubList.append(imageLi);
@@ -197,7 +207,7 @@ $('#form').live('pageinit', function(){
             }
 	};
 	
-	$("#submit").bind("click", storeData);
+	$("#submit").bind("click", validate, storeData);
 	$("#displayLink").bind("click", getData);
 	$("#clearLink").bind("click", clearLocal);
 	$("#addNew").bind("click", formBack);
