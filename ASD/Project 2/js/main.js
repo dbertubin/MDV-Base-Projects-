@@ -2,15 +2,26 @@
 //Project  2 ASD 1204 
 
 
-// Todo for Week 2
-
-// Add $("home").live("pageinit", function(){...});
-
-// convert Function  makeList to var makeList = function(){};
+// Todo for Week 2 ******************
 
 // Go back to wimba and get more pointers 
 
+// Get validation to work
 
+// Write out additional JSON Objects 
+
+// fix image names to correespond to group names so that getImage works//
+
+//  Data from at least 3 formats in static !les is successfully imported into app variables.
+
+/* Imported data is successfully displayed visually in the app
+	without additional user action. No hard-coded data is
+	used in the app. Code libraries or plugins are not used to
+	display the data.*/
+
+/* The localStorage Create, Read,
+	Update and Delete functionality is
+	working correctly. */
 
 // $(document).ready(function(){
 
@@ -87,7 +98,7 @@ $('#form').live('pageinit', function(){
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
 			//Convert string from loc stor val back to an object using JSON.parse()
-			var object = JSON.parse(value);	
+			var object = jQuery.parseJSON(value);	
 			var makeSubList = $("<ul></ul>");
 			makeLi.append(makeSubList);
 			getImage(object.groups[1], makeSubList);
