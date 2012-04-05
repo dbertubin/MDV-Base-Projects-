@@ -74,13 +74,13 @@ $("#current").live("pageinit", function(){
 								'<li>' + thing.completeBy +'</li' + 
 							'</a>' +
 						'</ul>'
-					).appendTo('#current');
-				$("#current").listview("refresh");
+					).appendTo('#listAll');
+				$("#listAll").listview("refresh");
 				};
 		},
 		error: function(result){
 			console.log(result);
-		}
+			}
 	})
 });
 
@@ -102,7 +102,7 @@ $('#form').live('pageinit', function(){
 	    		$("#clear").css("display" , "block");
 		    	$("#displayLink").css("display" , "block");
 		        $("#addNew").css("display" , "block");
-                        $("#items").css("display" , "block");
+                        $("#items").css("display" , "none");
 		    	break;
 	    	default:
                         return false;
@@ -118,19 +118,6 @@ $('#form').live('pageinit', function(){
 	};
 // Store Data
 	var storeData = function (key){
-		var validate = function(){
-		var parseFriendForm = function (data){
-		console.log(data);
-		};
-		var fzform= $("#friendForm");
-			fzform.validate({
-			invalidHandler: function(form, validate){},
-			submitHandler: function(){
-				var data = fzform.serializeArray();
-				parseFriendForm(data);
-			}
-		})
-	}	
 		if (!key){
 			var id 		= Math.floor(Math.random()*100000001);
 		} else {
@@ -144,10 +131,12 @@ $('#form').live('pageinit', function(){
 			item.completeBy 	= ["Complete By:", 	$("#completeBy").val()];
 			item.notes 		= ["Notes:", 			$("#notes").val()];	
 		localStorage.setItem(id, JSON.stringify(item));
-		console.log(id, JSON.stringify(item))
-		alert("Task Saved!");
+		console.log(id, JSON.stringify(item));
 	};
          
+
+
+	
 	var getData = function (){
 		toggleControls("on");
 		if (localStorage.length === 0) {
@@ -238,7 +227,7 @@ $('#form').live('pageinit', function(){
 		editSubmit.key = this.key;
 		
 	};
-	
+
 	var deleteItem = function (){
 		var ask = confirm(" Are you sure that you want to delete this Task?");
 		if (ask){
@@ -249,7 +238,7 @@ $('#form').live('pageinit', function(){
 			alert("Task was not Deleted!");
 		}
 	};
-	
+// Clear DATA 	
 	var clearLocal = function (){
 		if(localStorage.length === 0){
 		alert("There are no tasks to clear!");	
@@ -260,6 +249,15 @@ $('#form').live('pageinit', function(){
                     return false;
 		}
 	};
+	
+//	Validate
+	$("#friendForm").validate({
+		submitHandler: function(form) {
+		alert("Task Saved");
+		console.log("Call Action");
+		window.location.reload();
+		}
+	});	
 	
 // Write date from the local storage to the browser
 	var autoFillData = function  () {
