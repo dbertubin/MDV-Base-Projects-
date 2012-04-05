@@ -2,43 +2,92 @@
 //Project  2 ASD 1204 
 
 
-// Todo for Week 2 ******************
+/********** Todo for Week 2 ***********
 
-// Go back to wimba and get more pointers 
+-Go back to wimba and get more pointers 
 
-// Get validation to work
+-Get validation to work
 
-// Write out additional JSON Objects 
+-Data from at least 3 formats in static files is successfully imported into app variables.
 
-//  Data from at least 3 formats in static !les is successfully imported into app variables.
-
-/* Imported data is successfully displayed visually in the app
+- Imported data is successfully displayed visually in the app
 	without additional user action. No hard-coded data is
 	used in the app. Code libraries or plugins are not used to
-	display the data.*/
+	display the data.
 
-/* The localStorage Create, Read,
+- The localStorage Create, Read,
 	Update and Delete functionality is
-	working correctly. */
 
-// $(document).ready(function(){
+	working corthingtly. 
+**************************************/
+
+/* ************** BUGS****************
+Display all does not display Item details
+	display all also duplicats default json Items if reloading with out clearing all
+
+After submitting -  the pages reloads to the home page, but  the home page does not work
+	 and has to be reloaded - the form tags is listed in the URL and has to be deleated to go
+	 back to the home page.
+*************************************/
+//Ajax call for JSON
+//	var showjson = $('#listAll').live('pageinit', function(){
+$('#listAll').live('pageinit', function(){
+	$.ajax({
+		url: "xhr/data.json",
+		type: "GET",
+		dataType: "json",
+		success: function(response){
+			console.log(response)
+				for (var i=0, j = response.request.length; i<j; i++){
+					var thing = response.request[i];
+					$(''+
+						'<ul>' +
+							'<a href="#example">' +
+								'<img src="images/' + thing.groups + '.png">' +
+								'<li>' + thing.taskName +'</li>' +
+								'<li>' + thing.completeBy +'</li' + 
+							'</a>' +
+						'</ul>'
+					).appendTo('#listAll');
+				$("#listAll").listview("refresh");
+				};
+		},
+		error: function(result){ console.log(result);}
+	});
+
+});
+
+$("#current").live("pageinit", function(){
+	$.ajax({
+		url: "xhr/data.json",
+		type: "GET",
+		dataType: "json",
+		sucess: function(response){
+			console.log(response)
+			for (var i=0, j = response.request.length; i<j; i++){
+					var thing = response.request[i];
+					$(''+
+						'<ul>' +
+							'<a href="#example">' +
+								'<img src="images/' + thing.groups + '.png">' +
+								'<li>' + thing.taskName +'</li>' +
+								'<li>' + thing.completeBy +'</li' + 
+							'</a>' +
+						'</ul>'
+					).appendTo('#current');
+				$("#current").listview("refresh");
+				};
+		},
+		error: function(result){
+			console.log(result);
+		}
+	})
+});
+
 
 $('#form').live('pageinit', function(){
 	
-	var validate = function(){
-		var parseFriendForm = function (data){
-		console.log(data);
-		};
-		var fzform= $("#friendForm");
-			fzform.validate({
-			invalidHandler: function(form, validate){},
-			submitHandler: function(){
-				var data = fzform.serializeArray();
-				parseFriendForm(data);
-				alert("Fun Saved!");
-			}
-		})
-	};
+	
 	var toggleControls = function (n){
 	    switch(n){
 		    case "on":
@@ -69,6 +118,19 @@ $('#form').live('pageinit', function(){
 	};
 // Store Data
 	var storeData = function (key){
+		var validate = function(){
+		var parseFriendForm = function (data){
+		console.log(data);
+		};
+		var fzform= $("#friendForm");
+			fzform.validate({
+			invalidHandler: function(form, validate){},
+			submitHandler: function(){
+				var data = fzform.serializeArray();
+				parseFriendForm(data);
+			}
+		})
+	}	
 		if (!key){
 			var id 		= Math.floor(Math.random()*100000001);
 		} else {
@@ -207,7 +269,7 @@ $('#form').live('pageinit', function(){
             }
 	};
 	
-	$("#submit").bind("click", validate, storeData);
+	$("#submit").bind("click", storeData);
 	$("#displayLink").bind("click", getData);
 	$("#clearLink").bind("click", clearLocal);
 	$("#addNew").bind("click", formBack);
