@@ -1,5 +1,5 @@
 
- var json = {
+ json = {
                 "task1" : {
                               "groups" : ["Group:" , "current"],
                               "taskName" : ["Task Name:", "Test App"],

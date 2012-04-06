@@ -4,10 +4,6 @@
 
 /********** Todo for Week 2 ***********
 
--Go back to wimba and get more pointers 
-
--Get validation to work
-
 -Data from at least 3 formats in static files is successfully imported into app variables.
 
 - Imported data is successfully displayed visually in the app
@@ -19,71 +15,120 @@
 	Update and Delete functionality is
 
 	working corthingtly. 
-**************************************/
+***************************************/
 
-/* ************** BUGS****************
+/* ************* BUGS****************
 Display all does not display Item details
 	display all also duplicats default json Items if reloading with out clearing all
 
 After submitting -  the pages reloads to the home page, but  the home page does not work
 	 and has to be reloaded - the form tags is listed in the URL and has to be deleated to go
 	 back to the home page.
-*************************************/
+*********************************************************/
 //Ajax call for JSON
 //	var showjson = $('#listAll').live('pageinit', function(){
-$('#listAll').live('pageinit', function(){
+
+/***********************************************
+				JSON
+***********************************************/
+$('#listAll').bind('click', function(){
 	$.ajax({
 		url: "xhr/data.json",
 		type: "GET",
 		dataType: "json",
 		success: function(response){
-			console.log(response)
-				for (var i=0, j = response.request.length; i<j; i++){
+			console.log(response);
+				for (var i = 0 , j = response.request.length; i<j; i++){
 					var thing = response.request[i];
+					console.log(i);
+					console.log(response.request.length);
 					$(''+
-						'<ul>' +
+						'<li>' +
 							'<a href="#example">' +
-								'<img src="images/' + thing.groups + '.png">' +
-								'<li>' + thing.taskName +'</li>' +
-								'<li>' + thing.completeBy +'</li' + 
+								'<img src="images/' + thing.groups[1] + '.png">' +
+								'<h2>' + thing.taskName[0] + thing.taskName[1] +'</h2>' +
+								'<p>' + thing.completeBy[0] + thing.completeBy[1] +'</p>' + 
 							'</a>' +
-						'</ul>'
+						'</li>'
 					).appendTo('#listAll');
-				$("#listAll").listview("refresh");
+					$("#listAll").listview("refresh");
 				};
 		},
 		error: function(result){ console.log(result);}
 	});
 
 });
-
-$("#current").live("pageinit", function(){
-	$.ajax({
-		url: "xhr/data.json",
-		type: "GET",
-		dataType: "json",
-		sucess: function(response){
-			console.log(response)
-			for (var i=0, j = response.request.length; i<j; i++){
-					var thing = response.request[i];
-					$(''+
-						'<ul>' +
-							'<a href="#example">' +
-								'<img src="images/' + thing.groups + '.png">' +
-								'<li>' + thing.taskName +'</li>' +
-								'<li>' + thing.completeBy +'</li' + 
-							'</a>' +
-						'</ul>'
-					).appendTo('#listAll');
-				$("#listAll").listview("refresh");
-				};
-		},
-		error: function(result){
-			console.log(result);
+/***********************************************
+				XML
+ ***********************************************/
+$('#showXML').bind('click', function(){
+		$.ajax({
+			url		: "xhr/data.xml",
+			type	: "GET",
+			dataType: "xml",
+			success	: function(xml){
+				$(xml).find("thing").each(function(){
+					var list = {};
+					    list.groups 		= $(this).find("Groups").text();
+					    list.name 		= $(this).find("Name").text();
+					    list.rating 		= $(this).find("Rating").text();
+					    list.date 		= $(this).find("Date").text();
+					    list.notes 		= $(this).find("Notes").text();
+						console.log(list);
+						
+							$(''+
+								'<li>' +
+									'<a href="#example">' +
+										'<img src="images/' + list.groups + '.png">' +
+										'<h2>' + list.name +'</h2>' +
+										'<h3>' + 'Date: ' + list.date + '</h3>' + 
+									'</a>' +
+								'</li>'
+							).appendTo('#showXML');
+						$("#showXML").listview("refresh");
+				});
 			}
-	})
-});
+			
+		});
 
+	});	
+
+/**********************************************
+				CSV 
+ **********************************************/
+	$('#showCSV').bind('click', function(){
+		$.ajax({
+			url		: "xhr/data.csv",
+			type	: "GET",
+			dataType: "text",
+			success	: function(csv){
+				console.log(csv);
+				var lines = csv.split("\n");
+				for (var lineNum = 0; lineNum < lines.length; lineNum++){
+					var row = lines[lineNum];
+					var columns = row.split(",");
+					console.log(columns);
+						$(''+
+							'<li>' +
+								'<a href="#example">' +
+									'<img src="images/' + columns[0] + '.png">' +
+									'<h2>' + columns[1] +'</h2>' +
+									'<p>' + 'Date: ' + columns[2] + '</p>' + 
+								'</a>' +
+							'</li>'
+						).appendTo('#showCSV');
+					$("#showCSV").listview("refresh");
+				}
+			},
+			error	: function(result){ console.log(result);}
+		});
+
+	});	
+
+
+/*******************************************
+				FORM 
+ *******************************************/
 
 $('#form').live('pageinit', function(){
 	
