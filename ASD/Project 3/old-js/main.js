@@ -31,10 +31,12 @@ After submitting -  the pages reloads to the home page, but  the home page does 
 /***********************************************
 				JSON
 ***********************************************/
+
+
 $('#listAll').on('click', function(){
 	$.ajax({
-		url: "xhr/data.json",
-		type: "GET",
+		url: "_view/listall",
+	//	type: "GET",
 		dataType: "json",
 		success: function(response){
 			console.log(response);

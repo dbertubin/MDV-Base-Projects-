@@ -25,105 +25,33 @@ After submitting -  the pages reloads to the home page, but  the home page does 
 	 and has to be reloaded - the form tags is listed in the URL and has to be deleated to go
 	 back to the home page.
 *********************************************************/
-//Ajax call for JSON
-//	var showjson = $('#listAll').live('pageinit', function(){
+
 
 /***********************************************
 				JSON
 ***********************************************/
-$('#listAll').on('click', function(){
-	$.ajax({
-		url: "xhr/data.json",
-		type: "GET",
-		dataType: "json",
-		success: function(response){
-			console.log(response);
-				for (var i = 0 , j = response.request.length; i<j; i++){
-					var thing = response.request[i];
-					console.log(i);
-					console.log(response.request.length);
-					$(''+
-						'<li>' +
-							'<a href="#example">' +
-								'<img src="images/' + thing.groups[1] + '.png">' +
-								'<h2>' + thing.taskName[0] + thing.taskName[1] +'</h2>' +
-								'<p>' + thing.completeBy[0] + thing.completeBy[1] +'</p>' + 
-							'</a>' +
-						'</li>'
-					).appendTo('#listAll');
-					$("#listAll").listview("refresh");
-				};
-		},
-		error: function(result){ console.log(result);}
-	});
+$(document).ready(function(){
 
-});
-/***********************************************
-				XML
- ***********************************************/
-$('#showXML').on('click', function(){
+	$('#listAll').on('pageinit', function(){	
 		$.ajax({
-			url		: "xhr/data.xml",
-			type	: "GET",
-			dataType: "xml",
-			success	: function(xml){
-				$(xml).find("thing").each(function(){
-					var list = {};
-					    list.groups 		= $(this).find("Groups").text();
-					    list.name 		= $(this).find("Name").text();
-					    list.rating 		= $(this).find("Rating").text();
-					    list.date 		= $(this).find("Date").text();
-					    list.notes 		= $(this).find("Notes").text();
-						console.log(list);
-						
-							$(''+
-								'<li>' +
-									'<a href="#example">' +
-										'<img src="images/' + list.groups + '.png">' +
-										'<h2>' + list.name +'</h2>' +
-										'<h3>' + 'Date: ' + list.date + '</h3>' + 
-									'</a>' +
-								'</li>'
-							).appendTo('#showXML');
-						$("#showXML").listview("refresh");
+			"url": "_view/listall",
+			"dataType": "json",
+			"success": function(data){
+				$.each(data.rows, function (index, listall){
+						console.log(data);
+					/*	var groups = listall.value.groups;
+					var taskName = listall.value.taskName;
+					var completeby =listall.value.completeBy;
+					$('#listview').append(
+						$('<li>').append(
+							$('<a>').attr("href",'#')
+								.text(taskName)
+						)
+					);
 				});
+				$('#listAll').listview('refresh');*/
 			}
-			
-		});
-
-	});	
-
-/**********************************************
-				CSV 
- **********************************************/
-	$('#showCSV').on('click', function(){
-		$.ajax({
-			url		: "xhr/data.csv",
-			type	: "GET",
-			dataType: "text",
-			success	: function(csv){
-				console.log(csv);
-				var lines = csv.split("\n");
-				for (var lineNum = 0; lineNum < lines.length; lineNum++){
-					var row = lines[lineNum];
-					var columns = row.split(",");
-					console.log(columns);
-						$(''+
-							'<li>' +
-								'<a href="#example">' +
-									'<img src="images/' + columns[0] + '.png">' +
-									'<h2>' + columns[1] +'</h2>' +
-									'<p>' + 'Date: ' + columns[2] + '</p>' + 
-								'</a>' +
-							'</li>'
-						).appendTo('#showCSV');
-					$("#showCSV").listview("refresh");
-				}
-			},
-			error	: function(result){ console.log(result);}
-		});
-
-	});	
+	})
 
 
 /*******************************************
@@ -131,7 +59,6 @@ $('#showXML').on('click', function(){
  *******************************************/
 
 $('#form').live('pageinit', function(){
-	
 	
 	var toggleControls = function (n){
 	    switch(n){
@@ -318,4 +245,6 @@ $('#form').live('pageinit', function(){
 	$("#addNew").on("click", formBack);
 	
 
-});	
+})
+});
+	console.log("im ready")
