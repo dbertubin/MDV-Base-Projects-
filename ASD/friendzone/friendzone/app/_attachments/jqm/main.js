@@ -39,20 +39,8 @@ $(document).ready(function(){
 			"success": function(data){
 				$.each(data.rows, function (index, listall){
 						console.log(data);
-					/*	var groups = listall.value.groups;
-					var taskName = listall.value.taskName;
-					var completeby =listall.value.completeBy;
-					$('#listview').append(
-						$('<li>').append(
-							$('<a>').attr("href",'#')
-								.text(taskName)
-						)
-					);
-				});
-				$('#listAll').listview('refresh');*/
-			}
-	})
-
+				});		
+				
 
 /*******************************************
 				FORM 
@@ -247,4 +235,5 @@ $('#form').live('pageinit', function(){
 
 })
 });
+		
 	console.log("im ready")
