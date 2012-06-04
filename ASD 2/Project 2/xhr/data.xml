@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<listThings>
+			<thing>
+				<Groups>current</Groups>
+				<Name>Finish Week 3 Project</Name>
+                                <Date>2012-12-21</Date>
+				<Rating>5</Rating>
+				<Notes>The Early Bird Gets Debug</Notes>
+			</thing>
+                        <thing>
+				<Groups>sharedbucket</Groups>
+				<Name>Stop and Smell the Roses</Name>
+				<Rating>5</Rating>
+				<Notes>Fill in notes here!</Notes>
+			</thing>
+                        <thing>
+				<Groups>bucket</Groups>
+				<Name>Go to the Phillipines</Name>
+				<Rating>5</Rating>
+				<Notes>I will have to do this after I make my first app!    </Notes>
+			</thing>
+                        <thing>
+				<Groups>current</Groups>
+				<Name>Finish Week 3 Project</Name>
+				<Rating>5</Rating>
+				<Notes>Fill in notes here!</Notes>
+			</thing>
+                        <thing>
+				<Groups>current</Groups>
+				<Name>Finish Week 3 Project</Name>
+				<Rating>5</Rating>
+				<Notes>Fill in notes here!</Notes>
+			</thing>
+                        <thing>
+				<Groups>current</Groups>
+				<Name>Finish Week 3 Project</Name>
+				<Rating>5</Rating>
+				<Notes>Fill in notes here!</Notes>
+			</thing>
+                        <thing>
+				<Groups>current</Groups>
+				<Name>Finish Week 3 Project</Name>
+				<Rating>5</Rating>
+				<Notes>Fill in notes here!</Notes>
+			</thing>
+                </listThings> 
