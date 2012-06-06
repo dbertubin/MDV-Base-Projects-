@@ -31,13 +31,13 @@ After submitting -  the pages reloads to the home page, but  the home page does 
 /***********************************************
 				JSON
 ***********************************************/
-$('#listAll').on('click', function(){
+$('#listAll').click(function(){
 	$.ajax({
 		url: "xhr/data.json",
 		type: "GET",
 		dataType: "json",
-		success: function(response){
-			console.log(response);
+		success: function(result){
+			console.log(result);
 				for (var i = 0 , j = response.request.length; i<j; i++){
 					var thing = response.request[i];
 					console.log(i);
@@ -61,7 +61,7 @@ $('#listAll').on('click', function(){
 /***********************************************
 				XML
  ***********************************************/
-$('#showXML').on('click', function(){
+$('#showXML').click(function(){
 		$.ajax({
 			url		: "xhr/data.xml",
 			type	: "GET",
@@ -70,12 +70,11 @@ $('#showXML').on('click', function(){
 				$(xml).find("thing").each(function(){
 					var list = {};
 					    list.groups 		= $(this).find("Groups").text();
-					    list.name 		= $(this).find("Name").text();
+					    list.name 			= $(this).find("Name").text();
 					    list.rating 		= $(this).find("Rating").text();
-					    list.date 		= $(this).find("Date").text();
-					    list.notes 		= $(this).find("Notes").text();
+					    list.date 			= $(this).find("Date").text();
+					    list.notes 			= $(this).find("Notes").text();
 						console.log(list);
-						
 							$(''+
 								'<li>' +
 									'<a href="#example">' +
@@ -96,7 +95,7 @@ $('#showXML').on('click', function(){
 /**********************************************
 				CSV 
  **********************************************/
-	$('#showCSV').on('click', function(){
+	$('#showCSV').click(function(){
 		$.ajax({
 			url		: "xhr/data.csv",
 			type	: "GET",
