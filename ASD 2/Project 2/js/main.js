@@ -31,27 +31,28 @@ After submitting -  the pages reloads to the home page, but  the home page does 
 /***********************************************
 				JSON
 ***********************************************/
-$('#listAll').click(function(){
+$('#listAll').on("click",function(){
+	$('#listView').empty();
 	$.ajax({
-		url: "xhr/data.json",
+		url: "xhr/json.php",
 		type: "GET",
 		dataType: "json",
-		success: function(result){
-			console.log(result);
+		success: function(response){
+			console.log(response);
 				for (var i = 0 , j = response.request.length; i<j; i++){
 					var thing = response.request[i];
-					console.log(i);
-					console.log(response.request.length);
 					$(''+
+						'<ul>' +
 						'<li>' +
-							'<a href="#example">' +
-								'<img src="images/' + thing.groups[1] + '.png">' +
-								'<h2>' + thing.taskName[0] + thing.taskName[1] +'</h2>' +
-								'<p>' + thing.completeBy[0] + thing.completeBy[1] +'</p>' + 
-							'</a>' +
-						'</li>'
-					).appendTo('#listAll');
-					$("#listAll").listview("refresh");
+						'<a href="#example">' +
+						'<img src="images/' + thing.groups[1] + '.png">' +
+						'<h4>' + thing.taskName[0] + thing.taskName[1] +'</h4>' +
+						'</a>' +
+						'</li>' +
+						'</ul>' 							
+					).appendTo('#listView');
+					//$("#listAll").listview("refresh"); //for some reason this was causeing the display bug....hmmmm
+					
 				};
 		},
 		error: function(result){ console.log(result);}
@@ -62,6 +63,7 @@ $('#listAll').click(function(){
 				XML
  ***********************************************/
 $('#showXML').click(function(){
+		$('#xmlView').empty();
 		$.ajax({
 			url		: "xhr/data.xml",
 			type	: "GET",
@@ -75,6 +77,7 @@ $('#showXML').click(function(){
 					    list.date 			= $(this).find("Date").text();
 					    list.notes 			= $(this).find("Notes").text();
 						console.log(list);
+
 							$(''+
 								'<li>' +
 									'<a href="#example">' +
@@ -83,8 +86,8 @@ $('#showXML').click(function(){
 										'<h3>' + 'Date: ' + list.date + '</h3>' + 
 									'</a>' +
 								'</li>'
-							).appendTo('#showXML');
-						$("#showXML").listview("refresh");
+							).appendTo('#xmlView');
+						//$("#showXML").listview("refresh");
 				});
 			}
 			
@@ -116,7 +119,7 @@ $('#showXML').click(function(){
 								'</a>' +
 							'</li>'
 						).appendTo('#showCSV');
-					$("#showCSV").listview("refresh");
+					//$("#showCSV").listview("refresh");
 				}
 			},
 			error	: function(result){ console.log(result);}
