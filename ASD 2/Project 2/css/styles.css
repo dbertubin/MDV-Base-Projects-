@@ -2,13 +2,13 @@ html {
     background-color:  #ffffff; /*---1 css---*/
     text-shadow: 0px 1px 0px #e5e5ee;	
 }
-/*ul{ 
+ul{ 
     list-style: none;
     text-align: left;
     padding: 0px;
     margin-top:0px;
 }
-*/
+
 li{
     list-style: none;
     text-align: left;
@@ -75,13 +75,17 @@ h4{
     display: inline;
     margin: 10px;
     font-size: 25px;
+    margin-bottom: 20px;
+    
+    
 }
 p{
     margin: 10px;
 }	
 a{
-    /*margin: 10px;*/
+    
     margin-top:0px;
+    text-decoration:none;
     
 }
 

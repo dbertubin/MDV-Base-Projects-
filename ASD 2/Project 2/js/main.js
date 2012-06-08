@@ -31,7 +31,7 @@ After submitting -  the pages reloads to the home page, but  the home page does 
 /***********************************************
 				JSON
 ***********************************************/
-$('#listAll').on("click",function(){
+$('#listAll').on("pageinit",function(){
 	$('#listView').empty();
 	$.ajax({
 		url: "xhr/json.php",
@@ -42,27 +42,23 @@ $('#listAll').on("click",function(){
 				for (var i = 0 , j = response.request.length; i<j; i++){
 					var thing = response.request[i];
 					$(''+
-						'<ul>' +
 						'<li>' +
 						'<a href="#example">' +
 						'<img src="images/' + thing.groups[1] + '.png">' +
-						'<h4>' + thing.taskName[0] + thing.taskName[1] +'</h4>' +
+						'<h4>' + thing.taskName[0] +" " + thing.taskName[1] +'</h4>' +
 						'</a>' +
-						'</li>' +
-						'</ul>' 							
+						'</li>'							
 					).appendTo('#listView');
 					//$("#listAll").listview("refresh"); //for some reason this was causeing the display bug....hmmmm
-					
 				};
 		},
 		error: function(result){ console.log(result);}
 	});
-
 });
 /***********************************************
 				XML
  ***********************************************/
-$('#showXML').click(function(){
+$('#showXML').on('pageinit',function(){
 		$('#xmlView').empty();
 		$.ajax({
 			url		: "xhr/data.xml",
@@ -82,8 +78,7 @@ $('#showXML').click(function(){
 								'<li>' +
 									'<a href="#example">' +
 										'<img src="images/' + list.groups + '.png">' +
-										'<h2>' + list.name +'</h2>' +
-										'<h3>' + 'Date: ' + list.date + '</h3>' + 
+										'<h4>' + list.name +'</h4>' + 
 									'</a>' +
 								'</li>'
 							).appendTo('#xmlView');
@@ -98,7 +93,7 @@ $('#showXML').click(function(){
 /**********************************************
 				CSV 
  **********************************************/
-	$('#showCSV').click(function(){
+$('#showCSV').on('pageinit',function(){
 		$.ajax({
 			url		: "xhr/data.csv",
 			type	: "GET",
@@ -114,8 +109,7 @@ $('#showXML').click(function(){
 							'<li>' +
 								'<a href="#example">' +
 									'<img src="images/' + columns[0] + '.png">' +
-									'<h2>' + columns[1] +'</h2>' +
-									'<p>' + 'Date: ' + columns[2] + '</p>' + 
+									'<h4>' + columns[1] +'</h4>' + 
 								'</a>' +
 							'</li>'
 						).appendTo('#showCSV');
@@ -126,7 +120,6 @@ $('#showXML').click(function(){
 		});
 
 	});	
-
 
 /*******************************************
 				FORM 
@@ -181,47 +174,50 @@ $('#form').live('pageinit', function(){
 		console.log(id, JSON.stringify(item));
 	};
          
+// Write date from the local storage to the browser
+	var autoFillData = function  () {
+		for ( var n in json) {
+                var id 		= Math.floor(Math.random()*1000000001);
+                localStorage.setItem(id, JSON.stringify(json[n]));
+            }
+	};
+// Edit Item 
+	var editItem = function () {
+	// Grab the datafrom local Storage 
+		var value = localStorage.getItem(this.key);
+		var item = jQuery.parseJSON(value);
+		var save = $("submit");
+	//	save.addEventListener("click", validate);
+	//Show the form 
+		toggleControls("off");
+	// populate form fields with current local stortage values.	
+		$("#groups").val(item.groups[1]);
+		$("#taskName").val(item.taskName[1]);
+		$("#taskLength").val(item.taskLength[1]);
+		$("#completeBy").val(item.completeBy[1]);
+		$("#notes").val(item.notes[1]);
+		save.u.on("click", storeData);
+		$("#submit").val("Edit Task");
+		var editSubmit = $("#submit");
+	// save key value established in the in this funct is a prop of  the editSubmit 
+	//editSubmit .addEventListener("click", validate);
+		editSubmit.on("click","form.validate");
+		editSubmit.key = this.key;
+		
+	};
 
-
-	
-	var getData = function (){
-		toggleControls("on");
-		if (localStorage.length === 0) {
-			autoFillData();
-			alert("There are no tasks saved so default data was added.");	
-		}
-		var makeDiv = $("<div></div>");
-		makeDiv.attr("id", "items");
-		var makeList = $("<ul></ul>");
-		makeDiv.append(makeList);
-		$("#friendForm").after(makeDiv);
-		$("#items").css("display", "block");
-		for(var i =0, j=localStorage.length; i<j; i++ ){
-			console.log(json)
-			var makeLi = $("<li></li>");
-			var linksLi =$("<li></li>");
-		        linksLi.attr("id" , "linksLi");
-			makeList.append(makeLi);
-		        makeList.attr("id","listed");
-			var key = localStorage.key(i);
-			var value = localStorage.getItem(key);
-			//Convert string from loc stor val back to an object using JSON.parse()
-			var object = jQuery.parseJSON(value);	
-			var makeSubList = $("<ul></ul>");
-			makeLi.append(makeSubList);
-			getImage(object.groups[1], makeSubList);
-			for( var n in object){
-				var makeSubLi = $("<li><li>");
-				makeSubList.append(makeSubLi);
-				var optSubText = object[n][0] +" " + object[n][1];
-				makeSubLi.innerHTML = optSubText;
-				makeSubList.attr("id","displayed");
-				makeSubList.append(linksLi);
-			}
-			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
+	var deleteItem = function (){
+		var ask = confirm(" Are you sure that you want to delete this Task?");
+		if (ask){
+			localStorage.removeItem(this.key);
+			alert("Task is Deleted!");
+			window.location.reload();
+		} else {
+			alert("Task was not Deleted!");
 		}
 	};
-// Note for getImage ***  the  group value names may need to be changed in the furture to the full name of the group 	
+
+//Get Data
 	var getImage =  function  (catName, makeSubList) {
 		var imageLi = $("<li></li>");
 		makeSubList.append(imageLi);
@@ -248,43 +244,49 @@ $('#form').live('pageinit', function(){
 		deleteLink.on("click", deleteItem);
 		deleteLink.html(deleteText);
 		linksLi.append(deleteLink);
-	};
-		
-	// Edit Item 
-	var editItem = function () {
-	// Grab the datafrom local Storage 
-		var value = localStorage.getItem(this.key);
-		var item = jQuery.parseJSON(value);
-		var save = $("submit");
-	//	save.addEventListener("click", validate);
-	//Show the form 
-		toggleControls("off");
-	// populate form fields with current local stortage values.	
-		$("#groups").val(item.groups[1]);
-		$("#taskName").val(item.taskName[1]);
-		$("#taskLength").val(item.taskLength[1]);
-		$("#completeBy").val(item.completeBy[1]);
-		$("#notes").val(item.notes[1]);
-		save.u.on("click", storeData);
-		$("#submit").val("Edit Task");
-		var editSubmit = $("#submit");
-	// save key value established in the in this funct is a prop of  the editSubmit 
-	//editSubmit .addEventListener("click", validate);
-		editSubmit.on("click", fzForm.validate);
-		editSubmit.key = this.key;
-		
-	};
-
-	var deleteItem = function (){
-		var ask = confirm(" Are you sure that you want to delete this Task?");
-		if (ask){
-			localStorage.removeItem(this.key);
-			alert("Task is Deleted!");
-			window.location.reload();
-		} else {
-			alert("Task was not Deleted!");
+	}; 	
+	var getData = function (){
+		toggleControls("on");
+		if (localStorage.length === 0) {
+			autoFillData();
+			alert("There are no tasks saved so default data was added.");	
+		}
+		var makeDiv = $("<div></div>");
+		makeDiv.attr("id", "items");
+		var makeList = $("<ul></ul>");
+		makeDiv.append(makeList);
+		$("#friendForm").after(makeDiv);
+		$("#items").css("display", "block");
+		for(var i =0, j=localStorage.length; i<j; i++ ){
+			console.log(localStorage.length);
+			var makeLi = $("<li></li>");
+			var linksLi =$("<li></li>");
+		        linksLi.attr("id" , "linksLi");
+			makeList.append(makeLi);
+		        makeList.attr("id","listed");
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//Convert string from loc stor val back to an object using JSON.parse()
+			var object = jQuery.parseJSON(value);	
+			var makeSubList = $("<ul></ul>");
+			makeLi.append(makeSubList);
+			getImage(object.groups[1], makeSubList);
+			console.log(object);
+			for( var n in object){
+				var makeSubLi = $("<li><li>");
+				makeSubList.append(makeSubLi);
+				var optSubText = object[n][0] +" " + object[n][1];
+				makeSubLi.innerHTML = optSubText;
+				makeSubList.attr("id","displayed");
+				makeSubList.append(linksLi);
+			}
+			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
 		}
 	};
+// Note for getImage ***  the  group value names may need to be changed in the furture to the full name of the group 	
+
+		
+
 // Clear DATA 	
 	var clearLocal = function (){
 		if(localStorage.length === 0){
@@ -297,7 +299,7 @@ $('#form').live('pageinit', function(){
 		}
 	};
 	
-//	Validate
+/*	Validate
 	$("#friendForm").validate({
 		submitHandler: function(form) {
 		alert("Task Saved");
@@ -305,14 +307,8 @@ $('#form').live('pageinit', function(){
 		window.location.reload();
 		}
 	});	
-	
-// Write date from the local storage to the browser
-	var autoFillData = function  () {
-		for ( var n in json) {
-                var id 		= Math.floor(Math.random()*1000000001);
-                localStorage.setItem(id, JSON.stringify(json[n]));
-            }
-	};
+*/	
+
 	
 	$("#submit").on("click", storeData);
 	$("#displayLink").on("click", getData);

@@ -48,12 +48,12 @@
 						<h3>Show Everything To Do in JSON</h3>
 					</a>
 				</li>
-				<li data-role= "list-divider">
+				<li data-role="list-divider">
 					<a href="#showXML" data-icon="arrow-r">
 						<h3>Show Everything To Do in XML</h3>
 					</a>
 				</li>
-				<li data-role= "list-divider">
+				<li data-role="list-divider">
 					<a href="#showCSV" data-icon="arrow-r">
 						<h3>Show Everything To Do in CSV</h3>
 					</a>
@@ -382,16 +382,15 @@
 		  		</a>
 	  		</div>
 			<div id="addNew">
-		  		<a href="#" data-role="button" value="Add Thing to Do" class="viewlists" id="addNew" />
+		  		<a href="#" data-role="button" value="Add Thing to Do" class="viewlists" id="addNew" >
 		  			Add Thing to Do
 		  		</a>	
 	  		</div>
 	  	</div>	
 	  	</div>	
-		<form action="#" method="post" id="friendForm">
+		<form action="#" method="post" id="friendForm" name="friendForm">
 			<p align="center">"Fill in the details of what you want to do!"</p>
- 			<form action="#" method="post" id="friendForm" name="friendForm">
-			<div data-role="fieldcontain">
+ 						<div data-role="fieldcontain">
  				<label for="category">Category</label> 
  				<select name="things-category" id="groups" data-native-menu="false" class="required">
  					<option data-placeholder="true">--Select Item Type--</option>
@@ -411,7 +410,7 @@
 	  			<input type="range" value="0" min="1" max="5" name="rating" id="rating" />
   			</div>
   			<div data-role="fieldcontain">
-	  			<label for= "date" >"When do you want to do this by?"</label>
+	  			<label for="date" >"When do you want to do this by?"</label>
 				<input type="date" name="date" id="date" placeholder="Please Select a Date!" />
 			</div>
   			<div data-role="fieldcontain">
