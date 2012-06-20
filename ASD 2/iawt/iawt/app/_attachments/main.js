@@ -1,122 +1,159 @@
 // Bertubin, Derek
-//Project  2 ASD 1204 
+//Project  3 ASD 1206
 
+/*******************************************
+				List All  
+ *******************************************/
 
-/********** Todo for Week 2 ***********
-
--Data from at least 3 formats in static files is successfully imported into app variables.
-
-- Imported data is successfully displayed visually in the app
-	without additional user action. No hard-coded data is
-	used in the app. Code libraries or plugins are not used to
-	display the data.
-
-- The localStorage Create, Read,
-	Update and Delete functionality is
-
-	working corthingtly. 
-***************************************/
-
-/* ************* BUGS****************
-Display all does not display Item details
-	display all also duplicats default json Items if reloading with out clearing all
-
-After submitting -  the pages reloads to the home page, but  the home page does not work
-	 and has to be reloaded - the form tags is listed in the URL and has to be deleated to go
-	 back to the home page.
-*********************************************************/
-//Ajax call for JSON
-//	var showjson = $('#listAll').live('pageinit', function(){
-
-/***********************************************
-				JSON
-***********************************************/
-$('#listAll').on("pageinit",function(){
+$('#listAll').live("pageinit",function(){
 	$('#listView').empty();
 	$.ajax({
-		url: "xhr/json.php",
-		type: "GET",
-		dataType: "json",
-		success: function(response){
-			console.log(response);
-				for (var i = 0 , j = response.request.length; i<j; i++){
-					var thing = response.request[i];
-					$(''+
+		"url": "_view/listall",
+		"dataType": "json",
+		"success":function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, thing){
+				var name = thing.value.taskName[1];
+				console.log(name);
+				$(''+
 						'<li>' +
 						'<a href="#example">' +
-						'<img src="images/' + thing.groups[1] + '.png">' +
-						'<h4>' + thing.taskName[1] +'</h4>' +
+						'<h4>' + name +'</h4>' +
 						'</a>' +
 						'</li>'							
 					).appendTo('#listView');
-				};
-		},
-		error: function(result){ console.log(result);}
+			});
+			$('#listView').listview('refresh');
+		}
 	});
 });
-/***********************************************
-				XML
- ***********************************************/
-$('#showXML').on('pageinit',function(){
-		$('#xmlView').empty();
-		$.ajax({
-			url		: "xhr/data.xml",
-			type	: "GET",
-			dataType: "xml",
-			success	: function(xml){
-				$(xml).find("thing").each(function(){
-					var list = {};
-					    list.groups 		= $(this).find("Groups").text();
-					    list.name 			= $(this).find("Name").text();
-					    list.rating 		= $(this).find("Rating").text();
-					    list.date 			= $(this).find("Date").text();
-					    list.notes 			= $(this).find("Notes").text();
-						console.log(list);
+/*******************************************
+	 			Current
+*******************************************/
+$('#current').on("pageinit",function(){
+	$('#currentView').empty();
+	$.ajax({
+		"url": "_view/current",
+		"dataType": "json",
+		"success":function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, thing){
+				var name = thing.value.taskName[1];
+				console.log(name);
+				$(''+
+						'<li>' +
+						'<a href="#example">' +
+						'<h4>' + name +'</h4>' +
+						'</a>' +
+						'</li>'							
+					).appendTo('#currentView');
+			});
+			$('#currentView').listview('refresh');
+		}
+	});
+});
+/*******************************************
+				Future
+*******************************************/
+$('#future').live("pageinit",function(){
+	$('#futureView').empty();
+	$.ajax({
+		"url": "_view/future",
+		"dataType": "json",
+		"success":function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, thing){
+				var name = thing.value.taskName[1];
+				console.log(name);
+				$(''+
+						'<li>' +
+						'<a href="#example">' +
+						'<h4>' + name +'</h4>' +
+						'</a>' +
+						'</li>'							
+					).appendTo('#futureView');
+			});
+			$('#futureView').listview('refresh');
+		}
+	});
+});
+/*******************************************
+				Collabrative 
+*******************************************/
+$('#collabrative').live("pageinit",function(){
+	$('#collabrativeView').empty();
+	$.ajax({
+		"url": "_view/collabrative",
+		"dataType": "json",
+		"success":function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, thing){
+				var name = thing.value.taskName[1];
+				console.log(name);
+				$(''+
+						'<li>' +
+						'<a href="#example">' +
+						'<h4>' + name +'</h4>' +
+						'</a>' +
+						'</li>'							
+					).appendTo('#collabrativeView');
+			});
+			$('#collabrativeView').listview('refresh');
+		}
+	});
+});
+/*******************************************
+				BUCKET 
+*******************************************/
 
-							$(''+
-								'<li>' +
-									'<a href="#example">' +
-										'<img src="images/' + list.groups + '.png">' +
-										'<h4>' + list.name +'</h4>' + 
-									'</a>' +
-								'</li>'
-							).appendTo('#xmlView');
-				});
-			}
-			
-		});
+$('#bucket').live("pageinit",function(){
+	$('#bucketView').empty();
+	$.ajax({
+		"url": "_view/bucket",
+		"dataType": "json",
+		"success":function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, thing){
+				var name = thing.value.taskName[1];
+				console.log(name);
+				$(''+
+						'<li>' +
+						'<a href="#example">' +
+						'<h4>' + name +'</h4>' +
+						'</a>' +
+						'</li>'							
+					).appendTo('#bucketView');
+			});
+			$('#bucketView').listview('refresh');
+		}
+	});
+});
+/*******************************************
+			SHARED BUCKET 
+*******************************************/
+$('#sharedBucket').live("pageinit",function(){
+	$('#sharedBucketView').empty();
+	$.ajax({
+		"url": "_view/sharedbucket",
+		"dataType": "json",
+		"success":function(data) {
+			console.log(data);
+			$.each(data.rows, function(index, thing){
+				var name = thing.value.taskName[1];
+				console.log(name);
+				$(''+
+						'<li>' +
+						'<a href="#example">' +
+						'<h4>' + name +'</h4>' +
+						'</a>' +
+						'</li>'							
+					).appendTo('#sharedBucketView');
+			});
+			$('#sharedBucketView').listview('refresh');
+		}
+	});
+});
 
-	});	
-
-/**********************************************
-				CSV 
- **********************************************/
-$('#showCSV').on('pageinit',function(){
-		$.ajax({
-			url		: "xhr/data.csv",
-			type	: "GET",
-			dataType: "text",
-			success	: function(csv){
-				console.log(csv);
-				var lines = csv.split("\n");
-				for (var lineNum = 0; lineNum < lines.length; lineNum++){
-					var row = lines[lineNum];
-					var columns = row.split(",");
-					console.log(columns);
-						$(''+
-							'<li>' +
-								'<a href="#example">' +
-									'<img src="images/' + columns[0] + '.png">' +
-									'<h4>' + columns[1] +'</h4>' + 
-								'</a>' +
-							'</li>'
-						).appendTo('#showCSV');
-				}
-			},
-			error	: function(result){ console.log(result);}
-		});
-
-	});	
 
 /*******************************************
 				FORM 
@@ -219,8 +256,8 @@ $('#form').live('pageinit', function(){
 		var imageLi = $("<li></li>");
 		makeSubList.append(imageLi);
 		var newImg = $("<img></img>");
-		var setSrc = newImg.attr("src", "images/"+catName+".png");
-		newImg.attr("id", "img");
+		var setSrc = newImg.attr("src", catName+".png");
+	//	newImg.attr("id", "img");
 		imageLi.append(newImg);
     };		
 	var makeItemLinks = function  (key,linksLi){// add single item  edit link
@@ -249,34 +286,36 @@ $('#form').live('pageinit', function(){
 			alert("There are no tasks saved so default data was added.");	
 		}
 		var makeDiv = $("<div></div>");
-		makeDiv.attr("id", "items");
+		makeDiv.attr("data-role", "listview");
 		var makeList = $("<ul></ul>");
 		makeDiv.append(makeList);
 		$("#friendForm").after(makeDiv);
-		$("#items").css("display", "block");
+	//	$("#items").css("display", "block");
 		for(var i =0, j=localStorage.length; i<j; i++ ){
 			console.log(localStorage.length);
 			var makeLi = $("<li></li>");
 			var linksLi =$("<li></li>");
-		        linksLi.attr("id" , "linksLi");
+	//	        linksLi.attr("id" , "linksLi");
 			makeList.append(makeLi);
-		        makeList.attr("id","listed");
+		//  makeList.attr("id","listed");
 			var key = localStorage.key(i);
+			console.log(key);
 			var value = localStorage.getItem(key);
 			//Convert string from loc stor val back to an object using JSON.parse()
-			var object = jQuery.parseJSON(value);	
+			var object = jQuery.parseJSON(value);
+			console.log(object);
 			var makeSubList = $("<ul></ul>");
 			makeLi.append(makeSubList);
 			getImage(object.groups[1], makeSubList);
-						console.log(object.groups[1])
+						console.log(object.groups[1]);
 
-			//console.log(object);
+			console.log(object);
 			for( var n in object){
 				var makeSubLi = $("<li><li>");
 				makeSubList.append(makeSubLi);
 				var optSubText = object[n][0] + " " + object[n][1];
 				makeSubLi.innerHTML = optSubText;
-				makeSubList.attr("id","displayed");
+		//		makeSubList.attr("id","displayed");
 				makeSubList.append(linksLi);
 			};
 			makeItemLinks(localStorage.key(i), linksLi); // Create our edit and delete links for each item in local storage	
