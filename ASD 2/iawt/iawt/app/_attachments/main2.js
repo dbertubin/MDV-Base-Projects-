@@ -38,29 +38,43 @@ var urlVars = function(){
 
 
 $('#details').live("pageshow",function(){
-	var detailId= urlVars()["detailId"];
-	console.log(detailId);
-	$.couch.db("iawt").view("iawt/details", {
-		success:function(detailId) {
-			console.log(detailId);
-			$.each(detailId.rows, function(index, thing){
-				console.log(detailId.rows);
+	console.log("page active");
+	var detailId = urlVars()["detailId"];	
+	$.ajax({
+		"url": "http://127.0.0.1:5984/iawt/" + detailId ,
+		"type" : "GET",
+		"dataType": "json",
+		"success":function(data) {
+			for (var i = 0 , j = data.length; i<j; i++){
+				var thing = data.length[i];
+				$(''+
+					'<li>' +
+					'<a href="#example">' +
+					'<img src=" + thing.groups[1] + .png">' +
+					'<h4>' + thing.taskName[1] +'</h4>' +
+					'</a>' +
+					'</li>'							
+				).appendTo('#detailview');
+			};
+		/*	console.log(data);
+			$.each(data.values, function(index, thing){
+				console.log(data.values);
 				var name = thing.value.taskName[1];
-				var id = thing.id;
-				console.log(name);
-				console.log(id);
+				console.log(thing);
 				$(''+
 						'<li>' +
-						'<a href= details.html?detailId=' + id + '>'  +
+						'<a href="#example">' +
 						'<h4>' + name +'</h4>' +
 						'</a>' +
 						'</li>'							
-					).appendTo('#listView');
-			});
-			$('#listView').listview('refresh');
-		}
-	});
+					).appendTo('#sharedBucketView');*/
+			}
+		});
+		});
+		//	$('#detailview').listview('refresh');
+		
+
 	
 	
-});
+
 

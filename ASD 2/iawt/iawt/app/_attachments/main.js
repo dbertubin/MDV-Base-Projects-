@@ -325,14 +325,29 @@ $('#form').live('pageinit', function(){
 		if (localStorage.length === 0) {
 			autoFillData();
 			alert("There are no tasks saved so default data was added.");	
-		}
-		var makeDiv = $("<div></div>");
-		makeDiv.attr("data-role", "listview");
-		var makeList = $("<ul></ul>");
-		makeDiv.append(makeList);
-		$("#friendForm").after(makeDiv);
-	//	$("#items").css("display", "block");
-		for(var i =0, j=localStorage.length; i<j; i++ ){
+		};
+        $("#friendForm").empty();
+        for (var i= 0, j=localStorage.length; i<j ; i++){
+            var key = localStorage.key(i);
+            var item = JSON.parse(localStorage.getItem(key));
+            console.log(item);
+            var makeSubList = $("<li></li>");
+            var makeSubLi = $( "<h3>"+item.iname[1]+"</h3>"+
+                "<p><strong>"+item.category[1]+"</strong></p>"+
+                "<p>"+item.quantity[1]+"</p>" +
+                "<p>"+item.notes[1]+"</p>" );
+            var makeLink = $("<a href='#' id='"+key+"'>Edit</a>");
+            makeLink.on('click', function(){
+                console.log("This is my key: "+this.id);
+            });
+            makeLink.html(makeSubLi);
+            makeSubList.append(makeLink).appendTo("#itemList");
+        }; // end for loop
+        $("ul").listview('refresh');		
+		
+		
+		
+/*		for(var i =0, j=localStorage.length; i<j; i++ ){
 			console.log(localStorage.length);
 			var makeLi = $("<li></li>");
 			var linksLi =$("<li></li>");
@@ -363,7 +378,7 @@ $('#form').live('pageinit', function(){
 		}
 	};
 // Note for getImage ***  the  group value names may need to be changed in the furture to the full name of the group 	
-
+*/
 		
 
 // Clear DATA 	
