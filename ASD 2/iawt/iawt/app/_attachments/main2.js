@@ -38,12 +38,13 @@ var urlVars = function(){
 
 
 $('#details').live("pageshow",function(){
-	var detailId= urlVars()["id"];
+	var detailId= urlVars()["detailId"];
 	console.log(detailId);
 	$.couch.db("iawt").view("iawt/details", {
-		success:function(id) {
-			console.log(id);
-			$.each(id.rows, function(index, thing){
+		success:function(detailId) {
+			console.log(detailId);
+			$.each(detailId.rows, function(index, thing){
+				console.log(detailId.rows);
 				var name = thing.value.taskName[1];
 				var id = thing.id;
 				console.log(name);
@@ -62,3 +63,4 @@ $('#details').live("pageshow",function(){
 	
 	
 });
+
