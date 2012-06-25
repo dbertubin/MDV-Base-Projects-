@@ -1,0 +1,110 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8"/>
+
+	<title>Edit What You Want to Do!</title>
+
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on"/>
+
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="styles.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="modernizr.custom.min.js"></script>
+
+</head>
+<body>
+!-- New Form-->
+	<div data-role="page" data-theme="a" id="editForm" data-add-back-btn="true">
+		<a href="index.html" data-direction="reverse" style="text-decoration:none" >
+			<div data-role="header" data-theme="a" align="center" >
+			 <h3 >iAlwaysWantedTo</h3>
+			</div>
+		</a>
+		<div data-role="content" data-theme="a">
+		</div>
+			<div data-role="content" data-theme="a">
+			<div align="center">
+		</div>
+		<div align="center" id="toggle-btn">
+			<div id="displayLink">
+		  		<a href="index.html#listAll" data-role="button" value="Display All" id="displayLink" >
+		  			Display All
+		  		</a>
+	  		</div>
+			<!-- <div id="addNew">
+		  		<a href="#" data-role="button" value="Add Thing to Do" class="viewlists" id="addNew" >
+		  			Add Thing to Do
+		  		</a>	
+	  		</div> -->
+	  	</div>	
+	  	</div>	
+		<form action="#" method="get" id="friendForm" name="friendForm">
+			<p align="center">"Fill in the details of what you want to do!"</p>
+ 			<div data-role="fieldcontain">
+ 				<label for="category">Category</label> 
+ 				<select name="things-category" id="groups" data-native-menu="false" class="required">
+ 					<option data-placeholder="true">--Select Item Type--</option>
+ 					<option value="current">Current Things to Do</option>
+ 					<option value="future">Future Things to Do</option>
+ 					<option value="collabrative">Things to Do With Friends</option>
+ 					<option value="bucket">Bucket List</option>
+ 					<option value="sharedbucket">Shared Bucket Lists</option>
+				</select>	
+ 			</div> 
+ 			<div data-role="fieldcontain">
+	  			<label for="name">Name the Thing You Want to Do:</label>
+	  			<input type="text" name="name" id="taskName" placeholder="Eg. Something Fun :)" class="required"/>
+  			</div>
+  			<div data-role="fieldcontain">
+	  			<label for="rating">Rate How Excited You Are to DO This! (1=Excited, 5=Super Really Excited!): </label>
+	  			<input type="range" value="0" min="1" max="5" name="rating" id="taskLength" />
+  			</div>
+  			<!-- <div data-role="fieldcontain">
+	  			<label for="date" >"When do you want to do this by?"</label>
+				<input type="date" name="date" id="completeBy" placeholder="Please Select a Date!" />
+			</div> -->
+  			<div data-role="fieldcontain">
+	  			<label for="comments">Tell me more about what you want to do!:</label>
+	  			<textarea name="comments" id="notes" class="required" placeholder="Exciting things go here here!"></textarea>
+  			</div>
+  			<div >
+	  			<div>
+	  				<input type="submit" value="Update" id="updateItem"/><!--id="submit"--> 		
+				</div>
+				<div>
+					<a href="index.html" data-role= "button" value="Delete" id="cancel">
+						Cancel
+					</a>
+				</div>
+  			</div>
+			<div data-role="content" >
+				<ul id="allView" data-role="listview">
+				</ul>
+			</div>
+			
+		</form>	
+</div>
+
+
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script type="text/javascript" src="additional-methods.min.js"></script>
+	<script type="text/javascript" src="json.js"></script>
+	<script type="text/javascript" src="main2.js"></script>
+	<script type="text/javascript" src= "jquery.couch.js"></script>
+
+</body>
+</html>
