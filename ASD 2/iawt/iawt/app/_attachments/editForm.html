@@ -23,8 +23,8 @@
 
 </head>
 <body>
-!-- New Form-->
-	<div data-role="page" data-theme="a" id="editForm" data-add-back-btn="true">
+<!-- New Form-->
+	<div data-role="page" method="get" data-ajax="false" data-theme="a" id="editForm" data-add-back-btn="true">
 		<a href="index.html" data-direction="reverse" style="text-decoration:none" >
 			<div data-role="header" data-theme="a" align="center" >
 			 <h3 >iAlwaysWantedTo</h3>
@@ -48,7 +48,7 @@
 	  		</div> -->
 	  	</div>	
 	  	</div>	
-		<form action="#" method="get" id="friendForm" name="friendForm">
+		<form action="#" method="get" id="eForm" >
 			<p align="center">"Fill in the details of what you want to do!"</p>
  			<div data-role="fieldcontain">
  				<label for="category">Category</label> 
@@ -102,7 +102,7 @@
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script type="text/javascript" src="jquery.validate.min.js"></script>
 	<script type="text/javascript" src="additional-methods.min.js"></script>
-	<script type="text/javascript" src="json.js"></script>
+	<script type="text/javascript" src="editForm.js"></script>
 	<script type="text/javascript" src="main2.js"></script>
 	<script type="text/javascript" src= "jquery.couch.js"></script>
 
