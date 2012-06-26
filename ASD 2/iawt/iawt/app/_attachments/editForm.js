@@ -33,7 +33,7 @@ $('#editForm').live('pageshow', function(){
 	        			console.log("Load should work");
 	        			thisItem = data;
 	        			setObject(data);
-	        			console.log("thisItem="thisItem);
+	        			console.log(thisItem);
 	        			$('#taskName').val(data.taskName[1]).trigger('create');
 	        			console.log(data.taskName[1]);
 	        			$('#taskLength').val(data.taskLength[1]);

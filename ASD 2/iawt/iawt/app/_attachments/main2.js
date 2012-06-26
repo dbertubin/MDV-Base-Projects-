@@ -194,7 +194,7 @@
 						'</ul>'
 					).appendTo('#detailview').trigger('create');
 					$(''+
-							'<a  id= "editLink" href= editForm.html?detailId=' + detailId + '>' +
+							'<a  id= "editLink" href= "editForm.html?detailId=' + detailId + '">' +
 							 'Edit This?' +
 							 '</a>'
 					).appendTo('#editLink').trigger('create');
