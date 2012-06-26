@@ -52,7 +52,7 @@
 			<p align="center">"Fill in the details of what you want to do!"</p>
  			<div data-role="fieldcontain">
  				<label for="category">Category</label> 
- 				<select name="things-category" id="groups" data-native-menu="false" class="required">
+ 				<select name="things-category" id="editGroups" data-native-menu="false" class="required">
  					<option data-placeholder="true">--Select Item Type--</option>
  					<option value="current">Current Things to Do</option>
  					<option value="future">Future Things to Do</option>
@@ -63,11 +63,11 @@
  			</div> 
  			<div data-role="fieldcontain">
 	  			<label for="name">Name the Thing You Want to Do:</label>
-	  			<input type="text" name="name" id="taskName" placeholder="Eg. Something Fun :)" class="required"/>
+	  			<input type="text" name="name" id="editTaskName" placeholder="Eg. Something Fun :)" class="required"/>
   			</div>
   			<div data-role="fieldcontain">
 	  			<label for="rating">Rate How Excited You Are to DO This! (1=Excited, 5=Super Really Excited!): </label>
-	  			<input type="range" value="0" min="1" max="5" name="rating" id="taskLength" />
+	  			<input type="range" value="0" min="1" max="5" name="rating" id="editTaskLength" />
   			</div>
   			<!-- <div data-role="fieldcontain">
 	  			<label for="date" >"When do you want to do this by?"</label>
@@ -75,7 +75,7 @@
 			</div> -->
   			<div data-role="fieldcontain">
 	  			<label for="comments">Tell me more about what you want to do!:</label>
-	  			<textarea name="comments" id="notes" class="required" placeholder="Exciting things go here here!"></textarea>
+	  			<textarea name="comments" id="editNotes" class="required" placeholder="Exciting things go here here!"></textarea>
   			</div>
   			<div >
 	  			<div>

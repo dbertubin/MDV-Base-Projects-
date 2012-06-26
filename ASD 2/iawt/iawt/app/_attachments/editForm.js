@@ -34,12 +34,12 @@ $('#editForm').live('pageshow', function(){
 	        			thisItem = data;
 	        			setObject(data);
 	        			console.log(thisItem);
-	        			$('#taskName').val(data.taskName[1]).trigger('create');
+	        			$('#editTaskName').val(data.taskName[1]).trigger('create');
 	        			console.log(data.taskName[1]);
-	        			$('#taskLength').val(data.taskLength[1]);
-	        			$('#groups').val(data.groups[1]);
+	        			$('#editTaskLength').val(data.taskLength[1]);
+	        			$('#editGroups').val(data.groups[1]);
 	        			$('#completeBy').val(data.completeBy[1]);
-	        			$('#notes').val(data.notes[1]);
+	        			$('#editNotes').val(data.notes[1]);
 	        		}
 	        	})
 	        }
