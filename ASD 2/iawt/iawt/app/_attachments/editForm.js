@@ -43,7 +43,7 @@ $('#editForm').live('pageshow', function(){
 	        		}
 	        	})
 	        }
-	        
+	        // ADDED TO SEE IFF I CAN COMMIT....
 	        var currentItem = loadItemData(itemToChange)
 	        
 	        $('#updateItem').on("click", function(event){
