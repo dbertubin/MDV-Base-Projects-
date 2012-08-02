@@ -10,16 +10,17 @@ html{
 div{
 	margin-top: 10px;
 }
-h1,h2,p{
+h1,h2,h3,p{
 	margin: 1px;
 	height: auto;
 	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
 }
 article{
 	height: auto;
 }
 header{
-	margin: 0px;
+	margin:  0px;
 	padding: 5px;
 	width: auto;
 	height: 35px;
@@ -33,23 +34,7 @@ header{
 	background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-
-/*	margin:1px;
-	margin-bottom: 25px;
-	border-style:solid;
-	border-color: #ffffff;
-	border-radius: 20px ;
-	padding:5px;
-	text-shadow: 0px 1px 0px #000000;
-	background: #9FABB0;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:  14px;
-	font-weight:bolder;
-	text-align: center;
-	-moz-box-shadow:0px 0px 10px #000000;
-	-webkit-box-shadow:0px 0px 10px #000000;
-	box-shadow:0px 0px 10px #000000;
-*/	
+	
 }
 
 section{
@@ -89,30 +74,6 @@ a{
 }
 
 button {
-/*display: inline-block;
-border: 0px solid #ffffff;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: 14px Arial;
-font-weight: bold;
-padding: 5px 16px;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-text-shadow:0px 0px 0px #444444;
--moz-box-shadow:inset 0px 0px 0px 0px #444444;
--webkit-box-shadow:inset 0px 0px 0px 0px #444444;
-box-shadow:inset 0px 0px 0px 0px #444444;
-color: #ffffff;
-background: #e928d6;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#e928d6), to(#f285dc));
-background-image: -moz-linear-gradient(top,  #e928d6,  #f285dc);
-background-image:     -ms-linear-gradient(top, #e928d6,  #f285dc);
-background-image:      -o-linear-gradient(top, #e928d6,  #f285dc);
-background-image:         linear-gradient(top, #e928d6,  #f285dc);
-filter:  progid:DXImaGETransform.Microsoft.gradient(startColorstr='#e928d6', endColorstr='#f285dc');
-*/
 	-moz-box-shadow: 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow: 0px 1px 0px 0px #ffffff;
 	box-shadow: 0px 1px 0px 0px #ffffff;
