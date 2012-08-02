@@ -34,13 +34,12 @@ header{
 	background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-	
 }
 
 section{
 	margin:1px;
 	margin-bottom: 25px;
-	border-style:solid;
+	border-style:none ;
 	border-radius: 10px 10px 10px 10px;
 	border-color: #ffffff;
 	padding:5px;
