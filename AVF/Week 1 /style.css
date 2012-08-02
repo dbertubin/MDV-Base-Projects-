@@ -15,7 +15,7 @@ article{
 	height: auto;
 }
 header{
-	margin:5px;
+	margin:1px;
 	margin-bottom: 25px;
 	border-style:solid;
 	border-radius: 20px ;
@@ -33,7 +33,7 @@ header{
 }
 
 section{
-	margin:5px;
+	margin:1px;
 	margin-bottom: 25px;
 	border-style:solid;
 	border-radius: 10px 10px 10px 10px;
