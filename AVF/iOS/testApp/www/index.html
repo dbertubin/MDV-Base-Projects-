@@ -1,44 +1,108 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one
-# or more contributor license agreements.  See the NOTICE file
-# distributed with this work for additional information
-# regarding copyright ownership.  The ASF licenses this file
-# to you under the Apache License, Version 2.0 (the
-# "License"); you may not use this file except in compliance
-# with the License.  You may obtain a copy of the License at
-# 
-# http://www.apache.org/licenses/LICENSE-2.0
-# 
-# Unless required by applicable law or agreed to in writing,
-# software distributed under the License is distributed on an
-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#  KIND, either express or implied.  See the License for the
-# specific language governing permissions and limitations
-# under the License.
-#
--->
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name = "format-detection" content = "telephone=no"/>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello Cordova</title>
+        <meta charset="utf-8"/>
+        <title>Lauchpage</title>
+        <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Mobile IE needs ClearType for smoothing fonts -->
+        <meta http-equiv="cleartype" content="on"/>
+        
+        <!-- StyleSheets under here -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
     </head>
+    
     <body>
-        <div class="app">
-            <h1>Apache Cordova™</h1>
-            <div id="deviceready">
-                <p class="status pending blink">Connecting to Device</p>
-                <p class="status complete blink hide">Device is Ready</p>
-            </div>
+        
+        <!-- Heading -->
+        <div class="g1" id="section1">
+            <header class="shadow1">
+                <img src= "img/calltoaction-new.png" id="headerLogo"/>
+                <h1>
+                    By Derek Bertubin
+                </h1>
+                <h2>
+                    LaunchPage for AVF1208
+                </h2>
+            </header>
+            <!-- CRUD -->
+            <section class="shadow1">
+                <h1>
+                    CRUD Apps
+                </h1>
+                <button>
+                    <a href="https://dbertubin.cloudant.com/iawt/_design/iAWT/index.html" id="crudOld">Original</a>
+                </button>
+                <button>
+                    <a href="https://dbertubin.cloudant.com/iawt/_design/iAWT/index.html" id="crudOld">Revised</a>
+                </button>
+            </section>
+            <!-- iOS and Andy Feats -->
+            <section class="shadow1">
+                <h1>
+                    iOS/Andriod Native Features Demos
+                </h1>
+                <article>
+                    <button id="alert">
+                        Alert
+                    </button>
+                    <button id="geo">
+                        Geo
+                    </button>
+                    <button id="accel">
+                        Accelerometer
+                    </button>
+                </article>
+            </section >
+            <!-- iOS or Andy Feat -->
+            <section class="shadow1">
+                <h1>
+                    iOS or Andriod Native Features Demos
+                </h1>
+                <article>
+                    <button id="contacts">
+                        Contacts
+                    </button>
+                    <button id="camera">
+                        Camera
+                    </button>
+                    <button id="network">
+                        Network
+                    </button>
+                </article>
+            </section >
         </div>
-        <script type="text/javascript" src="cordova-2.0.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        
+        <div class="g2" id="section2">
+            <section class="shadow1">
+                <h1>
+                    Reseach
+                </h1>
+                <article id="vidLinks">
+                    <a href=# class="vid">Week One: Discussion Question One</a>
+                    <br/>
+                    <a href=# class="vid">Week Two: Discussion Question Two</a>
+                    <br/>
+                    <a href=# class="vid">Week Three: Discussion Question Three</a>
+                </article>
+            </section>
+            <section class="shadow1">
+                <h1>
+                    Developer Info 
+                </h1>
+                <article>
+                    <p>
+                    Derek Bertubin
+                    <br/>
+                    MDVBS-O
+                    <br/>
+                    AVF 1208
+                    </p>
+                </article>
+            </section>
+        </div>
     </body>
 </html>
