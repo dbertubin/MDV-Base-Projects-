@@ -2,26 +2,27 @@ html{
 	background-color:#222222;
 }
 body{
-	margin: 10px;
+	margin: 5px;
 }
 div{
 	margin-top: 10px;
 }
 h1{
-	
-	height: 30px;
+	height: auto;
+}
+article{
+	height: auto;
 }
 header{
-/*	border-radius:10px solid #999;
- */	
 	margin:5px;
 	margin-bottom: 25px;
 	border-style:solid;
 	border-radius: 20px ;
 	padding:5px;
-	background: #9FABB0;
+	background: #FFFFFF;
 	text-shadow: 0px 1px 0px #555561;
-	background: #9FABB0;
+	background: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size:  14px;
 	font-weight:bolder;
 	text-align: center;
@@ -31,17 +32,15 @@ header{
 }
 
 section{
-/*	padding: 5px;
-	margin-bottom: 10px;*/
-	
 	margin:5px;
 	margin-bottom: 25px;
 	border-style:solid;
 	border-radius: 10px 10px 10px 10px;
 	padding:5px;
-	background: #9FABB0;
+	background: #FFFFFF;
 	text-shadow: 0px 1px 0px #555561;
-	background: #9FABB0;
+	background: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size:  14px;
 	font-weight:bolder;
 	text-align: center;
@@ -50,12 +49,15 @@ section{
 	box-shadow:0px 0px 10px #000000;	
 }
 .shadow1 {
-	background-color: #ffffff;
 	border-radius:  5px;
 	-moz-box-shadow: 10px 10px 17px #0a0a0a;
 	-webkit-box-shadow: 10px 10px 17px #0a0a0a;
 	box-shadow: 10px 10px 17px #0a0a0a;
 }
-#headerLogo{
-	
+a{
+	text-decoration: none;
+}
+#vidLinks{
+	margin: 10px;
+	text-align: justify;
 }
