@@ -272,7 +272,7 @@ $('#form').live('pageinit', function(){
 
 			//console.log(object);
 			for( var n in object){
-				var makeSubLi = $("<li><li>");
+				var makeSubLi = $("<li></li>");
 				makeSubList.append(makeSubLi);
 				var optSubText = object[n][0] + " " + object[n][1];
 				makeSubLi.innerHTML = optSubText;
