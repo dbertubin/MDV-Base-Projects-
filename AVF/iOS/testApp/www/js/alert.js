@@ -7,7 +7,7 @@ function onDeviceReady()
 {
     
     phoneGapReady.innerHTML = ("")
-    
+    alert("this works");
 }
 
 // alert dismissed

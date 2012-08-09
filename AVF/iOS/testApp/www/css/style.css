@@ -74,13 +74,17 @@ section{
 	padding: 5px;
 }
 
-#largeMapDisplay{
+#mapFrame{
+    width: auto;
+}
+#mapDisplay{
 	background-color: #FCFCFC;
 	border-radius: 10px;
 	border: inset;
 	padding: 5px;
+    width: auto;
 }
-
+*/
 
 }
 /*

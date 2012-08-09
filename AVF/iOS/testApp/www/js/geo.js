@@ -4,19 +4,48 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 // PhoneGap is ready
 //
-function onDeviceReady() {}
+
+function $(x){
+    var theElement = document.getElementById(x);
+    return theElement;
+};
+
+function toggleControls(n){
+    switch(n){
+        case "on":
+            $("mapFrame").style.display = "block";
+        break;
+        case "off":
+            $("mapFrame").style.display = "none";
+            break;
+        default:
+            return false;
+    }
+}
+
+function onDeviceReady() {
+    toggleControls("off");
+   }
+
+
 
 function checkGeo () {
+    
     navigator.geolocation.getCurrentPosition(onSuccess, onError, { enableHighAccuracy: true });
 }
 
 // onSuccess Geolocation
 //
 var onSuccess = function(position) {
+    toggleControls("on");
+    var largeMap = document.getElementById('map');
     
-    var largeMap = document.getElementById('largeMap');
-    
-    largeMap.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=14&size=400x400&markers=color:red%7Ccolor:red%7C" + position.coords.latitude + "," + position.coords.longitude + "&sensor=false";
+    largeMap.src = "http://maps.googleapis.com/maps/api/staticmap?center=" +
+                    position.coords.latitude + "," +
+                    position.coords.longitude +
+                    "&zoom=14&size=780x400&markers=color:red%7Ccolor:red%7C" +
+                    position.coords.latitude + "," +
+                    position.coords.longitude + "&sensor=false";
     
 };
 
