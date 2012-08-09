@@ -45,7 +45,7 @@
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		45270BDA15D36F680066104C /* alert.html in Resources */ = {isa = PBXBuildFile; fileRef = 45270BD915D36F680066104C /* alert.html */; };
 		45270BDC15D379790066104C /* accel.js in Sources */ = {isa = PBXBuildFile; fileRef = 45270BDB15D379790066104C /* accel.js */; };
-		45270BDE15D3F1340066104C /* alert.js in Sources */ = {isa = PBXBuildFile; fileRef = 45270BDD15D3F1340066104C /* alert.js */; };
+		45270BEC15D4476C0066104C /* geo.js in Sources */ = {isa = PBXBuildFile; fileRef = 45270BEB15D4476C0066104C /* geo.js */; };
 		45522CA815D0E1C000D8AC77 /* wk1vid.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CA715D0E1C000D8AC77 /* wk1vid.html */; };
 		45522CAA15D0E33A00D8AC77 /* wk2vid.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CA915D0E33A00D8AC77 /* wk2vid.html */; };
 		45522CAC15D0E39C00D8AC77 /* wk3vid.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CAB15D0E39C00D8AC77 /* wk3vid.html */; };
@@ -127,7 +127,7 @@
 		32CA4F630368D1EE00C91783 /* testApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "testApp-Prefix.pch"; sourceTree = "<group>"; };
 		45270BD915D36F680066104C /* alert.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = alert.html; path = www/alert.html; sourceTree = "<group>"; };
 		45270BDB15D379790066104C /* accel.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = accel.js; path = www/js/accel.js; sourceTree = "<group>"; };
-		45270BDD15D3F1340066104C /* alert.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = alert.js; sourceTree = "<group>"; };
+		45270BEB15D4476C0066104C /* geo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = geo.js; path = www/js/geo.js; sourceTree = "<group>"; };
 		45522CA715D0E1C000D8AC77 /* wk1vid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = wk1vid.html; path = www/wk1vid.html; sourceTree = "<group>"; };
 		45522CA915D0E33A00D8AC77 /* wk2vid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = wk2vid.html; path = www/wk2vid.html; sourceTree = "<group>"; };
 		45522CAB15D0E39C00D8AC77 /* wk3vid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = wk3vid.html; path = www/wk3vid.html; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				45270BDD15D3F1340066104C /* alert.js */,
+				45270BEB15D4476C0066104C /* geo.js */,
 				45270BDB15D379790066104C /* accel.js */,
 				301BF56E109A69640062928A /* www */,
 				45270BD915D36F680066104C /* alert.html */,
@@ -469,7 +469,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				45270BDC15D379790066104C /* accel.js in Sources */,
-				45270BDE15D3F1340066104C /* alert.js in Sources */,
+				45270BEC15D4476C0066104C /* geo.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

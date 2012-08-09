@@ -74,6 +74,14 @@ section{
 	padding: 5px;
 }
 
+#largeMapDisplay{
+	background-color: #FCFCFC;
+	border-radius: 10px;
+	border: inset;
+	padding: 5px;
+}
+
+
 }
 /*
  .vid{
