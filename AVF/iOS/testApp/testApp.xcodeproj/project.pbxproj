@@ -43,6 +43,13 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		45270BDA15D36F680066104C /* alert.html in Resources */ = {isa = PBXBuildFile; fileRef = 45270BD915D36F680066104C /* alert.html */; };
+		45270BDC15D379790066104C /* accel.js in Sources */ = {isa = PBXBuildFile; fileRef = 45270BDB15D379790066104C /* accel.js */; };
+		45270BDE15D3F1340066104C /* alert.js in Sources */ = {isa = PBXBuildFile; fileRef = 45270BDD15D3F1340066104C /* alert.js */; };
+		45522CA815D0E1C000D8AC77 /* wk1vid.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CA715D0E1C000D8AC77 /* wk1vid.html */; };
+		45522CAA15D0E33A00D8AC77 /* wk2vid.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CA915D0E33A00D8AC77 /* wk2vid.html */; };
+		45522CAC15D0E39C00D8AC77 /* wk3vid.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CAB15D0E39C00D8AC77 /* wk3vid.html */; };
+		45522CAE15D0EC2600D8AC77 /* accel.html in Resources */ = {isa = PBXBuildFile; fileRef = 45522CAD15D0EC2600D8AC77 /* accel.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +125,13 @@
 		30E1352610E2C1420031B30D /* Cordova.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cordova.plist; path = ../Cordova.plist; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* testApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "testApp-Prefix.pch"; sourceTree = "<group>"; };
+		45270BD915D36F680066104C /* alert.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = alert.html; path = www/alert.html; sourceTree = "<group>"; };
+		45270BDB15D379790066104C /* accel.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = accel.js; path = www/js/accel.js; sourceTree = "<group>"; };
+		45270BDD15D3F1340066104C /* alert.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = alert.js; sourceTree = "<group>"; };
+		45522CA715D0E1C000D8AC77 /* wk1vid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = wk1vid.html; path = www/wk1vid.html; sourceTree = "<group>"; };
+		45522CA915D0E33A00D8AC77 /* wk2vid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = wk2vid.html; path = www/wk2vid.html; sourceTree = "<group>"; };
+		45522CAB15D0E39C00D8AC77 /* wk3vid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = wk3vid.html; path = www/wk3vid.html; sourceTree = "<group>"; };
+		45522CAD15D0EC2600D8AC77 /* accel.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = accel.html; path = www/accel.html; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* testApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "testApp-Info.plist"; path = "../testApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +201,14 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				45270BDD15D3F1340066104C /* alert.js */,
+				45270BDB15D379790066104C /* accel.js */,
 				301BF56E109A69640062928A /* www */,
+				45270BD915D36F680066104C /* alert.html */,
+				45522CAD15D0EC2600D8AC77 /* accel.html */,
+				45522CAB15D0E39C00D8AC77 /* wk3vid.html */,
+				45522CA715D0E1C000D8AC77 /* wk1vid.html */,
+				45522CA915D0E33A00D8AC77 /* wk2vid.html */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				307C750510C5A3420062BCA9 /* Plugins */,
@@ -412,6 +433,11 @@
 				3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */,
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
+				45522CA815D0E1C000D8AC77 /* wk1vid.html in Resources */,
+				45522CAA15D0E33A00D8AC77 /* wk2vid.html in Resources */,
+				45522CAC15D0E39C00D8AC77 /* wk3vid.html in Resources */,
+				45522CAE15D0EC2600D8AC77 /* accel.html in Resources */,
+				45270BDA15D36F680066104C /* alert.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +468,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				45270BDC15D379790066104C /* accel.js in Sources */,
+				45270BDE15D3F1340066104C /* alert.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
