@@ -43,7 +43,7 @@ var onSuccess = function(position) {
     largeMap.src = "http://maps.googleapis.com/maps/api/staticmap?center=" +
                     position.coords.latitude + "," +
                     position.coords.longitude +
-                    "&zoom=14&size=780x400&markers=color:red%7Ccolor:red%7C" +
+                    "&zoom=14&size=420x780&markers=color:red%7Ccolor:red%7C" +
                     position.coords.latitude + "," +
                     position.coords.longitude + "&sensor=false";
     

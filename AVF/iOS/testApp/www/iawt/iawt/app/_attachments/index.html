@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8"/>
+        
+        <title>iAlwaysWantedTo</title>
+        
+        <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="HandheldFriendly" content="True"/>
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Mobile IE needs ClearType for smoothing fonts -->
+        <meta http-equiv="cleartype" content="on"/>
+        
+        <!-- StyleSheets under here -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+        
+        <!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+        <script src="modernizr.custom.min.js"></script>
+        
+    </head>
+    <body>
+        
+        
+        
+        <!--Home Page-->
+        <div data-role="page" data-theme="a" id="home">
+            <a href="www/index.html" data-direction="reverse" style="text-decoration:none" >
+                <a href="#home" style="text-decoration:none">
+                    <div data-role="header" data-theme="a" data-position="fixed" align="center" >
+                        <h3>iAlwaysWantedTo</h3>
+                    </div>
+                </a>
+                <div>
+                    <div class="cta" id="cta">
+                        <img src="calltoaction-new.png" id="img-main"/>
+                        <p>Add things you want to do! Events, Road trips or even a Bucket list!</p>
+                        <!--<h3 id= "start">Start Here!</h3>-->
+                        <a href="#iawtForm" id="add" data-ajax="false"> Add Something to Do!</a>
+                    </div>
+                    <div>
+                        <ul class="ui-listview" data-role="listview" data-theme="a" data-filter="true" data-divider-theme="c">
+                            <li>
+                                <a href="#listAll" data-icon="arrow-r">
+                                    <h3>Show Everything To Do </h3>
+                                </a>
+                            </li>
+                            <li data-role="list-divider" >
+                                Browse Friend Categories
+                            </li>
+                            <li data-role="list-divider">
+                                <a href="#current" data-icon="arrow-r">
+                                    <h3>Current Things to Do</h3>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#future" data-icon="arrow-r">
+                                    <h3>Future Things to Do</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#collabrative" data-icon="arrow-r">
+                                    <h3>Things to Do with Friends </h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#bucket" data-icon="arrow-r">
+                                    <h3>Bucket List</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#sharedBucket" data-icon="arrow-r">
+                                    <h3>Shared Bucket Lists</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div href="#iawtForm" data-role="footer" data-theme="a" data-position="fixed">
+                    
+                </div>
+                </div>
+        
+        <!--List All Page-->
+        <div data-role="page" data-theme="a" id="listAll" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            
+            <div data-role="content" data-theme="a" >
+                <div align="center">
+                    <a href="#iawtForm" data-ajax="false">
+                        <img src="calltoaction-new.png" id="img"/>
+                    </a>
+                </div>
+                <div>
+                    <ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
+                        <li data-role="list-divider" >
+                            Everything To Do
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" >
+                <ul id="listView" data-role="listview">
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" >
+                <h4>Share With Friends!</h4>
+            </div>
+        </div>
+        
+        
+        <!--Current Tasks  Page-->
+        <div data-role="page" data-theme="a" id="current" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            <div data-role="content" data-theme="a" >
+                <div align="center">
+                    <a href="#iawtForm" data-ajax="false">
+                        <img src="calltoaction-new.png" id="img"/>
+                    </a>
+                </div>
+                <div>
+                    <ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
+                        <li data-role="list-divider" >
+                            Current Things To Do
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" >
+                <ul id="currentView" data-role="listview">
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" >
+                <h4>Share With Friends!</h4>
+            </div>
+        </div>
+        
+        <!--Future Tasks Page-->
+        <div data-role="page" data-theme="a" id="future" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            <div data-role="content" data-theme="a" >
+                <div align="center">
+                    <a href="#iawtForm" data-ajax="false">
+                        <img src="calltoaction-new.png" id="img"/>
+                    </a>
+                </div>
+                <div>
+                    <ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
+                        <li data-role="list-divider" >
+                            Future Things To Do
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" >
+                <ul id="futureView" data-role="listview">
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" >
+                <h4>Share With Friends!</h4>
+            </div>
+        </div>
+        
+        
+        <!--Collabrative Page-->
+        <div data-role="page" data-theme="a" id="collabrative" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            <div data-role="content" data-theme="a" >
+                <div align="center">
+                    <a href="#iawtForm" data-ajax="false">
+                        <img src="calltoaction-new.png" id="img"/>
+                    </a>
+                </div>
+                <div>
+                    <ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
+                        <li data-role="list-divider" >
+                            Future Things To Do
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" >
+                <ul id="collabrativeView" data-role="listview">
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" >
+                <h4>Share With Friends!</h4>
+            </div>
+        </div>
+        
+        <!--Bucket  Page-->
+        <div data-role="page" data-theme="a" id="bucket" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            <div data-role="content" data-theme="a" >
+                <div align="center">
+                    <a href="#iawtForm" data-ajax="false">
+                        <img src="calltoaction-new.png" id="img"/>
+                    </a>
+                </div>
+                <div>
+                    <ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
+                        <li data-role="list-divider" >
+                            Bucket List
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" >
+                <ul id="bucketView" data-role="listview">
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" >
+                <h4>Share With Friends!</h4>
+            </div>
+        </div>
+        
+        <!--Shared Bucket Page-->
+        <div data-role="page" data-theme="a" id="sharedBucket" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            <div data-role="content" data-theme="a" >
+                <div align="center">
+                    <a href="#iawtForm" data-ajax="false">
+                        <img src="calltoaction-new.png" id="img"/>
+                    </a>
+                </div>
+                <div>
+                    <ul class="ui-listview" data-role="listview" data-filter="true" data-divider-theme="c">
+                        <li data-role="list-divider" >
+                            Shared Bucket List
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" >
+                <ul id="sharedBucketView" data-role="listview">
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="a" data-position="fixed" >
+                <h4>Share With Friends!</h4>
+            </div>
+        </div>
+        
+        <!--Example Page-->
+        <!--    <div data-role="page" data-theme="a" id="example" data-add-back-btn="true">
+         <a href="#home" data-direction="reverse" style="text-decoration:none" >
+         <div data-role="header" data-theme="a" align="center" >
+         <h3 >iAlwaysWantedTo</h3>
+         </div>
+         <div data-role="content" data-theme="a">
+         <div class="ui-grid-a">
+         <div class="ui-block-a">
+         <h3>Task Name</h3>
+         <p>Due: MM/DD/YYYY</p>
+         </div>
+         </div>
+         <h4>Notes:</h4>
+         <p>Task notes or details would be listed here.  There is a lot of things that  I will need to add to this page. Like the edit bottons and all of that good stuff. </p>
+         </div>
+         <div data-role="footer" data-theme="a" data-position="fixed">
+         <h4>Share With Friends!</h4>
+         </div>
+         </div> -->
+        
+        <!-- New Form-->
+        <div data-role="page" method="get" data-theme="a" id="iawtForm" data-add-back-btn="true">
+            <a href="#home" data-direction="reverse" style="text-decoration:none" >
+                <div data-role="header" data-theme="a" align="center" >
+                    <h3 >iAlwaysWantedTo</h3>
+                </div>
+            </a>
+            <div data-role="content" data-theme="a">
+            </div>
+            <div data-role="content" data-theme="a">
+                <div align="center">
+                </div>
+                <div align="center" id="toggle-btn">
+                    <div id="displayLink">
+                        <a href="index.html#listAll" data-role="button" value="Display All" id="displayLink" >
+                            Display All
+                        </a>
+                    </div>
+                    <!-- <div id="addNew">
+                     <a href="#" data-role="button" value="Add Thing to Do" class="viewlists" id="addNew" >
+                     Add Thing to Do
+                     </a>
+                     </div> -->
+                </div>
+            </div>
+            <form action="#" method="get" id="friendForm" name="friendForm">
+                <p align="center">"Fill in the details of what you want to do!"</p>
+                <div data-role="fieldcontain">
+                    <label for="category">Category</label>
+                    <select name="things-category" id="groups" data-native-menu="false" class="required">
+                        <option data-placeholder="true">--Select Item Type--</option>
+                        <option value="current">Current Things to Do</option>
+                        <option value="future">Future Things to Do</option>
+                        <option value="collabrative">Things to Do With Friends</option>
+                        <option value="bucket">Bucket List</option>
+                        <option value="sharedbucket">Shared Bucket Lists</option>
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Name the Thing You Want to Do:</label>
+                    <input type="text" name="name" id="taskName" placeholder="Eg. Something Fun :)" class="required"/>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="rating">Rate How Excited You Are to DO This! (1=Excited, 5=Super Really Excited!): </label>
+                    <input type="range" value="0" min="1" max="5" name="rating" id="taskLength" />
+                </div>
+                <!-- <div data-role="fieldcontain">
+                 <label for="date" >"When do you want to do this by?"</label>
+                 <input type="date" name="date" id="completeBy" placeholder="Please Select a Date!" />
+                 </div> -->
+                <div data-role="fieldcontain">
+                    <label for="comments">Tell me more about what you want to do!:</label>
+                    <textarea name="comments" id="notes" class="required" placeholder="Exciting things go here here!"></textarea>
+                </div>
+                <div >
+                    <div>
+                        <input type="submit" value="Save" id="submit"/><!--id="submit"-->       
+                    </div>
+                    <div>
+                        <a href="#home" data-role="button" value="Cancel" id="cancel">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+                <div data-role="content" >
+                    <ul id="allView" data-role="listview">
+                    </ul>
+                </div>
+            </form> 
+        </div>
+        
+        
+        
+        <!-- JavaScript under here -->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <script type="text/javascript" src="jquery.validate.min.js"></script>
+        <script type="text/javascript" src="additional-methods.min.js"></script>
+        <script type="text/javascript" src="editForm.js"></script>
+        <script type="text/javascript" src="main2.js"></script>
+        <script type="text/javascript" src="jquery.couch.js"></script>
+        
+    </body>
+</html>

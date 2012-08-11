@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Alert</title>
+        <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Mobile IE needs ClearType for smoothing fonts -->
+        <meta http-equiv="cleartype" content="on"/>
+        
+        <!-- StyleSheets under here -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+    </head>
+    
+    <body onload="onLoad()">
+        <div class="g1" id="section1">
+            <section>
+                <a href="index.html">
+                    <img src= "img/calltoaction-new.png" id="headerLogo"/>
+                </a>
+            </section>
+            <!-- Accelerometer-->
+            <div class="g1" id="section2">
+                <section>
+                    <h1>
+                        Alert
+                    </h1>
+                    <div class="content">
+                        <button id="alert" onclick="showAlert(); return false;">Show Alert</button>
+                    </div>
+                    <div class="content">
+                        <button id="confirm" onclick="showConfirm(); return false;">Show Confirm</button>
+                    </div>
+                </section>
+                
+            </div>
+            <!-- JavaScript under here -->
+            <script type="text/javascript" src="js/alert.js"></script>
+            <script type="text/javascript" src="cordova-2.0.0.js"></script>
+    </body>
+</html>
+

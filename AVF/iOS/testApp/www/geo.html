@@ -25,7 +25,7 @@
 
             
             <!-- Geolocation-->
-            <div class="g1" id="section2">
+            <div id="section2">
                 <section>
                     <h1>
                         Location
@@ -34,15 +34,18 @@
                         <button onclick="checkGeo();">Check Location</button>
                     </div>
                 </section>
-                <section id="mapFrame" class="g2" style="display:none;">
-                    <h1>
-                        Map
-                    </h1>
-                    <div id="mapDisplay" >
-                        <img id="map"/>
-                    </div>
-                </section>
             </div>
+        </div>
+        <div class="g2" id="section1">
+            <section id="mapFrame" class="g2" style="display:none;">
+                <h1>
+                    Map
+                </h1>
+                <div id="mapDisplay" >
+                    <img id="map"/>
+                </div>
+            </section>
+        </div>
         <script type="text/javascript" src="js/geo.js"></script>
-        </body>
+    </body>
 </html>
