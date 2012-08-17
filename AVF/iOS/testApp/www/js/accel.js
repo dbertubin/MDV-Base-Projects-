@@ -3,7 +3,7 @@
 function onLoad()
 {
     document.addEventListener("deviceready",onDeviceReady,false);
-    alert("onLoad Fired!")
+
 }
 
 // PhoneGap is ready

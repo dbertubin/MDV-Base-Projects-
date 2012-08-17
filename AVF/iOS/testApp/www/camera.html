@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Camera</title>
+        <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Mobile IE needs ClearType for smoothing fonts -->
+        <meta http-equiv="cleartype" content="on"/>
+        
+        <!-- StyleSheets under here -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+    </head>
+    
+    <body onload="onLoad()">
+        <div class="g1" id="section1">
+            <section>
+                <a href="index.html">
+                    <img src="img/calltoaction-new.png" id="headerLogo"/>
+                </a>
+            </section>
+            <!-- Camera -->
+            <div id="section2" class="content">
+                
+                <button class="apple" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>
+                <button onclick="capturePhoto();">Capture Photo</button> <br>
+                <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+                <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+            </div>
+                
+            <div class="g2">
+                <div class="pic">
+                    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+                    <img style="display:none;" id="largeImage" src="" />
+                </div>
+            </div>
+            
+            <div class="push"></div>
+            <!-- JavaScript under here -->
+            <script type="text/javascript" src="js/camera.js"></script>
+            <script type="text/javascript" src="cordova-2.0.0.js"></script>
+        </div>
+    </body>
+</html>
