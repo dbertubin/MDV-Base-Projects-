@@ -23,23 +23,25 @@
                 </a>
             </section>
             <!-- Camera -->
-            <div id="section2" class="content">
+            <section id="section2" class="content">
                 
                 <button class="apple" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>
                 <button onclick="capturePhoto();">Capture Photo</button> <br>
                 <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
                 <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
                 <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-            </div>
+            </section>
                 
-            <div class="g2">
+            <section class="content">
                 <div class="pic">
-                    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-                    <img style="display:none;" id="largeImage" src="" />
+                    <img class="content" style="display:none;" id="smallImage" src="" />
+                    <img class="content" style="display:none;" id="largeImage" src="" />
                 </div>
-            </div>
-            
-            <div class="push"></div>
+            </section>
+         <!--   <section class="content">
+                <div class="push">
+                </div>
+            </section>-->
             <!-- JavaScript under here -->
             <script type="text/javascript" src="js/camera.js"></script>
             <script type="text/javascript" src="cordova-2.0.0.js"></script>
