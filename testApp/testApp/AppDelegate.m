@@ -24,6 +24,7 @@
     
         // Declare float
     float myFloat = 55.1452;
+    
         // Casting with myFloat into myInt using (int)myFloat
     int myInt = (int)myFloat;
             // Outputing myInt using NSLog
@@ -32,26 +33,76 @@
 //  Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
 //  Use an if, else if and else check using any of the data types of your choice.    
         // AND comparison using the myInt and myFloat variables above in an IF  
+    
     if ((myInt > 1) && (myInt < 100)){
         NSLog(@"myInt is Between 1 and 100");
     }
+    
     else{
         NSLog(@"myInt is not an acceptable number. Please give myFloat another number between 1 and 100.");
     }
     
-    // 
     if ((myInt < 40) || (myInt < 60)){
         NSLog(@"myInt is within the median range.");
     }
-    else if ((myInt < 40)) || (myInt < 60)){
+    
+    else{
         NSLog(@"myInt is outside the median range");
     }
-    // BOOL Needed
+
+// BOOL Needed as well as a else if 
+    /*BOOL (myInt != 50) {
+        NSLog(<#id, ...#>)
+    }*/
+
 
 //  Perform a single for loop printing out values to the console
-//  Perform a nested loop printing out values to the console
-//  Perform a while loop that increments an int variable and outputs to the console.
     
+        //loop intialize; loop condition; loop expression
+    for (int count =0; count < 15; count++) {
+        
+        // Print out looped value
+        NSLog(@" Count is: %d", count);
+    }
+    
+//  Perform a nested loop printing out values to the console
+        //loop intialize; loop condition; loop expression
+    for (int count =0; count < 15; count++) {
+        
+            // Print out looped value
+        NSLog(@" Count is: %d", count);
+        
+        if (count != 0) {
+            NSLog(@"Count value is equal to a BOOL YES");
+        }
+        
+        else if (count == 0){
+            NSLog(@"Count value is equal to a BOOL NO");
+        }
+
+    }
+    // I did get some inspiration for this from //https://gist.github.com/2629780 
+   /* BOOL same(int myInt, int count);{
+        if(same(myInt - count)== YES){
+            NSLog(@"myInt != count");
+        }
+        else {
+            NSLog(@"myInt == count");
+        }
+    }*/
+    
+//  Perform a while loop that increments an int variable and outputs to the console.
+    int demoCount = 0;
+    
+    while (demoCount < 100) {
+        
+        demoCount++;
+
+        NSLog(@"demoCount = %d/", demoCount);
+        
+        
+    
+    }
    
     
     
