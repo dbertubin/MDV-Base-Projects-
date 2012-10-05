@@ -447,6 +447,7 @@
 				45DD7206161E774A00190AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45DD7207161E774A00190AC6 /* Build configuration list for PBXNativeTarget "testAppTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +456,7 @@
 				45DD7209161E774A00190AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
