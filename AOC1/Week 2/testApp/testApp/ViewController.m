@@ -20,8 +20,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Set BG color and used http://www.touch-code-magazine.com/web-color-to-uicolor-convertor/ this was used for all color conversions below
-    // Note: UITextAlignmentCenter, Left and Right are depreciated in iOS 6 tried to use NSTextAlign, but it threw an error in main.m
-    
+        
     self.view.backgroundColor = [UIColor colorWithRed:0.541 green:0.537 blue:0.561 alpha:1]; /*#8a898f*/
 }
 
@@ -32,6 +31,8 @@
         title.backgroundColor = [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         title.text = @"The Celestine Prophesy";
         title.textAlignment = UITextAlignmentCenter;
+        // Note: ***UITextAlignmentCenter, Left and Right are depreciated in iOS 6, tried to use NSTextAlign, but it threw an error in main.m****
+
     }
     // Author Label
     UILabel * authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 145.0f, 20.0f)];
@@ -86,7 +87,11 @@
         listLabel.text = @"List of Topics";
         listLabel.textAlignment = UITextAlignmentLeft;
     }
-    // Create NSArray and pass thru objects thru mutableString using a for loop 
+    // Create NSArray and pass thru objects thru mutableString using a for loop
+    // the assignment asked for NSStrings, for optimization reasons I did not create seperate strings and them call them into the array
+    // eg. NSString * string1 = @"1st Insight";
+    //     NSString * string2 = @"2nd Insight";
+    //     NSArray * listArray =[[NSArray alloc] initWithObjects:string1, string2 , etc..., nil];
     NSArray * listArray =[[NSArray alloc] initWithObjects:@"1st Insight", @"2nd Insight",@"3rd Insight", @"4th Insight", @"5th Insight",nil];
     NSMutableString * mutableString = [[NSMutableString alloc] init];
     for (int i=0; i < [listArray count]; i++) {
@@ -98,7 +103,7 @@
     if (list != nil) {
         list.backgroundColor = [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         list.text = mutableString;
-        list.textAlignment = UITextAlignmentLeft;
+        list.textAlignment = UITextAlignmentCenter;
         list.numberOfLines = 2;
     }
     
