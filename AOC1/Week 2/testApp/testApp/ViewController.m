@@ -30,8 +30,9 @@
     if (title != nil) {
         title.backgroundColor = [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         title.text = @"The Celestine Prophesy";
-        title.textAlignment = UITextAlignmentCenter;
+        title.textAlignment = NSTextAlignmentCenter;
         // Note: ***UITextAlignmentCenter, Left and Right are depreciated in iOS 6, tried to use NSTextAlign, but it threw an error in main.m****
+        // ^^^^^^^^^^^^^^^^^^^^^^FIXED^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^FIXED^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     }
     // Author Label
@@ -39,15 +40,15 @@
     if (authorLabel != nil) {
         authorLabel.backgroundColor = [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         authorLabel.text = @"Author: ";
-        authorLabel.textAlignment = UITextAlignmentRight;
+        authorLabel.textAlignment = NSTextAlignmentRight;
         
     }
     // Author Name
     UILabel * author = [[UILabel alloc] initWithFrame:CGRectMake(165.0f, 40.0f, 145.0f, 20.0f)];
     if (author != nil) {
-        author.backgroundColor = [UIColor colorWithRed:0.361 green:0.345 blue:0.361 alpha:1]; /*#5c585c*/
+        author.backgroundColor = [UIColor colorWithRed:0.725 green:0.718 blue:0.749 alpha:1]; /*#b9b7bf*/
         author.text = @" Redfield, James";
-        author.textAlignment = UITextAlignmentLeft;
+        author.textAlignment = NSTextAlignmentLeft;
         
     }
     // Published Label
@@ -55,28 +56,28 @@
     if (publishedLabel != nil) {
         publishedLabel.backgroundColor = [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         publishedLabel.text =  @"Published: ";
-        publishedLabel.textAlignment = UITextAlignmentRight;
+        publishedLabel.textAlignment = NSTextAlignmentRight;
     }
     // Published Date
     UILabel * publishedDate = [[UILabel alloc] initWithFrame:CGRectMake(165.0f, 70.0f, 145.0f, 20.0f)];
     if (publishedDate != nil) {
-        publishedDate.backgroundColor = [UIColor colorWithRed:0.361 green:0.345 blue:0.361 alpha:1]; /*#5c585c*/
+        publishedDate.backgroundColor = [UIColor colorWithRed:0.725 green:0.718 blue:0.749 alpha:1]; /*#b9b7bf*/
         publishedDate.text = @" 1993";
-        publishedDate.textAlignment = UITextAlignmentLeft;
+        publishedDate.textAlignment = NSTextAlignmentLeft;
     }
     // Summary Label
     UILabel * summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f, 20.0f)];
     if (summaryLabel != nil) {
         summaryLabel.backgroundColor= [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         summaryLabel.text = @" Summary: ";
-        summaryLabel.textAlignment = UITextAlignmentLeft;
+        summaryLabel.textAlignment = NSTextAlignmentLeft;
     }
     // Summary
     UILabel * summary = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 120.0f, 300.0f, 250.0f)];
     if (summary != nil) {
         summary.backgroundColor= [UIColor colorWithRed:0.725 green:0.718 blue:0.749 alpha:1]; /*#b9b7bf*/
         summary.text =@"The story of the Celestine Prophesy tells about a man’s adventure into the synchronicities of life. While on this journey, the reluctant main character, John, encounters the 9 Insights, each giving him a deeper understanding and experience in his own spiritual growth.The story is packed with chases, near death experience,revelation and awakening. It is sure to keep you on the edge of your seat and centered in your soul.";
-        summary.textAlignment = UITextAlignmentCenter;
+        summary.textAlignment = NSTextAlignmentCenter;
         summary.numberOfLines = 30;
     }
     
@@ -85,7 +86,7 @@
     if (listLabel != nil) {
         listLabel.backgroundColor = [UIColor colorWithRed:0.992 green:0.729 blue:0.11 alpha:1]; /*#fdba1c*/
         listLabel.text = @" List of Topics";
-        listLabel.textAlignment = UITextAlignmentLeft;
+        listLabel.textAlignment = NSTextAlignmentLeft;
     }
     // Create NSArray and pass thru objects thru mutableString using a for loop
     // the assignment asked for NSStrings, for optimization reasons I did not create seperate strings and them call them into the array
@@ -103,7 +104,7 @@
     if (list != nil) {
         list.backgroundColor = [UIColor colorWithRed:0.725 green:0.718 blue:0.749 alpha:1]; /*#b9b7bf*/
         list.text = mutableString;
-        list.textAlignment = UITextAlignmentCenter;
+        list.textAlignment = NSTextAlignmentCenter;
         list.numberOfLines = 2;
     }
     
