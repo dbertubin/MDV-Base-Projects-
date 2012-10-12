@@ -55,7 +55,13 @@
         NSLog(@"Something faied! Check the first integer");
     }
     if ((intA == intB) == YES){                            // BOOL comparsion 
-        NSLog(@"The NSIntegers are equal!");    
+        NSLog(@"The NSIntegers are equal!");
+        // If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
+        UIAlertView *  alert = [[UIAlertView alloc]initWithTitle:@"Word! thats right, you got this they are equal" message:@"yeah" delegate:nil cancelButtonTitle:@"Yes I got this!" otherButtonTitles:@"Even thought I don't thinks so, I do...", nil];
+        if (alert != nil) {
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+        }
     }
     else {
         NSLog(@"The NSIntegers are not equal!");
@@ -69,19 +75,24 @@
 
 
 - (NSString *)Append:(NSString *) string1 to: (NSString *)string2{
- //   if (string1 != nil && string2 != nil) {               //nil check
-        NSMutableString * appendedString = [NSMutableString stringWithFormat:@"%@%@",string1,string2]; // concise
-        NSLog(@"%@",appendedString);
-        
-        return appendedString;
+    //    if (string1 != nil && string2 != nil) {               //nil check
+    NSMutableString * appendedString = [NSMutableString stringWithFormat:@"%@%@",string1,string2]; // concise
+    NSLog(@"%@",appendedString);
+    //Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
+    UIAlertView *  alert = [[UIAlertView alloc]initWithTitle:@"This is the appended string" message:(@"%@",appendedString) cancelButtonTitle:@"Yes I got this!" otherButtonTitles:@"Even thought I don't thinks so, I do...", nil];
+    if (alert != nil) {
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+        [alert show];
     }
+    
+    return appendedString;
+}
 
 
 //  5.  Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
 
--(void)DisplayAlertWithString:(NSString *)title message:(NSString *)alertMessage cancelButton:(NSString *)cancel {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:alertMessage delegate:nil cancelButtonTitle:cancel otherButtonTitles: nil];
-    
+-(void)DisplayAlertWithString:(NSString *)alertString {
+    UIAlertView * alertView; 
     if (alertView != nil) {
         [alertView show];
     }
@@ -94,17 +105,19 @@
 
 {
     [self Add:(int *)4 into:(int *)6];
-    [self Compare:(NSInteger *)5 comparedTo: (NSInteger * )8];
+    //  9.  Call the Compare function with two integer values.
+    [self Compare:(NSInteger *)5 comparedTo: (NSInteger * )5];
+    //  4.  Call the Append function with two NSStrings.
     [self Append:(NSString *) @"This is the first string" to: (NSString *)@" and this is the second string appended"];
-    [self DisplayAlertWithString:@"Alert" message:<#(NSString *)#> cancelButton:<#(NSString *)#>]
-    
+//    [self DisplayAlertWithString:@"Alert" message:<#(NSString *)#> cancelButton:<#(NSString *)#>]
+   
     [super viewDidLoad];
 }
 
 
 
 
-//  4.  Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
+
 
 
 
