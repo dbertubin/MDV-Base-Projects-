@@ -32,13 +32,7 @@
 //  5.  Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
 
 
--(NSString *)DisplayAlertWithString:(NSString* )passedString{
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"DisplayAlertWithString" message:passedString delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Next", nil];
-    if (alert != nil) {
-        [alert show];
-    }
-    return passedString;
-}
+
 
 
 
@@ -55,7 +49,7 @@
 
 //  1.  Create a function called Add. This function will take two NSInteger or int types and return the result of an addition between these two
 
--(int)Add:(int *)intA into: (int * )intB{
+-(int)Add:(int *)intA into: (int *)intB{
     if (intA != nil) {                                      //nil check 
         NSLog(@"The first nuber is = %d", (int)intA);
     }
@@ -72,7 +66,7 @@
     //Bundle the returned integer into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
     NSNumber * newNumber = [[NSNumber alloc] initWithInt: result];
     //convert it to a NSString
-    NSString * stringFromNumber = [[NSString alloc] initWithFormat:@"%@",newNumber];
+    NSString * stringFromNumber = [NSString stringWithFormat:@"%@", newNumber];
     
     NSLog(@"The numbers added together = %@", stringFromNumber);
     
@@ -83,7 +77,7 @@
 //  2.  Create a BOOL function called Compare that takes two NSInteger values. Return YES or NO based on whether the values are equal.
 
 -(BOOL)Compare:(NSInteger *)intA comparedTo: (NSInteger * )intB{
-    if (intA != nil) {                                      //nil check 
+/*    if (intA != nil) {                                      //nil check
         NSLog(@"The first NSInteger to be compared is %d",  (NSInteger)intA);
     }
     else {
@@ -95,22 +89,21 @@
     else {
         NSLog(@"Something faied! Check the first integer");
     }
-    // Create int to NSString 
-    NSString * resultString = [NSString stringWithFormat:@"The numbers are %d and %d", (int)intA, (int)intB];
-    
-    if ((intA == intB) == YES){                            // BOOL comparsion 
+    // Create int to NSString
+    // NSString * resultString = [NSString stringWithFormat:@"The numbers are %d and %d", (int)intA, (int)intB];
+*/    
+    if ((intA == intB) == YES){                            // BOOL comparsion
         NSLog(@"The NSIntegers are equal!");
         // If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
-        UIAlertView *  alert = [[UIAlertView alloc] initWithTitle:@"Word! thats right, you got this they are equal" message:resultString delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Next", nil];
-        if (alert != nil) {
-            alert.alertViewStyle = UIAlertViewStyleDefault;
-            [alert show];
-        }
+        
     }
-    else {
+    else if ((intA != intB)==NO){
         NSLog(@"The NSIntegers are not equal!");
+        
+        
     }
     return intA - intB;
+    
 }
 
 
@@ -122,32 +115,57 @@
 - (NSString *)Append:(NSString *) string1 to: (NSString *)string2{
     //    if (string1 != nil && string2 != nil) {               //nil check
     NSMutableString * appendedString = [NSMutableString stringWithFormat:@"%@%@",string1,string2]; // concise
-    NSLog(@"%@",appendedString);
-    //Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
-    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"This is the appended string" message:appendedString delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Next", nil];
-        
-    if (alert != nil) {
-        alert.alertViewStyle = UIAlertViewStyleDefault;
-        [alert show];
-    }
-        
+    NSLog(@"%@",appendedString);   
     return appendedString;
 }
 
-
-
-
-
+//	5.	Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
+-(NSString *)DisplayAlertWithString:(NSString* )passedString{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"DisplayAlertWithString" message:passedString delegate:nil cancelButtonTitle:@"Go" otherButtonTitles:nil];
+    if (alert != nil) {
+        [alert show];
+    }
+    return passedString;
+}
 
 - (void)viewDidLoad
 
 {
-    [self Add:(int *)4 into:(int *)6];
-    //  9.  Call the Compare function with two integer values.
-    [self Compare:(NSInteger *)5 comparedTo: (NSInteger * )5];
-    //  4.  Call the Append function with two NSStrings.
-    [self Append:(NSString *) @"This is the first string" to: (NSString *)@" and this is the second string appended"];
-//    [self DisplayAlertWithString:];
+
+//  Call the Add function passing in two integer values.  Capture the return of this function into a variable.
+    int addInt = [self Add:(int *)4 into:(int *)4];
+
+//  Bundle the returned integer into an NSNumber
+    NSNumber * bundledInt = [[NSNumber alloc] initWithInt:addInt];
+
+//  and then convert it to a NSString
+    NSString * addString =[[NSString alloc] initWithFormat:@"The numbers added together equal %@",bundledInt];
+
+//  and pass it to the DisplayAlertWithString function.
+    [self DisplayAlertWithString:addString];
+    
+    
+    
+//  Call the Append function with two NSStrings. Capture the result and 
+    NSString * appendedString = [self Append: @"This is the first string" to:@" and this is the second string appended"];
+//  display a UIAlertView with the appended string using displayAlertWithString.
+    [self DisplayAlertWithString:appendedString];
+   
+//	9.	Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
+
+
+
+/*
+    NSString * compareString  = [NSString stringWithFormat:@"%@",compareResult? @"YES" : @"NO"];
+    NSString * compareStringError  = [NSString stringWithFormat:@"Numbers did not equal each other so you are seening this"];
+    NSMutableString * compareStringWithValues =[NSMutableString stringWithFormat:@" Are the numbers %d and %d? %@", intA, intB, compareString];
+    
+    if (compareResult == YES) {
+        [self DisplayAlertWithString:compareStringWithValues];
+    }
+    else
+        [self DisplayAlertWithString:compareStringError];
+*/
     [super viewDidLoad];
 }
 
