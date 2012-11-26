@@ -133,7 +133,7 @@
 {
 
 //  Call the Add function passing in two integer values.  Capture the return of this function into a variable.
-    int addInt = [self Add:(int *)4 into:(int *)4];
+    int addInt = [self Add:4 into:4];
 
 //  Bundle the returned integer into an NSNumber
     NSNumber * bundledInt = [[NSNumber alloc] initWithInt:addInt];

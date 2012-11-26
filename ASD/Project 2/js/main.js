@@ -317,5 +317,6 @@ $('#form').live('pageinit', function(){
 	$("#clearLink").on("click", clearLocal);
 	$("#addNew").on("click", formBack);
 	
+	
 
 });	
